@@ -1,0 +1,618 @@
+/************************ RESET ************************/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	font: inherit;
+	font-size: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+code, kbd, tt, var {
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+sup, sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+small {
+  font-size: 75%;
+}
+
+big {
+  font-size: 125%;
+}
+
+figure {
+  margin: 0;
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+}
+
+textarea {
+  overflow: auto;
+  padding: 10px;
+  vertical-align: top;
+  width: 98%;
+}
+
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+
+/************************ GENERAL ************************/
+
+body, button, input, select {
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  line-height: 26.64px;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+
+/************************ TYPOGRAPHY ************************/
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+}
+
+h1 {
+  line-height: 71px;
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+h2 {
+  line-height: 50px;
+  font-size: 34px;
+  font-size: 3.4rem;
+}
+
+h3 {
+  line-height: 41px;
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+
+h4 {
+  line-height: 26px;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+ul, ol {
+  margin: 0 0 1.5em 3em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 0.7em;
+  line-height: 1.5em;
+  margin-bottom: 1.6em;
+  padding: 1.6em;
+  overflow: auto;
+  max-width: 100%;
+  box-shadow: 0 3px 5px #ddd inset;
+}
+
+a {
+  color: #007998;
+  -webkit-transition: color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+  color: rgba(0, 121, 152, 0.5);
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+
+/************************ HEADER ************************/
+
+header {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 14px 0 0;
+    position: fixed;
+    z-index: 9999;
+}
+
+header .container {
+    width: 100%;
+}
+
+.logo {
+    padding-left: 8%;
+    float: left;
+}
+
+.logo img {
+	height: 71px;
+}
+
+.navigation {
+	padding-right: 8%;
+}
+
+.main-nav {
+    text-transform: uppercase;
+    text-align: right !important;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: initial;
+    float: right;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav ul li {
+    margin: 15px 0 0 30px;
+}
+
+.main-nav ul li a {
+    color: #030753;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.main-nav ul li:hover > ul {
+    display: block;
+}
+
+.main-nav ul ul li {
+    margin: 0;
+    padding: 10px 0 5px 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.main-nav ul ul li:last-of-type {
+    border-bottom: none;
+}
+
+
+/************************ TEMPLATE ************************/
+
+article {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 80px;
+}
+
+article .title {
+  color: #404040;
+  line-height: 56.24px;
+  font-size: 38px;
+  font-size: 3.8rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+article .title a {
+  text-decoration: none;
+  color: #404040;
+}
+
+article .title a:hover {
+  color: #007998;
+}
+
+article .post-meta {
+  margin-bottom: 40px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+article .post-meta a {
+  color: #888888;
+  text-decoration: none;
+}
+
+article .post-meta a:hover {
+  color: rgba(136, 136, 136, 0.5);
+}
+
+article .the-content a {
+  text-decoration: none;
+}
+
+article .the-content img {
+  width: 100%;
+  height: auto;
+}
+
+article .meta {
+  line-height: 14.8px;
+  font-size: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .9px;
+}
+
+article .meta div {
+  margin:1px auto;
+}
+
+article .meta .post-categories {
+  list-style: none;
+  margin: 0 0 10px 0;
+}
+
+article .meta .post-categories li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.page article {
+  border-bottom: none;
+}
+
+.page article .title {
+  margin-bottom: 40px;
+}
+
+#pagination {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+#pagination .past-page {
+  float: right;
+  width: 49%;
+  text-align:right;
+}
+
+#pagination .next-page {
+  float: left;
+  width: 50%;
+  border-right: 1px solid #ccc;
+  height: 200px;
+}
+
+.next-page a, .past-page a {
+  font-size: 2em;
+  font-family: "Quicksand", Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  padding: 10%;
+}
+
+h3#comments {
+  margin-bottom: 80px;
+  font-size: 16px;
+}
+
+.commentlist {
+  list-style: none;
+  margin: 0;
+}
+
+.commentlist .comment {
+  margin: 0 0 40px 50px;
+  padding: 20px;
+  position: relative;
+  list-style: none;
+}
+
+.commentlist .comment .children {
+  margin-top: 40px;
+}
+
+.commentlist .comment-author {
+  float: left;
+  margin-right: 10px;
+}
+
+.commentlist .comment-author img {
+  position: absolute;
+  left: -50px;
+  top: 5px;
+}
+
+.commentlist .comment-author .says {
+  display: none;
+}
+
+.comment-meta {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.comment-subscription-form, .comment-subscription-form {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+#respond {
+  margin-bottom: 80px;
+}
+
+#respond > h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#respond form label {
+  color: #888888;
+}
+
+
+/************************ FOOTER ************************/
+
+footer {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 12px;
+}
+
+
+
+/************************ MOBILE ************************/
+
+@media only screen and (max-width: 1615px) {
+      
+    .logo {
+        padding-left: 5%;
+    }
+
+    .navigation {
+    	padding-right: 5%;
+    }
+    
+    .main-nav ul li {
+        margin: 15px 0 0 25px;
+    }
+
+    .main-nav ul li a {
+        font-size: 10px;
+    }
+    
+}
+
+@media only screen and (max-width: 1315px) {
+	
+	.main-nav ul li a {
+        font-size: 9px;
+    }
+
+}
+
+  
+@media only screen and (min-width: 1281px) {
+      
+    body {
+        font-size: 2.5em;
+        line-height: 1.5em;
+    }
+    
+    article .title {
+        font-size: 1.8em;
+        line-height: 1.5em;
+    }
+    
+    article .post-meta {
+        font-size: 0.7em;
+        line-height: 1em;
+    }
+    
+    .menu-main-nav-container a, .side-title, .menu-main-container a {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+    
+  }
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+      
+    body, article .post-meta {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+    
+    article .title {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+    
+    .menu-main-nav-container a, .side-title, .menu-main-container a {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+    
+  }
+
+
+@media only screen and (max-width: 479px) {
+      
+    body, article .post-meta {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+    
+    article .title {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+    
+    .menu-main-nav-container a, .side-title, .menu-main-container a {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+    
+  }
