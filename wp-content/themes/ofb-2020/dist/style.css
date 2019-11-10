@@ -453,6 +453,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 45, ../sass/_components/_form.scss */
 .vendor-content label[for="_wcv_facebook_url"],
+.vendor-content label[for="_wcv_facebook_url"],
+.vendor-content label[for="integration_option"],
 .vendor-content label[for="_wcv_owner_title"],
 .vendor-content label[for="first_name"],
 .vendor-content label[for="last_name"],

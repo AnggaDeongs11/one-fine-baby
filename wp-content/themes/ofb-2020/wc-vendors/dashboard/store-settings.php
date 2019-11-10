@@ -159,11 +159,10 @@ foreach ($settings_social as $value) {
                     <div class="form-row">
                         <div class="col">
                             <label for="wcv_bank_account_name">Third Party</label>
-                            <select name="integration_option" id="integration_option" class="form-control">
-                                  <option value="" <?php echo empty($integration_option) ?  'selected' : '' ?>>No Integration</option>
-                                  <option value="shopify" <?php echo ($integration_option=='shopify') ?  'selected' : '' ?>>Shopify</option>
-                                  <option value="bigcommerce" <?php echo ($integration_option=='bigcommerce') ?  'selected' : '' ?>>BigCommerce</option>
-                            </select>
+                            
+                        </div>
+                        <div class="col">
+                         <?php get_owner_integration(); ?>
                         </div>
                     </div>
                 </div>
@@ -173,7 +172,10 @@ foreach ($settings_social as $value) {
                   <div class="form-group">
                     <div class="col">
                         <label for="shopifyurl">Shopify URL</label>
-                        <input class="form-control" type="text"
+                       
+                    </div>
+                    <div class="col">
+                       <input class="form-control" type="text"
                                name="shopifyurl"
                                id="shopifyurl"
                                value="<?php echo get_user_meta( get_current_user_id(), 'shopifyurl', true ); ?>"/>
@@ -183,7 +185,10 @@ foreach ($settings_social as $value) {
                   <div class="form-group">
                     <div class="col">
                         <label for="api_key">API Key</label>
-                        <input class="form-control" type="text"
+                        
+                    </div>
+                    <div class="col">
+                      <input class="form-control" type="text"
                                name="api_key"
                                id="api_key"
                                value="<?php echo get_user_meta( get_current_user_id(), 'api_key', true ); ?>"/>
@@ -193,7 +198,10 @@ foreach ($settings_social as $value) {
                   <div class="form-group">
                     <div class="col">
                         <label for="shopify_password">Password</label>
-                        <input class="form-control" type="text"
+                        
+                    </div>
+                    <div class="col">
+                      <input class="form-control" type="text"
                                name="shopify_password"
                                id="shopify_password"
                                value="<?php echo get_user_meta( get_current_user_id(), 'shopify_password', true ); ?>"/>
@@ -207,7 +215,10 @@ foreach ($settings_social as $value) {
                   <div class="form-group">
                     <div class="col">
                         <label for="api_path">API Path</label>
-                        <input class="form-control" type="text"
+                        
+                    </div>
+                    <div class="col">
+                      <input class="form-control" type="text"
                                name="api_path"
                                id="api_path"
                                value="<?php echo get_user_meta( get_current_user_id(), 'api_path', true ); ?>"/>
@@ -217,7 +228,10 @@ foreach ($settings_social as $value) {
                   <div class="form-group">
                     <div class="col">
                         <label for="access_token">Access Token</label>
-                        <input class="form-control" type="text"
+                       
+                    </div>
+                    <div class="col">
+                       <input class="form-control" type="text"
                                name="access_token"
                                id="access_token"
                                value="<?php echo get_user_meta( get_current_user_id(), 'access_token', true ); ?>"/>
@@ -227,7 +241,10 @@ foreach ($settings_social as $value) {
                   <div class="form-group">
                     <div class="col">
                         <label for="client_id">Client ID</label>
-                        <input class="form-control" type="text"
+                        
+                    </div>
+                    <div class="col">
+                      <input class="form-control" type="text"
                                name="client_id"
                                id="client_id"
                                value="<?php echo get_user_meta( get_current_user_id(), 'client_id', true ); ?>"/>

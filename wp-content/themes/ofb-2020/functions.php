@@ -1074,6 +1074,27 @@ function get_owner_lastname() {
     );
 }
 
+function get_owner_integration() {
+    $value = get_user_meta( get_current_user_id(), 'integration_option', true );
+
+    WCVendors_Pro_Form_Helper::select(
+        apply_filters(
+            '_integration_option',
+            array(
+                'id'                => 'integration_option',
+                'class'             => 'custom-select',
+                'value'             => $value,
+                'options'           => [
+                        '' => 'No Integration',
+                        'shopify' => 'Shopify',
+                        'bigcommerce' => 'BigCommerce',
+                ],
+                'label'             => '&nbsp;',
+            )
+        )
+    );
+}
+
 function get_owner_contact() {
     $value = get_user_meta( get_current_user_id(), '_wcv_store_phone', true );
 
