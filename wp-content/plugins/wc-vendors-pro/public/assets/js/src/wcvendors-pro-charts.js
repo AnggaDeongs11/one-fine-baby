@@ -107,7 +107,7 @@
 			    datasets: [
 			        {
 			            label: "My First dataset",
-						fillColor: "rgba(" + fill_red + "," + fill_green + "," + fill_blue + "," + fill_opacity +")",
+						      fillColor: "rgba(" + fill_red + "," + fill_green + "," + fill_blue + "," + fill_opacity +")",
 			            strokeColor: "rgba(" + stroke_red + "," + stroke_green + "," + stroke_blue + "," + stroke_opacity + ")",
 			            hoverFill: "rgba(" + hover_fill_red + "," + hover_fill_green + "," + hover_fill_blue + "," + hover_fill_opacity + ")",
 			            hoverStroke: "rgba(" + hover_stroke_red + "," + hover_stroke_green + "," + hover_stroke_blue + "," + hover_stroke_opacity + ")",

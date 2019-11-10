@@ -15,13 +15,44 @@
 </div>
 <div class="col-12">
     <?php $order_chart_data = $store_report->get_order_chart_data(); ?>
+    <?php
+
+    $dates = json_decode($order_chart_data['labels']);
+    $data = json_decode($order_chart_data['data']);
+
+    $date_now = date('Y-m-d');
+    $date_30 = date('Y-m-d', strtotime($date.' - 29 days'));
+    $new_date = array();
+    $new_data = array();
+     for($i=0; $i<= 30; $i++) {
+       $d =date('Y-m-d', strtotime($date_30."+$i day"));
+       $data_val = 0;
+        foreach ($dates as $key => $value) {
+          if($d==$value) {
+            $data_val = $data[$key];
+          }
+        }
+      $days = date('D', strtotime($d));
+      $daySuffix = date('dS', strtotime($d));
+      array_push($new_date, $days." ".$daySuffix);
+      array_push($new_data, $data_val);
+     }
+
+     $label_new =  json_encode( array_values( $new_date ) );
+     $data_new =  json_encode( array_values( $new_data ) );
+
+
+     ?>
     <?php if ( ! $order_chart_data ) : ?>
         <p><?php _e( 'No orders for this period. Adjust your dates above and click Update, or list new products for customers to buy.', 'wcvendors-pro' ); ?></p>
     <?php else : ?>
-        <canvas id="orders_chart" width="350" height="200"></canvas>
+
+        <canvas id="orders_chart" width="350" height="200" ></canvas>
         <script type="text/javascript">
-          var orders_chart_label = <?php echo $order_chart_data['labels']; ?>;
-          var orders_chart_data = <?php echo $order_chart_data['data']; ?>;
+          var orders_chart_label = <?php echo $label_new; ?>;
+
+          var orders_chart_data = <?php echo $data_new; ?>;
+
         </script>
     <?php endif; ?>
 </div>

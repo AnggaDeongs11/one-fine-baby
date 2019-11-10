@@ -157,97 +157,108 @@ foreach ($settings_social as $value) {
                 </div>
                 <div class="form-group">
                     <div class="form-row">
-                        <div class="col">
+                        <div class="col-6">
                             <label for="wcv_bank_account_name">Third Party</label>
-                            
+                            <?php get_owner_integration(); ?>
+
                         </div>
-                        <div class="col">
-                         <?php get_owner_integration(); ?>
+                        <div class="col-6">
                         </div>
                     </div>
                 </div>
 
-                <div class="form-row shopify-form integration-form" <?php echo ($integration_option=='shopify') ?  'style="display:block;"' : 'style="display:none;"' ?>>
+                <div class="shopify-form integration-form" <?php echo ($integration_option=='shopify') ?  'style="display:block;"' : 'style="display:none;"' ?>>
 
                   <div class="form-group">
-                    <div class="col">
-                        <label for="shopifyurl">Shopify URL</label>
-                       
-                    </div>
-                    <div class="col">
-                       <input class="form-control" type="text"
-                               name="shopifyurl"
-                               id="shopifyurl"
-                               value="<?php echo get_user_meta( get_current_user_id(), 'shopifyurl', true ); ?>"/>
+                    <div class="form-row">
+                      <div class="col-6">
+                          <label for="shopifyurl">Shopify URL</label>
+                          <input class="form-control" type="text"
+                                  name="shopifyurl"
+                                  id="shopifyurl"
+                                  value="<?php echo get_user_meta( get_current_user_id(), 'shopifyurl', true ); ?>"/>
+                      </div>
+                      <div class="col-6">
+                      </div>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <div class="col">
-                        <label for="api_key">API Key</label>
-                        
-                    </div>
-                    <div class="col">
-                      <input class="form-control" type="text"
-                               name="api_key"
-                               id="api_key"
-                               value="<?php echo get_user_meta( get_current_user_id(), 'api_key', true ); ?>"/>
+                    <div class="form-row">
+                      <div class="col-6">
+                          <label for="api_key">API Key</label>
+                          <input class="form-control" type="text"
+                                   name="api_key"
+                                   id="api_key"
+                                   value="<?php echo get_user_meta( get_current_user_id(), 'api_key', true ); ?>"/>
+
+                      </div>
+                      <div class="col-6">
+                      </div>
                     </div>
                   </div>
-
                   <div class="form-group">
-                    <div class="col">
-                        <label for="shopify_password">Password</label>
-                        
-                    </div>
-                    <div class="col">
-                      <input class="form-control" type="text"
-                               name="shopify_password"
-                               id="shopify_password"
-                               value="<?php echo get_user_meta( get_current_user_id(), 'shopify_password', true ); ?>"/>
+                    <div class="form-row">
+                      <div class="col-6">
+                          <label for="shopify_password">Password</label>
+                          <input class="form-control" type="text"
+                                   name="shopify_password"
+                                   id="shopify_password"
+                                   value="<?php echo get_user_meta( get_current_user_id(), 'shopify_password', true ); ?>"/>
+
+                      </div>
+                      <div class="col-6">
+                      </div>
                     </div>
                   </div>
                 </div>
 
 
-                <div class="form-row bigcommerce-form integration-form" <?php echo ($integration_option=='bigcommerce') ?  'style="display:block;"' : 'style="display:none;"' ?>>
+                <div class="bigcommerce-form integration-form" <?php echo ($integration_option=='bigcommerce') ?  'style="display:block;"' : 'style="display:none;"' ?>>
 
                   <div class="form-group">
-                    <div class="col">
-                        <label for="api_path">API Path</label>
-                        
-                    </div>
-                    <div class="col">
-                      <input class="form-control" type="text"
-                               name="api_path"
-                               id="api_path"
-                               value="<?php echo get_user_meta( get_current_user_id(), 'api_path', true ); ?>"/>
+                    <div class="form-row">
+                      <div class="col-6">
+                          <label for="api_path">API Path</label>
+                          <input class="form-control" type="text"
+                                   name="api_path"
+                                   id="api_path"
+                                   value="<?php echo get_user_meta( get_current_user_id(), 'api_path', true ); ?>"/>
+
+                      </div>
+                      <div class="col-6">
+
+                      </div>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <div class="col">
-                        <label for="access_token">Access Token</label>
-                       
-                    </div>
-                    <div class="col">
-                       <input class="form-control" type="text"
-                               name="access_token"
-                               id="access_token"
-                               value="<?php echo get_user_meta( get_current_user_id(), 'access_token', true ); ?>"/>
+                    <div class="form-row">
+                      <div class="col-6">
+                          <label for="access_token">Access Token</label>
+                          <input class="form-control" type="text"
+                                  name="access_token"
+                                  id="access_token"
+                                  value="<?php echo get_user_meta( get_current_user_id(), 'access_token', true ); ?>"/>
+
+                      </div>
+                      <div class="col-6">
+                      </div>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <div class="col">
-                        <label for="client_id">Client ID</label>
-                        
-                    </div>
-                    <div class="col">
-                      <input class="form-control" type="text"
-                               name="client_id"
-                               id="client_id"
-                               value="<?php echo get_user_meta( get_current_user_id(), 'client_id', true ); ?>"/>
+                    <div class="form-row">
+                      <div class="col">
+                          <label for="client_id">Client ID</label>
+                          <input class="form-control" type="text"
+                                   name="client_id"
+                                   id="client_id"
+                                   value="<?php echo get_user_meta( get_current_user_id(), 'client_id', true ); ?>"/>
+
+                      </div>
+                      <div class="col">
+                      </div>
                     </div>
                   </div>
                 </div>
