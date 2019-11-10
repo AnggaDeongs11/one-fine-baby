@@ -1,0 +1,30 @@
+
+
+$wcv:   			#86b854;
+$green:         	#86b854;
+$red:           	#a00;
+$error-red: 		rgba(150, 8, 12, .55);
+$orange:        	#ffba00;
+$blue:          	#008cba;
+$white: 			#fff;
+$grey: 				#fafafa;
+
+$primary:           #86b854;                                    // primary colour for buttons (alt)
+$primarytext:       desaturate(lighten($primary, 50%), 18%);    // text on primary colour bg
+
+$secondary:         desaturate(lighten($primary, 40%), 21%);    // secondary buttons
+$secondarytext:     desaturate(darken($secondary, 60%), 21%);   // text on secondary colour bg
+
+$highlight:         adjust-hue($primary, 150deg);               // prices, in stock labels, sales flash
+$highlightext:      desaturate(lighten($highlight, 50%), 18%);  // text on highlight colour bg
+$font-icon: 		'fontawesome';
+
+// dashboard highlights
+$dashgreen: 		#21785f;
+$dashblue:			#1e86ab;
+$dashlightblue: 	#96cbde;
+$dashbrown:			#854b46;
+$dashred:			#ab1e3f;
+
+$dashbackground:	#f3f3f3;
+$dashgrey:			#e1e1e1;

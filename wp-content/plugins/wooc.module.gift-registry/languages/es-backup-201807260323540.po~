@@ -1,0 +1,558 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: woocommerce-gift-registry\n"
+"POT-Creation-Date: 2018-07-26 10:04+0700\n"
+"PO-Revision-Date: 2018-07-26 03:12+0000\n"
+"Last-Translator: mqd <quan22061997@gmail.com>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+"Report-Msgid-Bugs-To: "
+
+#: admin/magenest-giftregistry-admin.php:52
+msgid " Previous"
+msgstr ""
+
+#: admin/magenest-giftregistry-admin.php:53
+msgid "Next "
+msgstr ""
+
+#: admin/magenest-giftregistry-admin.php:103
+msgid "User id"
+msgstr ""
+
+#: admin/magenest-giftregistry-admin.php:106
+msgid "Registrant name"
+msgstr ""
+
+#: admin/magenest-giftregistry-admin.php:109
+msgid "Registrant email"
+msgstr ""
+
+#: admin/magenest-giftregistry-admin.php:112
+msgid "Date Time"
+msgstr ""
+
+#: admin/magenest-giftregistry-admin.php:115
+#: admin/magenest-giftregistry-admin.php:141
+msgid "Delete"
+msgstr ""
+
+#: admin/magenest-giftregistry-admin.php:118
+#: admin/magenest-giftregistry-admin.php:144
+msgid "Edit"
+msgstr ""
+
+#: admin/magenest-giftregistry-admin.php:168
+msgid "Gift registry manage"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:11 woocommerce-gift-registry.php:364
+msgid "Gift registry"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:33
+msgid "Gift registry Options"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:38
+msgid "Enable full mode"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:39
+msgid ""
+"Enable full mode will allow customer upload images in their gift registry"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:45
+msgid "Enable permission"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:46
+msgid "Allowing users without an account to see the link 'Add gift registry' "
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:52
+msgid "Notify gift registry's  owner when someone buy gift"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:53
+msgid "Send email to registry's  owner when someone buy gift"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:59
+msgid "Notify gift registrant when someone buy gift"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:60
+msgid "Send email to registrant when someone buy gift"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:66
+msgid "Notify admin when someone buy gift"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:67
+msgid "Send email to admin when someone buy gift"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:74
+msgid "Email subject"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:79
+msgid "Email content"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:80
+msgid ""
+"You can use variables {{buyer_name}},{{store_url}},{{store_name}},"
+"{{order_items}}"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:86
+msgid "Not allow adding items to gift registry until fulfill shipping address"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:87
+msgid ""
+"Not allow adding items to gift registry until fulfill shipping address. "
+"Recommend check this checkbox"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:94
+msgid "Social title"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:100
+msgid "Social text"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:102
+msgid ""
+"used by Facebook, Twitter and Pinterest. Use {wishlist_url} as placeholder "
+"for  URL of your giftregistry to appear"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:107
+msgid "Social image url"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:113
+msgid "Share gift registry via facebook"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:114
+msgid ""
+"Enable this option allow gift registry's owner share his gift registry via "
+"facebook"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:120
+msgid "Share gift registry via google plus"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:121
+msgid ""
+"Enable this option allow gift registry's owner share his gift registry via "
+"google plus"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:128
+msgid "Share gift registry via twitter"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:129
+msgid ""
+"Enable this option allow gift registry's owner share his gift registry via "
+"twitter"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:135
+msgid "Share gift registry via email"
+msgstr ""
+
+#: admin/magenest-giftregistry-setting.php:136
+msgid ""
+"Enable this option allow gift registry's owner share his gift registry via "
+"email"
+msgstr ""
+
+#: frontend/magenest-giftregistry-frontend.php:17
+msgid "All items is shipped to gift registry address"
+msgstr ""
+
+#: frontend/magenest-giftregistry-frontend.php:94
+#: template/public-view-giftregistry-full-mode.php:28
+#: template/public-view-giftregistry-mini-mode.php:18
+#: template/public-view-giftregistry.php:29
+msgid " and"
+msgstr "1"
+
+#: frontend/magenest-giftregistry-frontend.php:96
+msgid "Gift for "
+msgstr ""
+
+#: frontend/magenest-giftregistry-frontend.php:97
+msgid "Ending buy gift registry session"
+msgstr ""
+
+#: frontend/magenest-giftregistry-frontend.php:114
+msgid "Gift regitry ID"
+msgstr ""
+
+#: frontend/magenest-giftregistry-frontend.php:118
+#: template/account/giftregistry-share.php:71
+#: template/public-view-giftregistry-mini-mode.php:79
+#: template/public-view-giftregistry-mini-mode.php:92
+#: template/public-view-giftregistry.php:144
+#: template/public-view-giftregistry.php:159
+msgid "Message"
+msgstr ""
+
+#: frontend/magenest-giftregistry-myaccount.php:31
+msgid "Add to gift registry"
+msgstr ""
+
+#: frontend/magenest-giftregistry-widget.php:11
+msgid ""
+"Shows a price filter slider in a widget which lets you narrow down the list "
+"of shown products when viewing product categories."
+msgstr ""
+
+#: frontend/magenest-giftregistry-widget.php:13
+msgid "WooCommerce Price Filter"
+msgstr ""
+
+#: frontend/magenest-giftregistry-widget.php:17
+msgid "Filter by price"
+msgstr ""
+
+#: frontend/magenest-giftregistry-widget.php:18
+#: template/account/CopyOfadd-giftregistry.php:6
+#: template/account/add-giftregistry.php:32
+msgid "Title"
+msgstr ""
+
+#: frontend/magnest-form-handler.php:337
+msgid ""
+"You have to fulfill shipping address before adding item to gift registry"
+msgstr ""
+
+#: frontend/magnest-form-handler.php:357
+msgid "Please select some product options before add gift registry"
+msgstr ""
+
+#: frontend/magnest-form-handler.php:384
+msgid "Item is added to your gift registry"
+msgstr ""
+
+#: frontend/magnest-form-handler.php:386
+msgid "You have to select item"
+msgstr ""
+
+#: frontend/magnest-form-handler.php:390
+msgid ""
+"You have to enter gift registry information before adding item to gift "
+"registry"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:1
+msgid "Create Gift Registry"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:10
+#: template/account/add-giftregistry.php:37
+msgid "Registrant"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:12
+#: template/account/CopyOfadd-giftregistry.php:30
+#: template/account/CopyOfadd-giftregistry.php:81
+#: template/account/add-giftregistry.php:40
+#: template/account/add-giftregistry.php:102
+msgid "First name"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:17
+#: template/account/CopyOfadd-giftregistry.php:35
+#: template/account/CopyOfadd-giftregistry.php:86
+#: template/account/add-giftregistry.php:48
+#: template/account/add-giftregistry.php:110
+msgid "Last name"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:22
+#: template/account/CopyOfadd-giftregistry.php:40
+#: template/account/add-giftregistry.php:57
+#: template/account/add-giftregistry.php:118
+#: template/account/giftregistry-share.php:46
+#: template/giftregistry-index.php:52
+msgid "Email"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:28
+#: template/account/add-giftregistry.php:99
+msgid "CoRegistrant"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:45
+#: template/account/add-giftregistry.php:138
+msgid "Event"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:47
+#: template/account/add-giftregistry.php:141
+#: template/public-view-giftregistry-mini-mode.php:71
+#: template/public-view-giftregistry.php:136
+msgid "Event date"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:52
+#: template/account/add-giftregistry.php:150
+msgid "Event location"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:57
+#: template/account/add-giftregistry.php:157
+msgid "Message for guests"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:62
+msgid "Add a photo"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:65
+msgid "Gift Registry status"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:67
+#: template/account/add-giftregistry.php:181
+#: template/account/add-giftregistry.php:186
+msgid "Public"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:72
+#: template/account/add-giftregistry.php:182
+#: template/account/add-giftregistry.php:187 template/giftregistry-index.php:94
+msgid "Private"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:78
+msgid "Shipping address"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:91
+msgid "Company"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:97
+#: template/account/CopyOfadd-giftregistry.php:102
+msgid "Address"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:108
+msgid "City"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:113
+msgid "State"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:157
+msgid "Select a country&hellip;"
+msgstr ""
+
+#: template/account/CopyOfadd-giftregistry.php:164
+msgid "Update country"
+msgstr ""
+
+#: template/account/add-giftregistry.php:23
+msgid "Gift Registry Info"
+msgstr ""
+
+#: template/account/add-giftregistry.php:72
+#: template/account/add-giftregistry.php:131
+msgid "Description"
+msgstr ""
+
+#: template/account/add-giftregistry.php:78
+msgid "Are there CoRegistrants?"
+msgstr ""
+
+#: template/account/add-giftregistry.php:85
+#: template/account/add-giftregistry.php:90
+msgid "Yes"
+msgstr ""
+
+#: template/account/add-giftregistry.php:86
+#: template/account/add-giftregistry.php:91
+msgid "No"
+msgstr ""
+
+#: template/account/add-giftregistry.php:172
+msgid "Gift Registry Role"
+msgstr ""
+
+#: template/account/add-giftregistry.php:175
+msgid "Role"
+msgstr ""
+
+#: template/account/add-giftregistry.php:195
+msgid "Password"
+msgstr ""
+
+#: template/account/add-giftregistry.php:199
+#: template/account/my-giftregistry.php:113
+#: template/account/my-giftregistry.php:114
+msgid "Save"
+msgstr ""
+
+#: template/account/giftregistry-share.php:23
+msgid "Share"
+msgstr ""
+
+#: template/account/giftregistry-share.php:27
+msgid "Facebook"
+msgstr ""
+
+#: template/account/giftregistry-share.php:33
+msgid "Twitter"
+msgstr ""
+
+#: template/account/giftregistry-share.php:40
+msgid "Google plus"
+msgstr ""
+
+#: template/account/giftregistry-share.php:53
+msgid "Recipient"
+msgstr ""
+
+#: template/account/giftregistry-share.php:57
+msgid "separate email by commas"
+msgstr ""
+
+#: template/account/giftregistry-share.php:62
+msgid "Subject"
+msgstr ""
+
+#: template/account/my-giftregistry.php:12
+msgid "Gift registry items"
+msgstr ""
+
+#: template/checkpass_giftregistry.php:14 template/giftregistry-index.php:117
+msgid "Submit"
+msgstr ""
+
+#: template/giftregistry-index.php:50
+msgid "Name"
+msgstr ""
+
+#: template/giftregistry-index.php:51
+msgid "Co-registrant name"
+msgstr ""
+
+#: template/giftregistry-index.php:53
+msgid "Co-registrant email"
+msgstr ""
+
+#: template/giftregistry-index.php:54 template/giftregistry-index.php:84
+#: template/giftregistry-index.php:158
+msgid "View"
+msgstr ""
+
+#: template/giftregistry-index.php:180
+msgid "By name"
+msgstr ""
+
+#: template/giftregistry-index.php:186
+msgid "By email"
+msgstr ""
+
+#: template/giftregistry-index.php:194
+msgid "Search gift registry"
+msgstr ""
+
+#: template/giftregistry-index.php:208
+msgid "Create gift registry"
+msgstr ""
+
+#: template/giftregistry-index.php:220
+msgid "View my gift registry"
+msgstr ""
+
+#: template/public-view-giftregistry-full-mode.php:258
+#: template/public-view-giftregistry-mini-mode.php:141
+#: template/public-view-giftregistry.php:209
+msgid "High"
+msgstr ""
+
+#: template/public-view-giftregistry-full-mode.php:260
+#: template/public-view-giftregistry-mini-mode.php:143
+#: template/public-view-giftregistry.php:211
+msgid "Medium"
+msgstr ""
+
+#: template/public-view-giftregistry-full-mode.php:262
+#: template/public-view-giftregistry-mini-mode.php:145
+#: template/public-view-giftregistry.php:213
+msgid "Low"
+msgstr ""
+
+#: template/public-view-giftregistry-full-mode.php:278
+#: template/public-view-giftregistry-mini-mode.php:161
+msgid "Buy"
+msgstr ""
+
+#: template/public-view-giftregistry-mini-mode.php:86
+#: template/public-view-giftregistry.php:151
+msgid "Image"
+msgstr ""
+
+#: template/public-view-giftregistry-mini-mode.php:87
+#: template/public-view-giftregistry.php:154
+msgid "Product"
+msgstr ""
+
+#: template/public-view-giftregistry-mini-mode.php:88
+#: template/public-view-giftregistry.php:155
+msgid "Price"
+msgstr ""
+
+#: template/public-view-giftregistry-mini-mode.php:89
+#: template/public-view-giftregistry.php:156
+msgid "Desired Quantity"
+msgstr ""
+
+#: template/public-view-giftregistry-mini-mode.php:90
+#: template/public-view-giftregistry.php:157
+msgid "Priority"
+msgstr ""
+
+#: template/public-view-giftregistry-mini-mode.php:91
+#: template/public-view-giftregistry.php:158
+msgid "Quantity"
+msgstr ""
+
+#: template/public-view-giftregistry.php:233
+msgid "Add to cart"
+msgstr ""
+
+#: template/public-view-giftregistry.php:239
+msgid "Out stock"
+msgstr ""
+
+#: woocommerce-gift-registry.php:118
+msgid "My Gift Registry"
+msgstr ""
+
+#: template/account/advanced.phtml:283
+msgid "Subscribe and Save"
+msgstr ""

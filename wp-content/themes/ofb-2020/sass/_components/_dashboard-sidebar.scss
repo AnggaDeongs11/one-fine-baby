@@ -1,0 +1,40 @@
+/** dashboard sidebar **/
+
+.vendor-sidebar {
+  .profile-image {
+    height: 140px;
+  }
+
+  .vendor-nav {
+    padding-top: 40px;
+
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    color: $cobalt;
+
+    &__list {
+      display: flex;
+      padding: 10px 0;
+
+      img {
+        margin-right: 19px;
+      }
+
+      &.active span {
+        font-family: $font-default-b;
+      }
+    }
+
+    &__link {
+      display: flex;
+      width: 100%;
+
+      span {
+        color: $cobalt;
+        font-family: $font-default-md;
+      }
+    }
+  }
+}

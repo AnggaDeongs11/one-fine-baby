@@ -1,0 +1,391 @@
+/*--thumbnail-*/
+/*--*/
+/* view_giftregistry.php, search_giftregistry.php,
+table_giftregistry.php */
+@font-face {
+    font-family: "gothamBook";
+    src: url(../fonts/ufonts.com_gotham-book.ttf);
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+body {
+    color: #666;
+    font-family: 'Open Sans', sans-serif;
+}
+.video-responsive {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    overflow: hidden;
+}
+.video-responsive embed,
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: none;
+}
+.audio-responsive iframe {
+    width: 100%;
+    height: 126px;
+}
+.heading {
+    padding-bottom: 30px;
+    color: #fff;
+}
+.heading .title {
+    font-size: 76px;
+    font-family: "Arizonia", serif;
+    font-weight: 400;
+    margin: 0px;
+    line-height: 100%;
+    text-transform: capitalize;
+}
+.heading .line {
+    width: 47px;
+    border-top: 1px dotted #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+.heading i {
+    padding: 0 10px;
+    font-size: 24px;
+    color: #fff;
+}
+/* Display image after search block*/
+/*.about-us {*/
+/*background-image: url(../img/bg-about.jpg);*/
+/*background-repeat: no-repeat;*/
+/*background-size: 100% auto;*/
+/*padding: 100px 0 70px;*/
+/*background-position: center top;*/
+/*background-attachment: fixed;*/
+/*}*/
+.about-us .thumbnail {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.about-us .thumbnail .caption {
+    color: #6e6a5f;
+}
+.about-us .thumbnail img {
+    width: 100%;
+}
+.about-us .text-love {
+    color: #999700;
+    font-style: italic;
+}
+.about-us .text-love i {
+    padding-right: 10px;
+    color: #6e6a5f;
+}
+.about-us .name {
+    color: #5d594d;
+    text-transform: uppercase;
+}
+.countdown-wedding {
+    background-color: #F6F5EC;
+    padding: 20px 0;
+}
+.countdown-wedding .heading {
+    color: #666;
+}
+.countdown-wedding .heading .title {
+    font-size: 50px;
+}
+.countdown-wedding .heading .line {
+    border-color: #b5af47;
+}
+.countdown-wedding .heading i {
+    color: #b5af47;
+}
+.event-wedding {
+    padding: 80px 0px;
+    background-image: url(../img/bg-event.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    background-attachment: fixed;
+}
+.event-wedding .thumbnail {
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 5px;
+    color: #fff;
+}
+.event-wedding .thumbnail .title,
+.event-wedding .thumbnail .caption-time {
+    border-bottom: 1px solid #fff;
+}
+.event-wedding .thumbnail .title {
+    padding: 30px 0;
+    margin: 0;
+}
+.event-wedding .thumbnail .caption-time {
+    padding: 15px 0;
+}
+.event-wedding .thumbnail .caption-time i {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 15px;
+}
+.event-wedding .thumbnail .caption {
+    color: #fff;
+}
+.event-wedding .thumbnail .btn {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+    transition: all 0.3s;
+}
+.event-wedding .thumbnail .btn:hover {
+    background-color: #D6516D;
+    transition: all 0.3s;
+    border-color: #D6516D;
+}
+.event-wedding .heading {
+    padding-top: 25px;
+}
+.message {
+    background-image: url(../img/bg-table.jpg);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    padding: 30px 0;
+    padding: 70px 0 70px;
+}
+.message .thumbnail {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px 15px;
+}
+.table-cart {
+    padding: 30px 0;
+}
+.table-cart table {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.table-cart table tr:nth-of-type(odd) {
+    background: #eee;
+}
+.table-cart .heading {
+    color: #666;
+}
+.table-cart .heading .line {
+    border-color: #b5af47;
+}
+.table-cart .heading i {
+    color: #b5af47;
+}
+#defaultCountdown {
+    /* jQuery Countdown styles 2.0.0. */
+}
+#defaultCountdown .countdown-row {
+    clear: both;
+    width: 100%;
+    padding: 0px 2px;
+    text-align: center;
+}
+#defaultCountdown .countdown-row .countdown-section {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 75%;
+    text-align: center;
+    width: 20%;
+    background-color: #B5AF47;
+    padding: 30px 3px;
+    color: #fff;
+}
+#defaultCountdown .countdown-row .countdown-section .countdown-amount {
+    font-size: 36px;
+    display: block;
+}
+#defaultCountdown .countdown-row .countdown-section .countdown-period {
+    font-size: 18px;
+}
+.out-photo {
+    padding: 30px 0;
+}
+.out-photo .heading {
+    color: #666;
+}
+.out-photo .heading .line {
+    border-color: #b5af47;
+}
+.out-photo .heading i {
+    color: #b5af47;
+}
+.out-photo img {
+    width: 100%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.out-photo img:hover {
+    transform: scale(0.9, 0.9);
+    transition: all 0.3s;
+}
+.out-photo .row > div {
+    margin-bottom: 30px;
+}
+.out-photo .row > div:nth-child(4n+1) {
+    clear: both;
+}
+.map img {
+    width: 100%;
+}
+.body {
+    background: #00B500;
+}
+
+/* view_giftregistry.php */
+.view a {
+    font-size: 13px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* search_giftregistry.php */
+.search {
+    background-color: rgba(55, 55, 55, 0.75);
+    /*width: 72%;*/
+    text-align: center;
+    padding-top: 5px;
+}
+.search input{
+    width: 90%;
+    margin: 5px;
+    height: 35px;
+    font-size: 13px !important;
+}
+.search h2{
+    font-size: 20px;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 5px;
+}
+
+.view-search-form {
+    width: 31%;
+    margin-left: 55%;
+}
+
+.header-view-search {
+    margin-top: 200px !important;
+    line-height: 2.5em ;
+}
+
+.header-view-search label{
+    width: 25% !important;
+    display: inline-block;
+}
+
+.header-view-search span {
+    width: 60% !important;
+}
+
+.search #search_giftregistry{
+    width: 90%;
+    margin: 15px 0px;
+    font-size: 13px !important;
+    height: 10%;
+    font-family: unset;
+}
+#primary .search-result {
+    width: 100%;
+    margin-top: 10px;
+}
+@media only screen and (max-width: 767px)  {
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid #ccc; }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        width:100%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    table.shop_table.cart > tbody > tr {
+        position: relative;
+        padding: 10px 10px 10px 70px;
+    }
+    table.shop_table.cart > tbody > tr > td {
+        padding: 0 !important;
+        margin-bottom: 5px;
+        background: none;
+        border: none;
+    }
+    table.shop_table.cart > tbody > tr > td:not(.product-thumbnail):before {
+        content: attr(data-name);
+        display: block;
+        position: static;
+        width: auto;
+        font-style: italic;
+        color: #999;
+        font-weight: 300;
+    }
+    table.shop_table.cart > tbody > tr > td.product-thumbnail {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        padding: 0 !important;
+    }
+    table.shop_table.cart > tbody > tr > td.product-thumbnail img {
+        width: 100%;
+    }
+    table.shop_table.cart > tbody > tr > td.product-name {
+        font-weight: bold;
+    }
+    table.shop_table.cart > tbody > tr > td.product-quantity{
+        width: 100% !important;
+    }
+    table.shop_table.cart > tbody > tr > td.product-quantity input[type="text"]{
+        width: 60px !important;
+        height: 32px;
+        padding: 0 5px;
+        background: #fff;
+        border: 1px solid #ddd;
+    }
+    table.shop_table.cart > tbody > tr > td.product-quantity select{
+        width: 100% !important;
+        background: #fff;
+        border: 1px solid #ddd;
+        height: 32px;
+        padding: 0 5px;
+    }
+    table.shop_table.cart > tbody > tr > td.product-message textarea {
+        width: 100% !important;
+    }
+}

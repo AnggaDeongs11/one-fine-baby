@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+  body {
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: white;
+    padding: 1em 30px;
+    max-width: 650px;
+    margin: 0 auto; }
+  
+  body > *:first-child {
+    margin-top: 0 !important; }
+  body > *:last-child {
+    margin-bottom: 0 !important; }
+  
+  figure { margin: 1em 0; }
+  figcaption { display:none; }
+  
+  a {
+    color: #4183C4; }
+  a.absent {
+    color: #cc0000; }
+  a.anchor {
+    display: block;
+    padding-left: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0; }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0 10px;
+    padding: 0;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    cursor: text;
+    position: relative; }
+  
+  h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+    text-decoration: none; }
+  
+  h1 tt, h1 code {
+    font-size: inherit; }
+  
+  h2 tt, h2 code {
+    font-size: inherit; }
+  
+  h3 tt, h3 code {
+    font-size: inherit; }
+  
+  h4 tt, h4 code {
+    font-size: inherit; }
+  
+  h5 tt, h5 code {
+    font-size: inherit; }
+  
+  h6 tt, h6 code {
+    font-size: inherit; }
+  
+  h1 {
+    font-size: 28px;
+    color: black; }
+  
+  h2 {
+    font-size: 24px;
+    border-bottom: 1px solid #cccccc;
+    color: black; }
+  
+  h3 {
+    font-size: 18px; }
+  
+  h4 {
+    font-size: 16px; }
+  
+  h5 {
+    font-size: 14px; }
+  
+  h6 {
+    color: #777777;
+    font-size: 14px; }
+  
+  p, blockquote, ul, ol, dl, li, table, pre {
+    margin: 15px 0; }
+  
+  hr {
+    border: 0 none;
+    color: #cccccc;
+    height: 4px;
+    padding: 0; }
+  
+  body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0; }
+  body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0; }
+    body > h1:first-child + h2 {
+      margin-top: 0;
+      padding-top: 0; }
+  body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0; }
+  
+  a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0; }
+  
+  h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+    margin-top: 0; }
+  
+  li p.first {
+    display: inline-block; }
+  
+  ul, ol {
+    padding-left: 30px; }
+  
+  ul :first-child, ol :first-child {
+    margin-top: 0; }
+  
+  ul :last-child, ol :last-child {
+    margin-bottom: 0; }
+  
+  dl {
+    padding: 0; }
+    dl dt {
+      font-size: 14px;
+      font-weight: bold;
+      font-style: italic;
+      padding: 0;
+      margin: 15px 0 5px; }
+      dl dt:first-child {
+        padding: 0; }
+      dl dt > :first-child {
+        margin-top: 0; }
+      dl dt > :last-child {
+        margin-bottom: 0; }
+    dl dd {
+      margin: 0 0 15px;
+      padding: 0 15px; }
+      dl dd > :first-child {
+        margin-top: 0; }
+      dl dd > :last-child {
+        margin-bottom: 0; }
+  
+  blockquote {
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+    color: #777777; }
+    blockquote > :first-child {
+      margin-top: 0; }
+    blockquote > :last-child {
+      margin-bottom: 0; }
+  
+  table {
+    padding: 0; }
+    table tr {
+      border-top: 1px solid #cccccc;
+      background-color: white;
+      margin: 0;
+      padding: 0; }
+      table tr:nth-child(2n) {
+        background-color: #f8f8f8; }
+      table tr th {
+        font-weight: bold;
+        border: 1px solid #cccccc;
+        text-align: left;
+        margin: 0;
+        padding: 6px 13px; }
+      table tr td {
+        border: 1px solid #cccccc;
+        text-align: left;
+        margin: 0;
+        padding: 6px 13px; }
+      table tr th :first-child, table tr td :first-child {
+        margin-top: 0; }
+      table tr th :last-child, table tr td :last-child {
+        margin-bottom: 0; }
+  
+  img {
+    max-width: 100%; }
+  
+  span.frame {
+    display: block;
+    overflow: hidden; }
+    span.frame > span {
+      border: 1px solid #dddddd;
+      display: block;
+      float: left;
+      overflow: hidden;
+      margin: 13px 0 0;
+      padding: 7px;
+      width: auto; }
+    span.frame span img {
+      display: block;
+      float: left; }
+    span.frame span span {
+      clear: both;
+      color: #333333;
+      display: block;
+      padding: 5px 0 0; }
+  span.align-center {
+    display: block;
+    overflow: hidden;
+    clear: both; }
+    span.align-center > span {
+      display: block;
+      overflow: hidden;
+      margin: 13px auto 0;
+      text-align: center; }
+    span.align-center span img {
+      margin: 0 auto;
+      text-align: center; }
+  span.align-right {
+    display: block;
+    overflow: hidden;
+    clear: both; }
+    span.align-right > span {
+      display: block;
+      overflow: hidden;
+      margin: 13px 0 0;
+      text-align: right; }
+    span.align-right span img {
+      margin: 0;
+      text-align: right; }
+  span.float-left {
+    display: block;
+    margin-right: 13px;
+    overflow: hidden;
+    float: left; }
+    span.float-left span {
+      margin: 13px 0 0; }
+  span.float-right {
+    display: block;
+    margin-left: 13px;
+    overflow: hidden;
+    float: right; }
+    span.float-right > span {
+      display: block;
+      overflow: hidden;
+      margin: 13px auto 0;
+      text-align: right; }
+  
+  code, tt {
+    margin: 0 2px;
+    padding: 0 5px;
+    white-space: nowrap;
+    border: 1px solid #eaeaea;
+    background-color: #f8f8f8;
+    border-radius: 3px; }
+  
+  pre code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+    background: transparent; }
+  
+  .highlight pre {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px; }
+  
+  pre {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px; }
+    pre code, pre tt {
+      background-color: transparent;
+      border: none; }
+  </style>
+</head>
+<body>
+<h1 id="contact-form-7-storage-plugin-for-wordpress">Contact Form 7 Storage plugin for WordPress</h1>
+<p><strong>Contact Form 7 Storage stores all Contact Form 7 submissions (including attachments) in your WordPress database (DB).</strong> All contact form entries and business leads are stored safely even if the e-mail notifications go missing or get deleted.</p>
+<p><a href="#bonus-plugin-contact-form-7-controls"><img src="https://preseto.com/wp-content/uploads/2019/03/contact-form-7-storage-controls-bonus-plugin.png" alt="Scroll down to learn about our free bonus plugin for Contact Form 7" /></a></p>
+<p><strong>Latest version 2.0.3</strong> includes a bugfix for local file references in mail attachments.</p>
+<figure>
+<img src="https://preseto.com/wp-content/uploads/2019/03/contact-form-7-storage-ratings-sales.png" alt="The most popular Contact Form 7 add-on on Envato. Five star rating, 25 updates since 2014 and 2100+ customers" /><figcaption>The most popular Contact Form 7 add-on on Envato. Five star rating, 25 updates since 2014 and 2100+ customers</figcaption>
+</figure>
+<h2 id="video-overview">Video Overview</h2>
+<p><a href="https://www.youtube.com/watch?v=Dp8jinuIWd0?utm_source=cc_readme"><img src="https://preseto.com/wp-content/uploads/2019/04/storage-contact-form-7-video.png" alt="Demo video of the Storage for Contact Form 7 plugin" /></a></p>
+<h2 id="gdpr-compliance">GDPR Compliance</h2>
+<p>While this plugin doesn’t guarantee GDPR compliance, it offers the following functionality to help with that:</p>
+<ul>
+<li>Easily delete form entry data, meta information and uploaded attachments.</li>
+<li>Disable storing user IP address and browser information.</li>
+</ul>
+<h2 id="amazing-support">Amazing Support</h2>
+<figure>
+<img src="https://preseto.com/wp-content/uploads/2017/02/created-by-kaspars-dambis-pro-wordpress-developer.png" alt="Plugin created and supported by a professional WordPress developer" /><figcaption>Plugin created and supported by a professional WordPress developer</figcaption>
+</figure>
+<p>This plugin is developed and maintained by <a href="https://kaspars.net">Kaspars Dambis</a> who is a WordPress core contributor and professional WordPress developer since 2007. All support requests are handled by the plugin author.</p>
+<h2 id="features">Features</h2>
+<p><a href="https://codecanyon.net/item/storage-for-contact-form-7-/screenshots/7806229"><img src="https://preseto.com/wp-content/uploads/2017/12/contact-form-7-entry-inbox.png" alt="Contact Form 7 Form Submission Inbox" /></a></p>
+<p><strong>All form submissions are stored in the WordPress backend in addition to being sent via e-mail.</strong> E-mail delivery is never 100% reliable and having a backup of all contact entries will ensure you never miss a lead or inquiry.</p>
+<p><strong>Export form submissions as CSV for Excel.</strong> Export all submissions or use the date and form filters to select which entries you want to export. Export also includes links to entry attachments.</p>
+<p><a href="https://preseto.com/go/cf7-demo?utm_source=cc_readme"><img src="https://preseto.com/wp-content/uploads/2017/02/contact-form-7-export-field-values-excel.png" alt="Save and Export Contact Form 7 Input Fields as CSV for Excel" /></a></p>
+<p><strong>Each entry stores the following details about the submission:</strong></p>
+<ul>
+<li>Individual input field values (also available as individual columns in the exported CSV files).</li>
+<li>All attachments uploaded to the contact form.</li>
+<li>Time and date of the entry.</li>
+<li>E-mail address of the contact form recipient.</li>
+<li>Subject line of the e-mail that was sent to the contact form recipient.</li>
+<li>Post or page URL where the contact form was submitted (referrer).</li>
+<li>IP address, browser and device information (user-agent) of the submission.</li>
+<li>Link to the configuration page for the contact form that was used for submission.</li>
+</ul>
+<p>Storing user IP address and device information can be disabled in the plugin settings.</p>
+<p><a href="https://preseto.com/go/buy-cf7-storage?utm_source=cc_readme"><img src="https://preseto.com/wp-content/uploads/2017/02/buy-storage-for-contact-form-7.png" alt="Buy Storage for Contact Form 7 Plugin, 100% GPL Licensed" /></a></p>
+<h2 id="automatic-updates">Automatic Updates</h2>
+<p>Install the <a href="https://envato.com/market-plugin/">Envato Market plugin</a> to enable automatic updates of this plugin right from your WordPress dashboard. Remember to specify <a href="https://build.envato.com/create-token/?purchase:download=t&amp;purchase:verify=t&amp;purchase:list=t">your API Token</a> in the Envato Market settings page.</p>
+<h2 id="bonus-plugin-contact-form-7-controls">Bonus Plugin: Contact Form 7 Controls</h2>
+<p>Get our companion plugin for Contact Form 7 for free!</p>
+<p><a href="https://formcontrols.com?utm_source=cc_readme"><img src="https://preseto.com/wp-content/uploads/2019/03/contact-form-7-controls-signup.png" alt="Contact Form 7 Controls for the form output (disable AJAX, default CSS, track events with Google Analytics, etc.)" /></a></p>
+<h2 id="installation">Installation</h2>
+<ol type="1">
+<li>Go to “Plugins → Add New” in the main menu in your WordPress dashboard.</li>
+<li>Select the “Upload” tab at the top of the page.</li>
+<li>Select the <code>cf7-storage.zip</code> file for the upload and click “Upload”.</li>
+<li>Be sure to activate the plugin once it has been uploaded.</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<p><strong>This plugin adds a new section called “Entries” under the “Contact” menu</strong> in the WordPress dashboard which lists all of the contact form submissions in a reverse chronological order. Quick preview of each entry to avoid extra clicks.</p>
+<p><strong>Dropdown selectors at the top of the list provide filtering and sorting of the contact form entries</strong> by the contact form used for submission and the date of submission.</p>
+<p><strong>Export entries as CSV</strong> by using the “Export as CSV” button at the top of the form entry list. Use the contact form filter or the bulk action dropdown to select which submissions to export. Specify the CSV delimiter character (comma, semicolon or tab) for quickly opening the file in MS Excel.</p>
+<p><strong>Individual form storage settings</strong> to exclude fields from being added to the CSV export.</p>
+<p><strong>Free form text search is available</strong> for finding specific entries.</p>
+<p><strong>File attachment shortcode <code>[file-field]</code> automatically links to the uploaded file</strong> in the notification email instead of just displaying the filename of the uploaded file.</p>
+<p><strong>Reference entry ID and entry URL in the e-mails</strong> that get sent to the admin:</p>
+<ul>
+<li><code>[storage_entry_id]</code> is replaced with a unique entry ID such as 3212, and</li>
+<li><code>[storage_entry_url]</code> generates a link to the entry in the backend accessible only to registered users.</li>
+</ul>
+<p>Please note that Contact Form 7 doesn’t support wrapping variables in square brackets <code>[]</code> such as <code>[[storage_entry_id]]</code>. Please use another set of characters (for example <code>{}</code> or <code>()</code>).</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7 plugin</a>.</li>
+<li>Tested up to WordPress 5.2.</li>
+<li>Requires at least WordPress 3.2.</li>
+</ul>
+<h2 id="screenshots">Screenshots</h2>
+<ol type="1">
+<li><a href="https://preseto.com/wp-content/uploads/2014/05/01_screenshot.png">List of all form submissions</a></li>
+<li><a href="https://preseto.com/wp-content/uploads/2014/05/02_screenshot.png">Detailed view of each submission</a></li>
+<li><a href="https://preseto.com/wp-content/uploads/2014/05/03_screenshot.png">CSV export of form submissions</a></li>
+</ol>
+<h2 id="support">Support</h2>
+<p>Please use the <a href="https://preseto.com/go/cf7-storage-support?utm_source=cc_readme">dedicated support section on CodeCanyon</a></a>.</p>
+<h2 id="changelog">Changelog</h2>
+<h3 id="april-18-2019">2.0.3 (April 18, 2019)</h3>
+<ul>
+<li>Bugfix: support for local file references in mail attachments.</li>
+<li>Tested with WordPress 5.2.</li>
+</ul>
+<h3 id="february-18-2019">2.0.2 (February 18, 2019)</h3>
+<ul>
+<li>Security fix: Escape all form field data in the admin output. Thanks to Patrick Samuel for reporting the issue.</li>
+<li>Tested with WordPress 5.1.</li>
+</ul>
+<h3 id="november-15-2018">2.0.1 (November 15, 2018)</h3>
+<ul>
+<li>Replace upload file URLs in confirmation emails even when uploads are not attached to email.</li>
+<li>Tested with WordPress 5.0.</li>
+</ul>
+<h3 id="september-8-2018">2.0.0 (September 8, 2018)</h3>
+<ul>
+<li>Introduce plugin and form settings pages.</li>
+<li>Mark as tested with WordPress 4.9.8.</li>
+</ul>
+<h3 id="july-30-2018">1.7.0 (July 30, 2018)</h3>
+<ul>
+<li>Mark as tested with WordPress 4.9.7.</li>
+<li>Reformat code according to the <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/">WordPress coding standards</a>.</li>
+</ul>
+<h3 id="december-17-2017">1.6.1 (December 17, 2017)</h3>
+<ul>
+<li>Mark as tested with WordPress 4.9.1.</li>
+<li>Silence errors when creating the uploads directory.</li>
+<li>Added developer tools to enforce coding standards.</li>
+</ul>
+<h3 id="march-2-2017">1.6.0 (March 2, 2017)</h3>
+<ul>
+<li>New: Add Spanish and Catalan translations. Thank you Albert Parera!</li>
+<li>New: File attachment fields such as <code>[file-field-name]</code> are automatically replaced with file URLs in the email notifications.</li>
+<li>New: Added a filter <code>cf7_storage_skip_capture</code> to disable capturing form submission. The second parameter is an instance of <code>WPCF7_ContactForm</code>.</li>
+<li>Bugfix: Delete the attachment files when a form entry is deleted.</li>
+</ul>
+<h3 id="february-18-2017">1.5.5 (February 18, 2017)</h3>
+<ul>
+<li>Bugfix: Store “piped” checkbox labels instead of just values.</li>
+</ul>
+<h3 id="june-3-2016">1.5.4 (June 3, 2016)</h3>
+<ul>
+<li>Bugfix: Fix the <code>[storage_entry_url]</code> mail tag URL.</li>
+</ul>
+<h3 id="june-1-2016">1.5.3 (June 1, 2016)</h3>
+<ul>
+<li>Bugfix: Check for the field type before adding the piped field label.</li>
+<li>Bugfix: Allow export of the selected entries only.</li>
+</ul>
+<h3 id="may-21-2016">1.5.2 (May 21, 2016)</h3>
+<ul>
+<li>New feature: Added a subscription form for plugin update notifications.</li>
+<li>New feature: Added a link to form entries to the plugin list next to the “Activate” button.</li>
+</ul>
+<h3 id="may-10-2016">1.5.1 (May 10, 2016)</h3>
+<ul>
+<li>New feature: Add field values from the <a href="http://contactform7.com/selectable-recipient-with-pipes/">pipped fields</a> to the CSV export with a <code>-pipe-label</code> field name suffix.</li>
+<li>Bugfix: Ensure that bulk trash/delete/untrash works as expected after changing the <code>WP_List_Table</code> definition.</li>
+</ul>
+<h3 id="may-4-2016">1.5.0 (May 4, 2016)</h3>
+<ul>
+<li>Added CSV delimiter selector for better Excel support out of the box.</li>
+<li>Bugfix: The length of the URL no longer increases between searches.</li>
+</ul>
+<h3 id="december-10-2015">1.4.5 (December 10, 2015)</h3>
+<ul>
+<li>Export CSV now includes the remote IP address by default.</li>
+<li>Bugfix: <code>cf7_storage_csv_columns</code> filter is now applied <em>after</em> the individual form field value columns have been added to the export array.</li>
+</ul>
+<h3 id="september-6-2015">1.4.4 (September 6, 2015)</h3>
+<ul>
+<li>Bugfix: Don’t cast entry ID to integer during <code>get_post()</code> call.</li>
+<li>Add a filter <code>cf7_storage_csv_delimiter</code> to enable custom CSV delimiters. Use “;” as the default column delimiter in CSV export files (for Microsoft Excel compatability).</li>
+<li>Exported CSV files should now open correctly in Excel by default.</li>
+</ul>
+<h3 id="section">1.4.3</h3>
+<ul>
+<li>Add form input field names as column headers in the CSV export.</li>
+</ul>
+<h3 id="section-1">1.4.2</h3>
+<ul>
+<li>Add support for fields with multiple values (checkboxes, radio) to CSV export too.</li>
+</ul>
+<h3 id="section-2">1.4.1</h3>
+<ul>
+<li>Add support for fields with multiple values (checkboxes, radio) in the entry view.</li>
+</ul>
+<h3 id="section-3">1.4</h3>
+<ul>
+<li>Enable <code>[storage_entry_id]</code> and <code>[storage_entry_url]</code> mail tags.</li>
+<li>Fix issue with upload filename backslashes being removed on Windows servers.</li>
+</ul>
+<h3 id="section-4">1.3.8</h3>
+<ul>
+<li>Don’t store the mail 2 which is usually sent as a receipt to the user.</li>
+</ul>
+<h3 id="section-5">1.3.7</h3>
+<ul>
+<li>Include automatic update library which was missing in 1.3.6.</li>
+</ul>
+<h3 id="section-6">1.3.6</h3>
+<ul>
+<li>Show uploaded files in the backend even if they were not mailed.</li>
+</ul>
+<h3 id="section-7">1.3.4</h3>
+<ul>
+<li>More reliable automatic updates.</li>
+</ul>
+<h3 id="section-8">1.3.3</h3>
+<ul>
+<li>Bugfix: Include all available contact forms in the drop-down filter.</li>
+</ul>
+<h3 id="section-9">1.3.2</h3>
+<ul>
+<li>Style table columns in the admin index view.</li>
+</ul>
+<h3 id="section-10">1.3.1</h3>
+<ul>
+<li>Include entry subject in the admin index view.</li>
+<li>Enable quick preview of entry content from the admin index view.</li>
+</ul>
+<h3 id="section-11">1.3</h3>
+<ul>
+<li>Enable automatic updates via the <a href="https://github.com/envato/envato-wordpress-toolkit">Envato WordPress Toolkit plugin</a>.</li>
+</ul>
+<h3 id="section-12">1.2</h3>
+<ul>
+<li>Support for Contact Form 7 version 3.9.</li>
+</ul>
+<h3 id="section-13">1.1.0</h3>
+<ul>
+<li>Add entry export functionality.</li>
+</ul>
+<h3 id="section-14">1.0.3</h3>
+<ul>
+<li>Add support for localization.</li>
+<li>Add Latvian translation.</li>
+</ul>
+<h3 id="section-15">1.0.1</h3>
+<ul>
+<li>Simplify the readme file.</li>
+</ul>
+<h3 id="section-16">1.0</h3>
+<ul>
+<li>Initial release.</li>
+</ul>
+</body>
+</html>

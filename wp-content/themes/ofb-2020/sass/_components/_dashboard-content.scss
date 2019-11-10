@@ -1,0 +1,155 @@
+/** dashboard content **/
+
+.vendor-content {
+  padding: 30px 0 30px 30px;
+
+  &__page-title {
+    margin-top: 30px;
+
+    h2 {
+      font-family: Canela;
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  &__page-subtitle {
+    margin-top: 10px;
+
+    h4 {
+      font-family: $font-default;
+      font-size: 16px;
+      line-height: 20px;
+      color: $cobalt;
+      opacity: 0.5;
+    }
+  }
+
+  .nav-tabs {
+    border-bottom: none;
+
+    .nav-link {
+      border: none;
+      text-transform: uppercase;
+      height: 43px;
+      font-family: $font-default;
+      letter-spacing: 2px;
+      color: $cobalt;
+
+      &.active {
+        border-bottom: 2px solid $primary;
+        font-family: $font-default-b;
+      }
+    }
+  }
+
+  .section-header {
+    font-size: 25px;
+    color: $cobalt;
+    font-family: Canela;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $blue;
+    line-height: 30px;
+
+    &__actions {
+      font-family: $font-default;
+      color: $light-grey;
+      font-size: 16px;
+
+      span {
+        margin-right: 63px;
+      }
+
+      &-select {
+        border: none;
+        background: #fff;
+      }
+    }
+  }
+
+  .light-border-1 {
+    background-color: $lighter-grey;
+    height: 1px;
+  }
+
+  .blue-border-1 {
+    background-color: $blue;
+    height: 1px;
+  }
+
+  .wcvendors-table-order {
+    th {
+      border-bottom: none;
+      font-family: $font-default-md;
+      font-size: 16px;
+      line-height: 20px;
+      height: 35px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    td {
+      height: 50px;
+      border-bottom: none;
+    }
+  }
+
+  .table-label,
+  .table-value {
+    font-size: 18px;
+    line-height: 25px;
+    color: $cobalt;
+    opacity: 0.5;
+    border-bottom: none;
+    height: 60px;
+  }
+
+  .table-value {
+    opacity: 1;
+    text-align: right;
+  }
+
+  .table-total {
+    font-size: 20px;
+    line-height: 25px;
+    padding-left: 0;
+  }
+
+  .table-total-value {
+    font-size: 50px;
+    line-height: 50px;
+    text-align: right;
+  }
+
+  .recent-orders {
+    thead th,
+    tbody td {
+      border: none;
+      padding: 10px 0;
+      line-height: 20px;
+    }
+  }
+
+  .wcv-gallery-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .wcv-tabs.top>.tabs-nav {
+    border-bottom: none;
+    text-transform: uppercase;
+    font-family: $font-default;
+
+    & li.active a {
+      border-bottom: 2px solid $primary;
+      border-bottom-color: $primary;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    & li a {
+      color: $cobalt;
+    }
+  }
+}

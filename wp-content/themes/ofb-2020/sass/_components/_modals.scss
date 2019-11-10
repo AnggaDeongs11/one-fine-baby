@@ -1,0 +1,58 @@
+.vendor-modal {
+  .wcv-modal {
+    & > .modal-header {
+      padding: 60px 65px 20px;
+      border-bottom: none;
+
+      > .modal-close {
+        float: none;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
+    }
+
+    & > .modal-body {
+      padding: 60px 65px 20px;
+    }
+  }
+
+  &__header-date {
+    font-size: 16px;
+    line-height: 20px;
+    color: $cobalt;
+    opacity: 0.5;
+  }
+
+  &__header-title {
+    font-family: Canela;
+    font-size: 40px;
+    line-height: 40px;
+    color: $cobalt;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+
+  .form-group {
+    margin: 5px 0;
+  }
+
+  .modal-title {
+    font-family: Canela;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: $cobalt;
+  }
+
+  .modal-description {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $cobalt;
+    opacity: .5;
+  }
+
+}

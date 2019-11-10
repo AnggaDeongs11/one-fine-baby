@@ -1,0 +1,391 @@
+# Copyright (C) 2018 Contact Form 7 Storage
+# This file is distributed under the same license as the Contact Form 7 Storage package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact Form 7 Storage 2.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/git\n"
+"POT-Creation-Date: 2018-09-08 09:02:59+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: src/class-cf7-storage-form-settings-page.php:75
+msgid "Storage"
+msgstr ""
+
+#: src/class-cf7-storage-form-settings-page.php:147
+#: src/class-cf7-storage.php:363 src/class-cf7-storage.php:663
+msgid "Entries"
+msgstr ""
+
+#: src/class-cf7-storage-form-settings-page.php:151
+msgid "View form entries"
+msgstr ""
+
+#: src/class-cf7-storage-form-settings-page.php:157
+msgid "Export"
+msgstr ""
+
+#: src/class-cf7-storage-form-settings-page.php:160
+msgid "Select the form fields to exclude from the CSV export of this form:"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:89
+msgid "Entry"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:90 src/class-cf7-storage.php:1098
+msgid "Contact Form"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:91 src/class-cf7-storage.php:1114
+#: src/class-cf7-storage.php:1286
+msgid "Date"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:101
+msgid ""
+"All form submissions will appear here. Try submitting one of the forms on "
+"the site."
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:125
+msgid "All"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:162
+#: src/class-cf7-storage-list-table.php:218
+msgid "Restore"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:166
+#: src/class-cf7-storage-list-table.php:230
+msgid "Delete Permanently"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:168
+msgid "Move to Trash"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:211
+msgid "Preview"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:224
+#: src/class-cf7-storage-list-table.php:242
+#: src/class-cf7-storage-list-table.php:434
+msgid "Export as CSV"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:236
+msgid "View"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:248
+msgid "Trash"
+msgstr ""
+
+#. translators: %s: Contact form title.
+#: src/class-cf7-storage-list-table.php:274
+msgid "View this submission from %s"
+msgstr ""
+
+#. translators: %s: relative time diff, for example 1 minute, 2 days, etc.
+#: src/class-cf7-storage-list-table.php:298
+msgid "%s ago"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:360
+msgid "All Contact Forms"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:381
+msgid "Filter"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:391
+msgid "Empty Trash"
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:407
+msgid "Filter entries by form to export."
+msgstr ""
+
+#: src/class-cf7-storage-list-table.php:429
+msgid "Choose the CSV delimiter character"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:143
+#: src/class-cf7-storage-plugin-settings-page.php:144
+msgid "Storage Settings"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:161
+msgid "General Settings"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:162
+msgid "General"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:166
+msgid "Meta Data Storage"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:171
+#: src/class-cf7-storage.php:1029
+msgid "Form Settings"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:294
+msgid "Contact Form Storage Settings"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:302
+msgid "View Entries"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:324
+msgid "Support"
+msgstr ""
+
+#. translators: %s: URL to the support section on CodeCanyon.
+#: src/class-cf7-storage-plugin-settings-page.php:329
+msgid "Use the <a href=\"%s\">support section on CodeCanyon</a>."
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:337
+msgid "Plugin Updates"
+msgstr ""
+
+#. translators: %s: URL of the plugin.
+#: src/class-cf7-storage-plugin-settings-page.php:342
+msgid ""
+"Install and configure the <a href=\"%s\">Envato Market plugin</a> to receive "
+"free automatic updates."
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:349
+msgid "Subscribe to plugin update notifications:"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:352
+msgid "Subscribe"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:421
+msgid "Do not store user browser agent"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:424
+msgid "Do not store user IP address"
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:458
+msgid "Limit the meta data stored with each form submission."
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:464
+msgid ""
+"Note that deleting a form submission will also remove all associated file "
+"attachments and meta data."
+msgstr ""
+
+#: src/class-cf7-storage-plugin-settings-page.php:490
+msgid ""
+"Configure form settings to specify which fields to include in the CSV export."
+msgstr ""
+
+#: src/class-cf7-storage.php:334
+msgid ""
+"The Storage for Contact Form 7 plugin requires the Contact Form 7 plugin "
+"which currently isn't installed and activated."
+msgstr ""
+
+#: src/class-cf7-storage.php:336
+msgid "Search and Install"
+msgstr ""
+
+#: src/class-cf7-storage.php:662 src/class-cf7-storage.php:988
+msgid "Contact Form Entries"
+msgstr ""
+
+#: src/class-cf7-storage.php:803
+msgid "You are not allowed to move this item to Trash."
+msgstr ""
+
+#: src/class-cf7-storage.php:807
+msgid "Error moving an item to Trash."
+msgstr ""
+
+#: src/class-cf7-storage.php:824
+msgid "You are not allowed to restore this item from Trash."
+msgstr ""
+
+#: src/class-cf7-storage.php:828
+msgid "Error in restoring an item from Trash."
+msgstr ""
+
+#: src/class-cf7-storage.php:844
+msgid "You are not allowed to delete this entry."
+msgstr ""
+
+#: src/class-cf7-storage.php:860
+msgid "Error in deleting an entry."
+msgstr ""
+
+#: src/class-cf7-storage.php:950
+msgid "Missing entry ID."
+msgstr ""
+
+#: src/class-cf7-storage.php:997 src/class-cf7-storage.php:1273
+#: src/class-cf7-storage.php:1567
+msgid "Settings"
+msgstr ""
+
+#. translators: %s: search query string.
+#: src/class-cf7-storage.php:1007
+msgid "Search results for \"%s\""
+msgstr ""
+
+#. translators: %s: search query string.
+#: src/class-cf7-storage.php:1025
+msgid "Entries for \"%s\""
+msgstr ""
+
+#: src/class-cf7-storage.php:1044
+msgid "Search Entries"
+msgstr ""
+
+#: src/class-cf7-storage.php:1065
+msgid "This contact form submission doesn't exist!"
+msgstr ""
+
+#: src/class-cf7-storage.php:1091
+msgctxt "No attachments found"
+msgid "None"
+msgstr ""
+
+#: src/class-cf7-storage.php:1106 src/class-cf7-storage.php:1287
+msgid "From"
+msgstr ""
+
+#: src/class-cf7-storage.php:1110 src/class-cf7-storage.php:1288
+msgid "To"
+msgstr ""
+
+#: src/class-cf7-storage.php:1124 src/class-cf7-storage.php:1289
+msgid "Subject"
+msgstr ""
+
+#: src/class-cf7-storage.php:1128
+msgid "Message"
+msgstr ""
+
+#: src/class-cf7-storage.php:1135 src/class-cf7-storage.php:1291
+msgid "Attachments"
+msgstr ""
+
+#: src/class-cf7-storage.php:1177
+msgid "No field values were captured."
+msgstr ""
+
+#: src/class-cf7-storage.php:1185
+msgid "Post"
+msgstr ""
+
+#: src/class-cf7-storage.php:1193 src/class-cf7-storage.php:1205
+#: src/class-cf7-storage.php:1295
+msgid "Referer"
+msgstr ""
+
+#: src/class-cf7-storage.php:1210
+msgid "Visit"
+msgstr ""
+
+#: src/class-cf7-storage.php:1216
+msgid "User agent"
+msgstr ""
+
+#: src/class-cf7-storage.php:1233 src/class-cf7-storage.php:1297
+msgid "IP Address"
+msgstr ""
+
+#: src/class-cf7-storage.php:1267
+msgid "Form Submission"
+msgstr ""
+
+#: src/class-cf7-storage.php:1269
+msgid "Field Values"
+msgstr ""
+
+#: src/class-cf7-storage.php:1271
+msgid "Submission Details"
+msgstr ""
+
+#: src/class-cf7-storage.php:1290
+msgid "Body"
+msgstr ""
+
+#: src/class-cf7-storage.php:1292
+msgid "Form Name"
+msgstr ""
+
+#: src/class-cf7-storage.php:1293
+msgid "Entry ID"
+msgstr ""
+
+#: src/class-cf7-storage.php:1294
+msgid "Entry URL"
+msgstr ""
+
+#: src/class-cf7-storage.php:1296
+msgid "User-agent"
+msgstr ""
+
+#: src/class-cf7-storage.php:1481
+msgid "Comma delimited"
+msgstr ""
+
+#: src/class-cf7-storage.php:1482
+msgid "Semicolon delimited"
+msgstr ""
+
+#: src/class-cf7-storage.php:1483
+msgid "Tab delimited"
+msgstr ""
+
+#: src/class-cf7-storage.php:1543
+msgid ""
+"Storage for Contact Form 7 requires the latest version of Contact Form 7 "
+"plugin."
+msgstr ""
+
+#: src/class-cf7-storage.php:1558
+msgid "Form Entries"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Contact Form 7 Storage"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://preseto.com/plugins/contact-form-7-storage"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Store all Contact Form 7 submissions (including attachments) in your "
+"WordPress dashboard."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Kaspars Dambis"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://kaspars.net"
+msgstr ""

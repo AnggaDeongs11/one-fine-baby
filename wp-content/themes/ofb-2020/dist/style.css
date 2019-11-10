@@ -1,0 +1,565 @@
+/*
+Theme Name: One Fine Baby 2020
+Author: Station Five
+Author URI: https://www.stationfive.com/
+Description: WordPress Theme for One Fine Baby 2020
+Version: 1.0
+License: GNU General Public License
+*/
+/* line 5, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* mixins.scss */
+/*_variables.scss*/
+/*_typography.scss*/
+/** utilities **/
+/* line 3, ../sass/_partials/_utilities.scss */
+.mt-60 {
+  margin-top: 60px;
+}
+
+/* line 4, ../sass/_partials/_utilities.scss */
+.font-default {
+  font-family: Canela;
+  font-size: 25px !important;
+  line-height: 30px;
+}
+
+/** vendor header **/
+/* line 3, ../sass/_components/_vendor-header.scss */
+.vendor-header {
+  margin: 17px 30px 18px;
+}
+/* line 6, ../sass/_components/_vendor-header.scss */
+.vendor-header__logo {
+  padding-right: 23px;
+  border-right: 1px solid #000;
+}
+/* line 11, ../sass/_components/_vendor-header.scss */
+.vendor-header__name {
+  padding-left: 20px;
+  align-self: center;
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* line 21, ../sass/_components/_vendor-header.scss */
+.vendor-header__logout {
+  right: 30px;
+  bottom: 20px;
+}
+/* line 25, ../sass/_components/_vendor-header.scss */
+.vendor-header__logout a {
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  color: #D3D3D3;
+  font-size: 14px;
+  text-decoration: none;
+}
+/* line 32, ../sass/_components/_vendor-header.scss */
+.vendor-header__logout a:hover {
+  color: #030753;
+  text-decoration: none;
+}
+
+/** dashboard sidebar **/
+/* line 4, ../sass/_components/_dashboard-sidebar.scss */
+.vendor-sidebar .profile-image {
+  height: 140px;
+}
+/* line 8, ../sass/_components/_dashboard-sidebar.scss */
+.vendor-sidebar .vendor-nav {
+  padding-top: 40px;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #030753;
+}
+/* line 17, ../sass/_components/_dashboard-sidebar.scss */
+.vendor-sidebar .vendor-nav__list {
+  display: flex;
+  padding: 10px 0;
+}
+/* line 21, ../sass/_components/_dashboard-sidebar.scss */
+.vendor-sidebar .vendor-nav__list img {
+  margin-right: 19px;
+}
+/* line 25, ../sass/_components/_dashboard-sidebar.scss */
+.vendor-sidebar .vendor-nav__list.active span {
+  font-family: "Sailec-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+/* line 30, ../sass/_components/_dashboard-sidebar.scss */
+.vendor-sidebar .vendor-nav__link {
+  display: flex;
+  width: 100%;
+}
+/* line 34, ../sass/_components/_dashboard-sidebar.scss */
+.vendor-sidebar .vendor-nav__link span {
+  color: #030753;
+  font-family: "Sailec-Medium", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+/** dashboard content **/
+/* line 3, ../sass/_components/_dashboard-content.scss */
+.vendor-content {
+  padding: 30px 0 30px 30px;
+}
+/* line 6, ../sass/_components/_dashboard-content.scss */
+.vendor-content__page-title {
+  margin-top: 30px;
+}
+/* line 9, ../sass/_components/_dashboard-content.scss */
+.vendor-content__page-title h2 {
+  font-family: Canela;
+  font-size: 40px;
+  line-height: 40px;
+}
+/* line 16, ../sass/_components/_dashboard-content.scss */
+.vendor-content__page-subtitle {
+  margin-top: 10px;
+}
+/* line 19, ../sass/_components/_dashboard-content.scss */
+.vendor-content__page-subtitle h4 {
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #030753;
+  opacity: 0.5;
+}
+/* line 28, ../sass/_components/_dashboard-content.scss */
+.vendor-content .nav-tabs {
+  border-bottom: none;
+}
+/* line 31, ../sass/_components/_dashboard-content.scss */
+.vendor-content .nav-tabs .nav-link {
+  border: none;
+  text-transform: uppercase;
+  height: 43px;
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #030753;
+}
+/* line 39, ../sass/_components/_dashboard-content.scss */
+.vendor-content .nav-tabs .nav-link.active {
+  border-bottom: 2px solid #F79F90;
+  font-family: "Sailec-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+/* line 46, ../sass/_components/_dashboard-content.scss */
+.vendor-content .section-header {
+  font-size: 25px;
+  color: #030753;
+  font-family: Canela;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2F2E7E;
+  line-height: 30px;
+}
+/* line 54, ../sass/_components/_dashboard-content.scss */
+.vendor-content .section-header__actions {
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #D3D3D3;
+  font-size: 16px;
+}
+/* line 59, ../sass/_components/_dashboard-content.scss */
+.vendor-content .section-header__actions span {
+  margin-right: 63px;
+}
+/* line 63, ../sass/_components/_dashboard-content.scss */
+.vendor-content .section-header__actions-select {
+  border: none;
+  background: #fff;
+}
+/* line 70, ../sass/_components/_dashboard-content.scss */
+.vendor-content .light-border-1 {
+  background-color: #F5F5F5;
+  height: 1px;
+}
+/* line 75, ../sass/_components/_dashboard-content.scss */
+.vendor-content .blue-border-1 {
+  background-color: #2F2E7E;
+  height: 1px;
+}
+/* line 81, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcvendors-table-order th {
+  border-bottom: none;
+  font-family: "Sailec-Medium", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  height: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 91, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcvendors-table-order td {
+  height: 50px;
+  border-bottom: none;
+}
+/* line 97, ../sass/_components/_dashboard-content.scss */
+.vendor-content .table-label,
+.vendor-content .table-value {
+  font-size: 18px;
+  line-height: 25px;
+  color: #030753;
+  opacity: 0.5;
+  border-bottom: none;
+  height: 60px;
+}
+/* line 107, ../sass/_components/_dashboard-content.scss */
+.vendor-content .table-value {
+  opacity: 1;
+  text-align: right;
+}
+/* line 112, ../sass/_components/_dashboard-content.scss */
+.vendor-content .table-total {
+  font-size: 20px;
+  line-height: 25px;
+  padding-left: 0;
+}
+/* line 118, ../sass/_components/_dashboard-content.scss */
+.vendor-content .table-total-value {
+  font-size: 50px;
+  line-height: 50px;
+  text-align: right;
+}
+/* line 125, ../sass/_components/_dashboard-content.scss */
+.vendor-content .recent-orders thead th,
+.vendor-content .recent-orders tbody td {
+  border: none;
+  padding: 10px 0;
+  line-height: 20px;
+}
+/* line 133, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcv-gallery-image img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 138, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcv-tabs.top > .tabs-nav {
+  border-bottom: none;
+  text-transform: uppercase;
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+/* line 143, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcv-tabs.top > .tabs-nav li.active a {
+  border-bottom: 2px solid #F79F90;
+  border-bottom-color: #F79F90;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+/* line 151, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcv-tabs.top > .tabs-nav li a {
+  color: #030753;
+}
+
+/** buttons **/
+/* line 2, ../sass/_components/_buttons.scss */
+.btn {
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 7, ../sass/_components/_buttons.scss */
+.form-actions .btn {
+  height: 40px;
+}
+/* line 11, ../sass/_components/_buttons.scss */
+.btn.btn--primary {
+  background: #F79F90;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+/* line 19, ../sass/_components/_buttons.scss */
+.btn.btn--secondary {
+  background: #F5F5F5;
+  border-radius: 50px;
+  color: #030753;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+/* line 26, ../sass/_components/_buttons.scss */
+.btn.btn--secondary:hover {
+  background-color: #030753;
+  text-decoration: none;
+}
+/* line 32, ../sass/_components/_buttons.scss */
+.btn.btn--link {
+  color: #030753;
+  letter-spacing: 2px;
+  font-size: 12px;
+  line-height: 30px;
+}
+/* line 38, ../sass/_components/_buttons.scss */
+.btn.btn--link:hover {
+  text-decoration: none;
+  background-color: #030753;
+  color: #fff;
+}
+/* line 45, ../sass/_components/_buttons.scss */
+.btn.btn-bordered {
+  border-radius: 50px;
+  border: 1px solid #030753;
+}
+/* line 50, ../sass/_components/_buttons.scss */
+.btn span {
+  height: 15px;
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+/* line 57, ../sass/_components/_buttons.scss */
+.vendor-content .btn, .vendor-sidebar .btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+/* line 66, ../sass/_components/_buttons.scss */
+.vendor-modal .btn {
+  color: #030753;
+}
+/* line 69, ../sass/_components/_buttons.scss */
+.vendor-modal .btn:hover {
+  text-decoration: none;
+}
+/* line 73, ../sass/_components/_buttons.scss */
+.vendor-modal .btn.btn--primary {
+  color: #fff;
+}
+/* line 78, ../sass/_components/_buttons.scss */
+.btn.btn-long {
+  width: 150px;
+}
+/* line 82, ../sass/_components/_buttons.scss */
+.btn.btn-longer {
+  width: 175px;
+}
+/* line 86, ../sass/_components/_buttons.scss */
+.btn.btn-longest {
+  width: 200px;
+}
+/* line 90, ../sass/_components/_buttons.scss */
+.btn.btn-thick {
+  height: 50px;
+}
+
+/** form components **/
+/* line 4, ../sass/_components/_form.scss */
+.vendor-content .form-group, .vendor-content .control-group {
+  margin-top: 20px;
+}
+/* line 7, ../sass/_components/_form.scss */
+.vendor-content .form-group label, .vendor-content .control-group label {
+  color: #030753;
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* line 17, ../sass/_components/_form.scss */
+.vendor-content .control-group input[type="checkbox"] {
+  margin-top: 4px;
+}
+/* line 21, ../sass/_components/_form.scss */
+.vendor-content input[type=text],
+.vendor-content textarea {
+  background: #FFF;
+  border: 0.5px solid #D3D3D3;
+  border-radius: 2.5px;
+  margin-bottom: 10px;
+}
+/* line 29, ../sass/_components/_form.scss */
+.vendor-content .form-actions {
+  position: absolute;
+  top: -130px;
+  right: 15px;
+}
+/* line 35, ../sass/_components/_form.scss */
+.vendor-content .wcv-form select {
+  margin-bottom: 10px;
+  line-height: 1;
+}
+/* line 40, ../sass/_components/_form.scss */
+.vendor-content .wcv-form .control-group {
+  margin-bottom: 0;
+  line-height: 1;
+}
+/* line 45, ../sass/_components/_form.scss */
+.vendor-content label[for="_wcv_facebook_url"],
+.vendor-content label[for="_wcv_owner_title"],
+.vendor-content label[for="first_name"],
+.vendor-content label[for="last_name"],
+.vendor-content label[for="business_reg_num"],
+.vendor-content label[for="business_abn"],
+.vendor-content label[for="business_tin"],
+.vendor-content label[for="_wcv_store_phone"] {
+  display: none;
+}
+
+/** products **/
+/* line 2, ../sass/_components/_products.scss */
+.product-header {
+  margin-top: 30px;
+}
+/* line 5, ../sass/_components/_products.scss */
+.product-header__title {
+  font-family: 'Canela';
+  font-size: 25px;
+  line-height: 30px;
+  color: #030753;
+}
+
+/* line 14, ../sass/_components/_products.scss */
+.product-card.card {
+  border: none;
+  margin-bottom: 40px;
+}
+/* line 19, ../sass/_components/_products.scss */
+.product-card__title, .product-card__price {
+  font-size: 14px;
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  padding-top: 5px;
+}
+/* line 27, ../sass/_components/_products.scss */
+.product-card__actions {
+  padding-top: 15px;
+}
+/* line 30, ../sass/_components/_products.scss */
+.product-card__actions .btn {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+/* line 36, ../sass/_components/_products.scss */
+.product-card__actions .btn:hover {
+  text-decoration: none;
+  color: #fff;
+}
+/* line 44, ../sass/_components/_products.scss */
+.product-card__actions-delete a, .product-card__actions-view a {
+  color: #D3D3D3;
+}
+
+/* line 3, ../sass/_components/_modals.scss */
+.vendor-modal .wcv-modal > .modal-header {
+  padding: 60px 65px 20px;
+  border-bottom: none;
+}
+/* line 7, ../sass/_components/_modals.scss */
+.vendor-modal .wcv-modal > .modal-header > .modal-close {
+  float: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+/* line 15, ../sass/_components/_modals.scss */
+.vendor-modal .wcv-modal > .modal-body {
+  padding: 60px 65px 20px;
+}
+/* line 20, ../sass/_components/_modals.scss */
+.vendor-modal__header-date {
+  font-size: 16px;
+  line-height: 20px;
+  color: #030753;
+  opacity: 0.5;
+}
+/* line 27, ../sass/_components/_modals.scss */
+.vendor-modal__header-title {
+  font-family: Canela;
+  font-size: 40px;
+  line-height: 40px;
+  color: #030753;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+/* line 36, ../sass/_components/_modals.scss */
+.vendor-modal .form-group {
+  margin: 5px 0;
+}
+/* line 40, ../sass/_components/_modals.scss */
+.vendor-modal .modal-title {
+  font-family: Canela;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  color: #030753;
+}
+/* line 48, ../sass/_components/_modals.scss */
+.vendor-modal .modal-description {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #030753;
+  opacity: .5;
+}

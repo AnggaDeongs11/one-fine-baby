@@ -1,0 +1,369 @@
+/*add-giftregistry.php , my-giftregistry.php , giftregistry-share.php , overview-statistics.php*/
+.nav{
+    display: block;
+}
+.navbar-fixed-bottom .dropdown .caret {
+    content: "";
+    border-top: 0;
+    border-bottom: 4px solid;
+}
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 2px;
+}
+@media (min-width: 768px) {
+    .navbar-right .dropdown-menu {
+        right: 0;
+        left: auto;
+    }
+    .navbar-right .dropdown-menu-left {
+        right: auto;
+        left: 0;
+    }
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+.nav > li.disabled > a {
+    color: #777;
+}
+.nav > li.disabled > a:hover,
+.nav > li.disabled > a:focus {
+    color: #777;
+    text-decoration: none;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+    background-color: #eee;
+    border-color: #337ab7;
+}
+.nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+.nav > li > a > img {
+    max-width: none;
+}
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+.nav-tabs > li > a:hover {
+    border-color: #eee #eee #ddd;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.nav-tabs.nav-justified > li {
+    float: none;
+}
+.nav-tabs.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .nav-tabs.nav-justified > .active > a,
+    .nav-tabs.nav-justified > .active > a:hover,
+    .nav-tabs.nav-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+.nav-tabs-justified {
+    border-bottom: 0;
+}
+.nav-tabs-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.nav-tabs-justified > .active > a,
+.nav-tabs-justified > .active > a:hover,
+.nav-tabs-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .nav-tabs-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .nav-tabs-justified > .active > a,
+    .nav-tabs-justified > .active > a:hover,
+    .nav-tabs-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+.tab-content > .tab-pane {
+    display: none;
+}
+.tab-content > .active {
+    display: block;
+}
+.nav-tabs .dropdown-menu {
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 0px ;
+}
+thead {
+    display: table-header-group;
+}
+.table {
+    border-collapse: collapse !important;
+}
+.table td,
+.table th {
+    background-color: #fff !important;
+}
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #ddd !important;
+}
+table {
+    background-color: transparent;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    /*margin-bottom: 20px;*/
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    padding: 15px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+}
+.table > thead > tr > th {
+    vertical-align: middle;
+    border-bottom: 2px solid #ddd;
+}
+.hentry .wp-post-image {
+    margin-bottom: 0em !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+input.items , input#select_all {
+    width: 15px !important;
+    height: 15px !important;
+    text-align: center;
+}
+img.icon_share {
+    margin: 5px;
+}
+th.product-remove , td.product-remove{
+    padding: auto !important;
+    text-align: center;
+}
+th.product-delete , td.product-delete{
+    padding: 0px !important;
+    text-align: center;
+    width: 24px;
+}
+th.product-thumbnail{
+    text-align: center;
+}
+td.product-delete img{
+    width: 20px;
+    height: 20px;
+}
+/* Tooltip container */
+button.trash{
+    background-repeat: no-repeat;
+    padding: 10px;
+    background-color: #ffffff;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.trash .tooltiptext {
+    visibility: hidden;
+    width: 70px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -35px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.trash .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.trash:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*overview-statistics.php*/
+.overview-statistics{
+    width: 50%;
+    margin-left: 25%;
+}
+.overview-statistics tr td{
+    text-align: center;
+}
+.overview-statistics tr td{
+    text-align: center;
+    border-right: 1px solid #000000;
+}
+.overview-statistics tr th {
+    text-align: center;
+}
+@media only screen and (max-width: 830px) {
+    table.table th, td {
+        padding: 5px 0em !important;
+        font-size: 0.8em !important;
+    }
+    table.table th.product-thumbnail, td.product-thumbnail{
+    }
+    table.table th.product-quantity, td.product-quantity{
+        width: 60px !important;
+    }
+    table.table th.received-quantity, td.received-quantity{
+        width: 60px !important;
+    }
+}
+.form-field textarea {
+    margin-left: 0px !important;
+}
+.shop_table .single_add_to_cart_button{
+    padding: 10px !important;
+    cursor: pointer;
+}
+.no-empty {
+    width: 30% !important;
+    margin: 5px;
+    text-align: center;
+}
+#tab3 ul{
+    margin: 0px !important;
+}
+
+#tab3 img{
+    cursor: pointer;
+}
+.form-field #dropdownlist,#textfield {
+    float: right;
+    width: 75%;
+    margin-top: 10px;
+}
+/* style filter form in GR page*/
+#level_filter {
+    margin: 15px;
+}
+/*go to top button in GR page*/
+#go_to_top{
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    color: #1b1b1b !important;
+    background-color: #f0ad4e !important;
+}
+
+/*style filter*/
+.filter-giftregistry{
+    margin: 10px;
+}
+.filter-giftregistry #filter-giftregistry,#level_filter {
+    height: 30px;
+}
+
+/*form share mail*/
+textarea#message_share {
+    min-height: 150px;
+}

@@ -1,0 +1,24 @@
+https://wordpress.org/support/topic/wpdb-custom-table-pagination
+http://wordpress.mcdspot.com/2010/11/25/pagination-using-paginate_links/
+http://tareq.wedevs.com/2011/07/simple-pagination-system-in-your-wordpress-plugins/
+array(8) {
+  ["product"]=&gt;
+  string(1) "x"
+  ["attribute_type"]=&gt;
+  string(5) "adult"
+  ["attribute_pa_loaive"]=&gt;
+  string(7) "regular"
+  ["quantity"]=&gt;
+  string(1) "1"
+  ["add-to-giftregistry"]=&gt;
+  string(3) "149"
+  ["product_id"]=&gt;
+  string(3) "149"
+  ["variation_id"]=&gt;
+  string(3) "150"
+  ["add-registry"]=&gt;
+  string(1) "1"
+}
+
+order item
+array(12) { ["name"]=> string(1) "a" ["type"]=> string(9) "line_item" ["item_meta"]=> array(9) { ["_qty"]=> array(1) { [0]=> string(1) "1" } ["_tax_class"]=> array(1) { [0]=> string(0) "" } ["_product_id"]=> array(1) { [0]=> string(2) "13" } ["_variation_id"]=> array(1) { [0]=> string(1) "0" } ["_line_subtotal"]=> array(1) { [0]=> string(2) "10" } ["_line_total"]=> array(1) { [0]=> string(2) "10" } ["_line_subtotal_tax"]=> array(1) { [0]=> string(1) "0" } ["_line_tax"]=> array(1) { [0]=> string(1) "0" } ["_line_tax_data"]=> array(1) { [0]=> string(45) "a:2:{s:5:"total";a:0:{}s:8:"subtotal";a:0:{}}" } } ["qty"]=> string(1) "1" ["tax_class"]=> string(0) "" ["product_id"]=> string(2) "13" ["variation_id"]=> string(1) "0" ["line_subtotal"]=> string(2) "10" ["line_total"]=> string(2) "10" ["line_subtotal_tax"]=> string(1) "0" ["line_tax"]=> string(1) "0" ["line_tax_data"]=> string(45) "a:2:{s:5:"total";a:0:{}s:8:"subtotal";a:0:{}}" } 

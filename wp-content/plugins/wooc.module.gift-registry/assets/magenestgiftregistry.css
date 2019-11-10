@@ -1,0 +1,68 @@
+.admin-gift-table .form-field input {
+	float:right;
+	width:80%;
+}
+.admin-gift-table .form-field textarea {
+	float:right;
+	width:80%;
+}
+.required {color: #c0392b }
+#admin-gift-registry
+ {
+border: 1px solid rgba(0,0,0,.1);
+margin: 0 -1px 24px 0;
+text-align: left;
+width: 100%;
+border-collapse: separate;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+background:#fff;
+text-shadow: none;
+}
+
+
+
+
+
+/* Account css styles */
+#accordion-giftregisty h3{
+	margin-bottom: 0px;
+}
+#accordion-giftregisty-content .giftregistry-form .form-field label{
+	width: 25%;
+	float: left;
+	display: inline-block;
+	margin-top: 10px;
+}
+#accordion-giftregisty-content .giftregistry-form .form-field{
+	overflow: hidden;
+}
+#accordion-giftregisty-content .giftregistry-form .form-field input{
+	width: 75%;
+	float: left;
+	display: inline-block;
+	margin-top: 10px;
+}
+#accordion-giftregisty-content .giftregistry-form .form-field textarea{
+	width: 75%;
+	float: left;
+	display: inline-block;
+	margin-top: 10px;
+}
+.giftregistry-form h3{
+	padding: 0px 0 5px 0;
+}
+.giftregistry-form input:last-child{
+	float: none;
+	display: block;
+	width: 50%;
+	margin: 10px auto 0px auto;
+}
+
+.address .title h3{
+	margin: 0 0 20px 0;
+}
+.address .title a{
+	margin-right: 20px;
+	font-style: italic;
+}

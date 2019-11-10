@@ -1,0 +1,496 @@
+<?php
+/** @var \Magenest\AdvancedProductOption\Block\Product\View\Option $block */
+/*$ranges = $block->getSpecialPriceDays();*/
+//$ranges =[];
+//$specialPrice = $block->getSpecialPrice();
+//$delta = floatval( $block->getDeltaPrice());
+
+$qtyMapping = $block->getQtyMapping();
+?>
+<div class="fieldset" id="advancedoption" data-bind="scope:'advancedoption'">
+
+    <!-- ko template:getTemplate() --> <!-- /ko -->
+
+    <div class="advanced-product-option">
+        <!-- ko foreach: ao -->
+        <!-- ko if: isShown -->
+        <div class="field" data-bind="aop:{}">
+            <!-- ko if: type() ==='swatch' -->
+            <input class="not-visible" data-bind="attr: { name: 'aop[' + id() + ']'},value:selectedRowsFlat()"/>
+
+            <label class="label"> <span data-bind="text:title()"> </span></label>
+            <div class="control">
+                <!--ko if:showSpecialPrice()-->
+                <span class="price-notice">+</span>
+                <span class="special-price" data-bind="text:activeSpecialPrice"> </span>
+                <!--/ko-->
+
+
+                <!--ko if:showSPrice() -->
+                <span class="price-notice">+</span>
+                <span class="normal-price" data-bind="text:activePrice"> </span>
+
+                <!--/ko-->
+
+                <!--show the product swatch-->
+                <div class="product-color-swatches">
+
+                    <div class="swatch-first-row">
+                        <!-- ko foreach:rows-->
+
+
+                        <span class="color_swatch_box">
+                         <span class="color_text" data-bind="text: title">white</span>
+                         <span class="color_img">
+                          <img data-bind="attr:{src: image,title:title},event:{click:chooseSwatch}">
+                          </span>
+
+                            <!--ko if:isSelected() -->
+
+                      <span data-bind="event:{ click:removeSwatch}" class="remove-icon">
+                          <span>X</span>
+                      </span>
+
+
+                            <!--/ko-->
+                      </span>
+
+                        <!--/ko-->
+                    </div>
+
+                    <!--todo:add the js-->
+                    <div class="swatch-second-row">
+                        <!-- ko foreach:rows-->
+                        <!--ko if:isSelected() -->
+                        <span class="swatch-illusion">
+                        <img data-bind="attr:{src:swatch}"/>
+                        </span>
+                        <!--/ko-->
+                        <!--/ko-->
+                    </div>
+
+                    <!--display the illustration image-->
+
+                </div>
+
+                <!-- ko if:activeImage() -->
+                <div class="option-illustration tooltip">
+                    <img class="apo-img" data-bind="attr: {src: activeImage() }"/>
+
+                </div>
+
+                <!--/ko-->
+            </div>
+            <!--/ko-->
+
+            <!--End of Swatch-->
+
+            <!-- ko if: type() ==='text' -->
+            <label class="label">
+                <span data-bind="text:title()"> </span>
+                <!--ko if:rows()[0].special_price()   -->
+                <span class="price-notice">+</span>
+                <span class="special-price" data-bind="text:rows()[0].formatted_special_price()"> </span>
+                <span class="normal-price" data-bind="text:rows()[0].formatted_price()"> </span>
+                <!--/ko-->
+
+                <!--ko ifnot:rows()[0].special_price() -->
+                <!-- ko if:rows()[0].price()  -->
+                <span class="price-notice">+</span>
+                <span class="option-price" data-bind="text:rows()[0].formatted_price()"> </span>
+
+                <!--/ko-->
+                <!--/ko-->
+            </label>
+
+            <div class="control">
+                <input type="text" class="input-text" data-bind="attr: { name: 'aop[' + id() + ']'}"/>
+
+                <!-- ko if:rows()[0].description() -->
+
+                <span class="note" data-bind="text:rows()[0].description()"> </span>
+                <!--/ko-->
+
+                <!-- ko if:rows()[0].image() -->
+                <div class="option-illustration showTip L1">
+                    <img class="apo-img" data-bind="attr: {src: rows()[0].image() }"/>
+
+                </div>
+                <!--/ko-->
+            </div>
+
+            <!--/ko-->
+            <!-- ko if: type() ==='select' -->
+            <label class="label"> <span data-bind="text:title()"> </span></label>
+            <div class="control">
+                <!--ko if:showSpecialPrice()-->
+                <span class="price-notice">+</span>
+                <span class="special-price" data-bind="text:activeSpecialPrice"> </span>
+                <!--/ko-->
+
+
+                <!--ko if:showSPrice() -->
+                <span class="price-notice">+</span>
+                <span class="normal-price" data-bind="text:activePrice"> </span>
+
+                <!--/ko-->
+
+
+                <select data-bind="options:rows(),
+                optionsText:  function(item) {
+                                                      return item.title() + ''
+                                                      },
+                                                      optionsValue : function (item) {
+                                                      return item.id()
+                                                      },
+                                                      optionsCaption: 'Choose...',
+                event:{ change:chooseOption},
+                attr: { name: 'aop[' + id() + ']','data-option':  $data.id()}">
+
+                </select>
+                <!-- ko if:activeImage() -->
+                <div class="option-illustration tooltip">
+                    <img class="apo-img" data-bind="attr: {src: activeImage() }"/>
+
+                </div>
+
+                <!--/ko-->
+            </div>
+            <!--/ko-->
+            <!-- ko if: type() ==='textarea' -->
+            <label> <span data-bind="text:title()"> </span></label>
+            <!--ko if:rows()[0].special_price() -->
+            <span class="price-notice">+</span>
+            <span class="special-price" data-bind="text:rows()[0].formatted_special_price()"> </span>
+            <span class="normal-price" data-bind="text:rows()[0].formatted_price()"> </span>
+            <!--/ko-->
+
+            <!--ko ifnot:rows()[0].special_price() -->
+
+            <!-- ko if:rows()[0].price()  -->
+
+            <span class="price-notice">+</span>
+            <span class="option-price" data-bind="text:rows()[0].formatted_price()"> </span>
+
+            <!--/ko-->
+            <!--/ko-->
+
+            <div class="control">
+                <textarea rows="5" cols="25" data-bind="attr: { name: 'aop[' + id() + ']'}"> </textarea>
+                <!-- ko if:rows()[0].description() -->
+
+                <span class="note" data-bind="text:rows()[0].description()"> </span>
+                <!--/ko-->
+                <!-- ko if:rows()[0].image() -->
+                <div class="option-illustration showTip L1">
+                    <img class="apo-img" data-bind="attr: {src: rows()[0].image() }"/>
+
+                </div>
+                <!--/ko-->
+            </div>
+
+            <!--/ko-->
+            <!-- ko if: type() ==='checkbox' -->
+            <label> <span data-bind="text:title()"> </span></label>
+            <div class="control">
+                <div class="options-list nested options-check choose-numbers">
+                    <!-- ko foreach:rows-->
+                    <div class="field choice radio checkbox">
+
+                        <label> <input type="checkbox"
+                                       data-bind="attr: { name: 'aop[' + option_id() + ']',value:id()}"/> <span
+                                    data-bind="text:title()"> </span></label>
+
+                        <!--ko if:special_price()   -->
+                        <!-- <span class="price-notice">+</span>
+                        <span class="special-price" data-bind="text:formatted_special_price()"> </span>
+                        <span class="normal-price" data-bind="text:formatted_price()"> </span> -->
+                        <!--/ko-->
+
+                        <!--ko ifnot:special_price() -->
+                        <!-- ko if:price()  -->
+                        <!-- <span class="price-notice">+</span>
+                        <span class="option-price" data-bind="text:formatted_price()"> </span> -->
+
+                        <!--/ko-->
+                        <!--/ko-->
+
+                    </div>
+                    <!--/ko-->
+                </div>
+
+            </div>
+            <!--/ko-->
+
+            <!-- ko if: type() ==='file' -->
+            <label> <span data-bind="text:title"> </span></label>
+            <div class="control">
+
+                <input type="file" data-bind="attr: { name: 'aop[' + id() + ']'}"/>
+            </div>
+            <!--/ko-->
+
+            <!--Start of Radio-->
+            <!-- ko if: type() ==='radio' -->
+            <label> <span data-bind="text:title"> </span></label>
+
+            <div class="control">
+                <div class="options-list nested options-check choose-numbers">
+                    <!-- ko foreach:rows-->
+                    <div class="field radio">
+
+                        <label class="label"><input type="radio" class="required flower-input"
+                                                    data-bind="attr: { name: 'aop[' + option_id() + ']',value:id() },event:{click:chooseOptionForRadioAndCheckBox}"/>
+                            <span data-bind="text:title"> </span></label>
+
+                        <!--ko if:showSpecialPrice() -->
+                        <!-- <span class="price-notice">+</span>
+                        <span class="special-price" data-bind="text:formatted_special_price()"> </span> -->
+
+                        <!--/ko-->
+
+                        <!--ko if: showSPrice()  -->
+
+                        <!--  <span class="price-notice">+</span>
+                         <span class="normal-price" data-bind="text:formatted_price()"> </span> -->
+
+                        <!--/ko-->
+                        <!--ko if: isSelected()  -->
+                        <!-- <span class="tooltip-flower" data-bind="text:tooltip"></span>
+                        <div class="option-illustration ">
+                            <img class="apo-img" data-bind="attr: {src: image() }"/>
+                        </div> -->
+                        <!--/ko-->
+                    </div>
+                    <!--/ko-->
+                    <!-- <input type="number" data-bind="attr: {value: numberOfSelectedRows()}"/>-->
+                </div>
+            </div>
+
+            <!-- ko if: id() == 1 --> <span data-bind="text: youChooseColors"></span> <!--/ko-->
+
+            <!--/ko-->
+            <!--End of Radio-->
+        </div>
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+
+
+    <?php if ($qtyMapping) {
+        $count = 0; ?>
+        <div class="description-check">
+            <p><b><?php echo __('Subscribe and Save',GIFTREGISTRY_TEXT_DOMAIN); ?></b></p>
+
+            <?php foreach ($qtyMapping[0] as $item) { ?>
+                <label class="<?php if ($count >= 3)
+                    echo "hidden"; ?>">
+                    <input type="radio" name="qty_mapping_radio"
+                           data-qty-mapping="<?php echo $item['quantity'] ?>-<?php echo $item['value'] ?>"/>
+                    <span> Add <?php echo $item['quantity'] ?> items and save <?php echo $item['value'] ?>%</span>
+                </label>
+                <?php $count++;
+            } ?>
+
+            <?php if (count($qtyMapping[0]) > 3) { ?>
+                <span class="btn-show">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+            <?php } ?>
+        </div>
+    <?php } ?>
+</div>
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        'use strict';
+
+        setInterval(function () {
+            var firstElement = $('input.flower-input').first();
+            var isSimulated = firstElement.data('simulated');
+            if (isSimulated != 'simulated') {
+                firstElement.trigger('click');
+                firstElement.data('simulated', 'simulated');
+            }
+
+            //force customer choose a specific number of color
+            var addToCartElement = $('#product-addtocart-button');
+            var bindclicked = addToCartElement.data('bindclicked');
+            if (bindclicked != 'bindclicked') {
+                addToCartElement.click(function (event) {
+                    var colorMustBeSelected = parseInt($(this).data('colors'));
+                    //selectedcolors
+                    var selectedcolors = parseInt($(this).data('selectedcolors'));
+
+                    if (selectedcolors < colorMustBeSelected) {
+                        event.preventDefault();
+                        alert("You have to choose " + colorMustBeSelected);
+
+                    }
+
+                });
+                addToCartElement.data('bindclicked', 'bindclicked');
+            }
+
+            $(".description-check .btn-show").off('click');
+            $(".description-check .btn-show").on('click', function () {
+                $(this).toggleClass('active');
+                $(this).parent().toggleClass('active');
+                return false;
+            });
+
+            var lastRadioElementBtn = $('.description-check input[name="qty_mapping_radio"]').last();
+
+            var clickBindData = lastRadioElementBtn.data('clickbinded');
+            if (clickBindData != 'clickbinded') {
+                lastRadioElementBtn.data('clickbinded', 'clickbinded');
+
+                $('.description-check input[name="qty_mapping_radio"]').on('click', function () {
+                    var qtyMappingData = $(this).data('qty-mapping');
+                    var explode = qtyMappingData.split('-');
+                    var originalPrice = parseFloat($('.product-info-price').find('.price-wrapper').attr('data-price-amount'));
+
+                    var priceHtml = $('.product-info-price').find('span.price').html();
+                    var currentPrice = parseFloat(priceHtml.match(/[\d\.]+$/)[0]);
+
+                    var priceWrapper = $('.product-info-price').find('.price-wrapper');
+
+                    var appliedTierPrice = priceWrapper.attr('applied-tier-price');
+                    if (typeof appliedTierPrice !== typeof undefined && appliedTierPrice !== false) {
+                        currentPrice += parseFloat(appliedTierPrice);
+                    }
+
+                    var tierDiscountPercentage = parseFloat(explode[1]);
+
+                    var priceAfterTier = currentPrice - originalPrice - tierDiscountPercentage / 100 * currentPrice;
+                    priceWrapper.attr('applied-tier-price', tierDiscountPercentage / 100 * currentPrice);
+
+                    $('.price-box').trigger('updatePrice', {
+                        'prices': {
+                            'finalPrice': {'amount': priceAfterTier},
+                            'basePrice': {'amount': priceAfterTier}
+                        }
+                    });
+
+                    $('#qty').val(parseInt(explode[0]));
+                });
+            }
+        }, 300);
+
+    });
+</script>
+<script type="text/x-magento-init">
+        {
+            "#advancedoption": {
+                "Magento_Ui/js/core/app": <?php
+    // @escapeNotVerified
+    echo $block->getJsLayout(); ?>
+            }
+        }
+
+
+
+</script>
+
+<style>
+    .btn-show {
+        text-align: center;
+        background-color: #ccc;
+        width: 44px;
+        line-height: 44px;
+        border-radius: 100%;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .btn-show span {
+        width: 6px;
+        height: 6px;
+        background-color: #333;
+        border-radius: 100%;
+        display: inline-block;
+    }
+
+    .btn-show.active span {
+        display: none;
+    }
+
+    .btn-show.active:before {
+        content: '';
+        width: 0;
+        height: 0;
+        z-index: 2;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-bottom: 13px solid #888;
+        position: relative;
+        top: -18px;
+        left: 12px;
+    }
+
+    .btn-show.active:after {
+        content: '';
+        width: 0;
+        height: 0;
+        z-index: 3;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-bottom: 13px solid #ccc;
+        position: relative;
+        top: -15px;
+        left: -11px;
+    }
+
+    .description-check label.hidden {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    .description-check.active label.hidden {
+        display: inline-block !important;
+        visibility: visible !important;
+    }
+
+    .description-check label {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px 10px 0;
+        width: 100%;
+        max-width: 100px;
+        cursor: pointer;
+    }
+
+    .description-check input[type=radio] {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .description-check input[type=radio] + span {
+        display: block;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+        text-align: center;
+        color: #000;
+
+    }
+
+    .description-check input[type=radio] + span:hover {
+
+        border: 1px solid #333;
+
+    }
+
+    .description-check input[type=radio]:checked + span {
+
+        border: 1px solid #c67605;
+        color: #c67605;
+
+    }
+</style>

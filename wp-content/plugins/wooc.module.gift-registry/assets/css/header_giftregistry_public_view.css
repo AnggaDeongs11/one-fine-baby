@@ -1,0 +1,9 @@
+/* header_giftregistry_public_view.php */
+
+table.cart .product-thumbnail img {
+    margin: 0px !important;
+    width: 250px;
+}
+.header-view-search {
+    margin-top: 500px;
+}

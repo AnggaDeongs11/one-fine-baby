@@ -1,0 +1,166 @@
+.button-add-giftregistry-shop-page:hover , .button-remove-giftregistry-shop-page:hover{
+    background-color: #d5d5d5 !important;
+    color: #333333 !important;
+}
+.button-add-giftregistry-shop-page , .button-remove-giftregistry-shop-page{
+    background-color: #eeeeee !important;
+    color: #333333 !important;
+    position: relative;
+}
+.img_loading_add{
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    padding:0px ;
+    z-index: 1;
+}
+.set-giftregistry-detail-shop-page{
+    display: none;
+}
+.img_loading_remove{
+    position: absolute;
+    top: 10px;
+    left: 85px;
+    padding:0px ;
+    z-index: 1;
+}
+.button-remove-giftregistry-shop-page{
+    padding: 5px 12px;
+}
+.set-giftregistry-detail-shop-page {
+    width: 70%;
+    margin: 0px auto;
+}
+.wgr-add-product-shop-page {
+    width: 70%;
+    margin: 0px auto;
+}
+.wgr-remove-product-shop-page{
+    width: 48%;
+    float: left;
+}
+.wgr-priority-shop-page {
+    width: 48%;
+    float: right;
+}
+.button-add-giftregistry-shop-page{
+    width: 48%;
+    padding: 5px 12px;
+}
+.wgr-priority-shop-page span{
+    float: left;
+    margin: 1em 0px;
+}
+.wgr-priority-shop-page img{
+    margin: 0.6em 0px !important;
+    float: right;
+}
+.button_loading{
+    position:  relative;
+    width: auto;
+    margin: auto;
+    display: inline-block;
+}
+.add_loader{
+    display: block;
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+/* Tooltip text */
+.wgr-priority-shop-page .tooltiptext {
+    visibility: visible;
+    width: 70px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -35px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.wgr-priority .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.wgr-priority:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-width:1120px) {
+    .set-giftregistry-detail-shop-page{
+        width: 80%;
+    }
+    .button-add-giftregistry-shop-page{
+        width: 53%;
+    }
+}
+@media only screen and (max-width:980px) {
+    .set-giftregistry-detail-shop-page{
+        width: 90%;
+    }
+    .button-add-giftregistry-shop-page{
+        width: 63%;
+    }
+}
+@media only screen and (max-width:880px) {
+    .set-giftregistry-detail-shop-page{
+        width: 90%;
+    }
+    .button-add-giftregistry-shop-page{
+        padding: 5px 4px;
+    }
+    .button-remove-giftregistry-shop-page{
+        padding: 5px 4px;
+    }
+    .button-add-giftregistry-shop-page{
+        width: 69%;
+    }
+}
+@media only screen and (max-width:768px) {
+    .set-giftregistry-detail-shop-page{
+        width: 47%;
+    }
+    .button-add-giftregistry-shop-page{
+        width: 29%;
+    }
+    .button-remove-giftregistry-shop-page{
+        padding: 5px 12px;
+    }
+}
+@media only screen and (max-width:601px) {
+    .set-giftregistry-detail-shop-page{
+        width: 59%;
+    }
+    .button-add-giftregistry-shop-page{
+        width: 35%;
+    }
+}
+@media only screen and (max-width:500px) {
+    .button-add-giftregistry-shop-page{
+        width: 45%;
+    }
+}

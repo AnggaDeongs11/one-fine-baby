@@ -1,0 +1,56 @@
+/** form components **/
+
+.vendor-content {
+  .form-group, .control-group {
+    margin-top: 20px;
+
+    label {
+      color: $cobalt;
+      font-family: $font-default;
+      font-size: 13px;
+      line-height: 30px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+
+  .control-group input[type="checkbox"] {
+    margin-top: 4px;
+  }
+
+  input[type=text],
+  textarea {
+    background: $white;
+    border: 0.5px solid $light-grey;
+    border-radius: 2.5px;
+    margin-bottom: 10px;
+  }
+
+  .form-actions {
+    position: absolute;
+    top: -130px;
+    right: 15px;
+  }
+
+  .wcv-form select {
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+
+  .wcv-form .control-group {
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  label[for="_wcv_facebook_url"] ,
+  label[for="_wcv_owner_title"],
+  label[for="first_name"],
+  label[for="last_name"],
+  label[for="business_reg_num"],
+  label[for="business_abn"],
+  label[for="business_tin"],
+  label[for="_wcv_store_phone"]
+  {
+    display: none;
+  }
+}

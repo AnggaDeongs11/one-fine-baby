@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<HN_Ticket>
+			<version>1.0.0</version>
+		</HN_Ticket>
+	</modules>
+
+	<global>
+
+		<blocks>
+			<ticket>
+				<class>HN_Ticket_Block</class>
+			</ticket>
+			<catalog>
+				<rewrite>
+					<product_view_options_type_select>HN_Ticket_Block_Catalog_Product_View_Options_Type_Select</product_view_options_type_select>
+				</rewrite>
+			</catalog>
+			<adminhtml>
+			    <rewrite>
+			        <sales_items_column_default>HN_Ticket_Block_Adminhtml_Sales_Items_Column_Default</sales_items_column_default>
+			    </rewrite>
+			</adminhtml>
+		</blocks>
+		<helpers>
+			<ticket>
+				<class>HN_Ticket_Helper</class>
+			</ticket>
+			<catalog>
+			    <rewrite>
+			        <product_configuration>HN_Ticket_Helper_Product_Configuration</product_configuration>
+			    </rewrite>
+			</catalog>
+		</helpers>
+
+		<models>
+			<ticket>
+				<class>HN_Ticket_Model</class>
+				<resourceModel>ticket_mysql4</resourceModel>
+			</ticket>
+			<ticket_mysql4>
+				<class>HN_Ticket_Model_Mysql4</class>
+				<entities>
+					<event>
+						<table>hn_event_product</table>
+					</event>
+					<eventoption>
+						<table>hn_event_product_option</table>
+					</eventoption>
+					<orderticket>
+						<table>hn_order_ticket</table>
+					</orderticket>
+					<ticket>
+						<table>hn_event_ticket</table>
+					</ticket>
+				</entities>
+			</ticket_mysql4>
+		</models>
+
+		<resources>
+			<ticket_setup>
+				<setup>
+					<module>HN_Ticket</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</ticket_setup>
+			<ticket_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</ticket_write>
+			<ticket_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</ticket_read>
+		</resources>
+
+		<template>
+			<email>
+				<ticket_information_template>
+					<label>Ticket information</label>
+					<file>ticket_info.html</file>
+					<type>html</type>
+				</ticket_information_template>
+			</email>
+		</template>
+		<events>
+			<sales_order_item_save_commit_after>
+				<observers>
+					<ticket_observer>
+						<class>ticket/observer</class>
+						<method>gererateTicket</method>
+					</ticket_observer>
+				</observers>
+			</sales_order_item_save_commit_after>
+			<catalog_product_load_after>
+				<observers>
+					<ticket_observer>
+						<type>model</type>
+						<class>ticket/observer</class>
+						<method>catalogProductLoadAfter</method>
+					</ticket_observer>
+				</observers>
+			</catalog_product_load_after>
+			<checkout_cart_product_add_after>
+				<observers>
+					<ticket_observer>
+						<type>singleton</type>
+						<class>ticket/observer</class>
+						<method>checkoutCartProductAddAfter</method>
+					</ticket_observer>
+				</observers>
+			</checkout_cart_product_add_after>
+			<sales_convert_quote_item_to_order_item>
+				<observers>
+					<ticket_observer>
+						<type>model</type>
+						<class>ticket/observer</class>
+						<method>salesConvertQuoteItemToOrderItem</method>
+					</ticket_observer>
+				</observers>
+			</sales_convert_quote_item_to_order_item>
+			<!-- <catalog_product_get_final_price> -->
+			<!-- <observers> -->
+			<!-- <ticket_observer> -->
+			<!-- <class>ticket/observer</class> -->
+			<!-- <method>applyPrice</method> -->
+			<!-- </ticket_observer> -->
+			<!-- </observers> -->
+			<!-- </catalog_product_get_final_price> -->
+		</events>
+	</global>
+
+
+	<frontend>
+		<routers>
+			<ticket>
+				<use>standard</use>
+				<args>
+					<module>HN_Ticket</module>
+					<frontName>ticket</frontName>
+				</args>
+			</ticket>
+
+		</routers>
+		<layout>
+			<updates>
+				<ticket>
+					<file>hn_ticket.xml</file>
+				</ticket>
+			</updates>
+		</layout>
+	</frontend>
+
+	<admin>
+	 <routers>
+			<ticket>
+				<use>admin</use>
+				<args>
+					<module>HN_Ticket</module>
+					<frontName>ticket</frontName>
+				</args>
+			</ticket>
+
+		</routers>
+<!-- 		<routers> -->
+<!-- 			<adminhtml> -->
+<!-- 				<args> -->
+<!-- 					<modules> -->
+<!-- 						<ticket before="Mage_Adminhtml">HN_Ticket_Adminhtml</ticket> -->
+<!-- 					</modules> -->
+<!-- 				</args> -->
+<!-- 			</adminhtml> -->
+<!-- 		</routers> -->
+	</admin>
+	<adminhtml>
+		<menu>
+			<catalog translate="title" module="catalog">
+				<title>Catalog</title>
+				<sort_order>30</sort_order>
+				<children>
+					<ticket translate="title" module="catalog">
+						<title>Event Ticket</title>
+						<children>
+							<event translate="title" module="catalog">
+								<title>Manage Event Product</title>
+								<action>ticket/adminhtml_ticket/product/</action>
+							</event>
+							<ticket translate="title" module="catalog">
+								<title>Manage Ticket</title>
+								<action>ticket/adminhtml_ticket/grid</action>
+							</ticket>
+						</children>
+						<sort_order>200</sort_order>
+					</ticket>
+				</children>
+			</catalog>
+		</menu>
+		<layout>
+			<updates>
+				<ticket>
+					<file>hn_ticket.xml</file>
+				</ticket>
+			</updates>
+		</layout>
+		<events>
+
+			<catalog_product_prepare_save>
+				<observers>
+					<ticket_observer>
+						<class>ticket/observer</class>
+						<method>saveEventTicket</method>
+					</ticket_observer>
+				</observers>
+			</catalog_product_prepare_save>
+		</events>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<ticket translate="title" module="ticket">
+											<title>Event Ticket Settings</title>
+										</ticket>
+									</children>
+								</config>
+							</children>
+						</system>
+						<catalog>
+							<children>
+								<ticket translate="title" module="catalog">
+									<title>Event Ticket</title>
+									<children>
+										<event translate="title" module="catalog">
+											<title>Manage Event Product</title>
+											<action>ticket/adminhtml_ticket/product/</action>
+										</event>
+										<ticket translate="title" module="catalog">
+											<title>Manage Ticket</title>
+											<action>ticket/adminhtml_ticket/grid</action>
+										</ticket>
+									</children>
+									<sort_order>200</sort_order>
+								</ticket>
+							</children>
+						</catalog>
+					</children>
+
+
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	<default>
+		<ticket>
+			<general>
+				<num_pattern>[A4]NamHung[N2]</num_pattern>
+				<template_email_confirm></template_email_confirm>
+				<template_email_reminder></template_email_reminder>
+			</general>
+			<pdf_page_setting>
+				<pagewidth>279</pagewidth>
+				<pageheight>400</pageheight>
+				<template></template>
+			</pdf_page_setting>
+		</ticket>
+
+	</default>
+	<crontab>
+		<jobs>
+			<notification_ticket_occur>
+				<schedule>
+					<cron_expr>*/5 * * * *</cron_expr>
+				</schedule>
+				<run>
+					<model>ticket/observer::scheduledSend</model>
+				</run>
+			</notification_ticket_occur>
+		</jobs>
+	</crontab>
+
+</config>

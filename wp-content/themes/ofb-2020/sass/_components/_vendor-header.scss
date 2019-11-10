@@ -1,0 +1,38 @@
+/** vendor header **/
+
+.vendor-header {
+  margin: 17px 30px 18px;
+
+  &__logo {
+    padding-right: 23px;
+    border-right: 1px solid #000;
+  }
+
+  &__name {
+    padding-left: 20px;
+    align-self: center;
+    font-family: $font-default;
+    font-size: 13px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__logout {
+    right: 30px;
+    bottom: 20px;
+
+    a {
+      font-family: $font-default;
+      line-height: 20px;
+      color: $light-grey;
+      font-size: 14px;
+      text-decoration: none;
+
+      &:hover {
+        color: $cobalt;
+        text-decoration: none;
+      }
+    }
+  }
+}

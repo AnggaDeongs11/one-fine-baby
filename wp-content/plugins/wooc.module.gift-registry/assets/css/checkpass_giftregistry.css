@@ -1,0 +1,7 @@
+/* Restyle section check password in search_giftregistry.php*/
+.view-search{
+    background-image:none !important;
+}
+.view-search-form{
+    display: none;
+}

@@ -1,0 +1,977 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Gift Registry\n"
+"POT-Creation-Date: 2019-01-03 11:09+0700\n"
+"PO-Revision-Date: 2019-04-30 14:29+0000\n"
+"Last-Translator: buttered_toast <victor@simplyad.co.il>\n"
+"Language-Team: עִבְרִית\n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Loco-Version: 2.2.2; wp-5.1.1"
+
+#: admin/magenest-giftregistry-admin.php:55
+msgid "Gift registry manage"
+msgstr "ערוך את רשימת המתנות"
+
+#: admin/magenest-giftregistry-admin.php:57
+#: admin/magenest-giftregistry-setting.php:13
+#: admin/view/html-giftregistry-setting.php:10
+#: languages/woocommerce-gift-registry.php:324
+#: woocommerce-gift-registry.php:513
+msgid "Gift registry"
+msgstr "רשימת מתנות"
+
+#: admin/magenest-giftregistry-admin.php:127
+msgid "Deleted gift registry"
+msgstr "מחק את רשימת המתנות"
+
+#: admin/magenest-giftregistry-admin.php:128
+msgid "Dismiss this notice."
+msgstr "דחה את ההודעה."
+
+#: admin/magenest-giftregistry-admin.php:134
+msgid "Gift Registry Management"
+msgstr "ערוך את רשימת המתנות"
+
+#: admin/magenest-giftregistry-admin.php:139
+msgid "User id"
+msgstr "ID משתמש"
+
+#: admin/magenest-giftregistry-admin.php:142
+msgid "Registrant name"
+msgstr "שם הבעלים"
+
+#: admin/magenest-giftregistry-admin.php:145
+msgid "Registrant email"
+msgstr "אימייל הבעלים"
+
+#: admin/magenest-giftregistry-admin.php:148
+msgid "Date Time"
+msgstr "תאריך שעה"
+
+#: admin/magenest-giftregistry-admin.php:151
+#: admin/magenest-giftregistry-admin.php:177
+#: template/account/my-giftregistry.php:125
+#: template/account/my-giftregistry.php:141
+msgid "Delete"
+msgstr "מחק"
+
+#: admin/magenest-giftregistry-admin.php:154
+#: admin/magenest-giftregistry-admin.php:180
+msgid "Edit"
+msgstr "ערוך"
+
+#: admin/magenest-giftregistry-admin.php:211
+msgid " Previous"
+msgstr " קודם"
+
+#: admin/magenest-giftregistry-admin.php:212
+msgid "Next "
+msgstr "הבאה"
+
+#: admin/magenest-giftregistry-setting.php:43
+#: admin/view/html-giftregistry-setting.php:11
+msgid "Gift Registry Settings"
+msgstr "הגדרות רשימת המתנות"
+
+#: admin/magenest-giftregistry-setting.php:55
+#: admin/view/html-giftregistry-setting.php:28
+#: admin/view/html-giftregistry-setting.php:32
+msgid "Guest permission"
+msgstr "הרשאות אורחים"
+
+#: admin/magenest-giftregistry-setting.php:56
+#: admin/view/html-giftregistry-setting.php:39
+msgid "Allow guest to add products to gift registry"
+msgstr "אשר לאורחים להוסיף מוצרים לרשימת המתנות"
+
+#: admin/magenest-giftregistry-setting.php:72
+#: admin/view/html-giftregistry-setting.php:60
+#: admin/view/html-giftregistry-setting.php:64
+msgid "Add to gift registry from product list page"
+msgstr "הוסף לרשימת המתנות מדף רשימת מוצרים"
+
+#: admin/magenest-giftregistry-setting.php:73
+#: admin/view/html-giftregistry-setting.php:68
+msgid ""
+"Add the \"Add to gift registry\" button for each product on category page"
+msgstr "הוסף את כפתור \"הוסף לרשימת המתנות\" לכל מוצר ברשימת קטגוריות"
+
+#: admin/magenest-giftregistry-setting.php:79
+#: admin/view/html-giftregistry-setting.php:73
+#: admin/view/html-giftregistry-setting.php:78
+msgid "Send notification email of gift registry new orders to"
+msgstr "שלח הזמנה חדשה של רשימת המתנות באימייל ל"
+
+#: admin/magenest-giftregistry-setting.php:80
+msgid "Registry's  owner"
+msgstr "בעלים רשימת המתנות"
+
+#: admin/magenest-giftregistry-setting.php:87
+#: admin/view/html-giftregistry-setting.php:96
+#: languages/add-giftregistry.php:46
+#: template/account/CopyOfadd-giftregistry.php:10
+#: template/account/add-giftregistry.php:91
+msgid "Registrant"
+msgstr "בעלים"
+
+#: admin/magenest-giftregistry-setting.php:93
+#: admin/view/html-giftregistry-setting.php:107
+msgid "Admin"
+msgstr "מנהל"
+
+#: admin/magenest-giftregistry-setting.php:102
+msgid "Email subject for Registry's  owner"
+msgstr "נושא אימייל לבעל הרשימה"
+
+#: admin/magenest-giftregistry-setting.php:107
+msgid "Email template for Registry's  owner"
+msgstr "תבנית אימייל לבעל הרשימה"
+
+#: admin/magenest-giftregistry-setting.php:108
+#: admin/magenest-giftregistry-setting.php:119
+#: admin/magenest-giftregistry-setting.php:130
+msgid ""
+"Available shortcodes for email template: {{buyer_name}},{{store_url}},"
+"{{store_name}},{{order_items}},{{break_line}}"
+msgstr ""
+"קודים זמינים לתבנית אימייל: {{buyer_name}},{{store_url}},{{store_name}},"
+"{{order_items}},{{break_line}}"
+
+#: admin/magenest-giftregistry-setting.php:113
+#: admin/view/html-giftregistry-setting.php:194
+#: admin/view/html-giftregistry-setting.php:221
+msgid "Email subject for Registrant"
+msgstr "נושא אימייל לבעל הרשימה"
+
+#: admin/magenest-giftregistry-setting.php:118
+#: admin/view/html-giftregistry-setting.php:205
+#: admin/view/html-giftregistry-setting.php:232
+msgid "Email template for Registrant"
+msgstr "תבנית אימייל לבעל הרשימה"
+
+#: admin/magenest-giftregistry-setting.php:124
+#: admin/view/html-giftregistry-setting.php:252
+#: admin/view/html-giftregistry-setting.php:280
+msgid "Email subject for Admin"
+msgstr "נושא אימייל למנהל"
+
+#: admin/magenest-giftregistry-setting.php:129
+#: admin/view/html-giftregistry-setting.php:263
+#: admin/view/html-giftregistry-setting.php:291
+msgid "Email template for Admin"
+msgstr "תבנית אימייל למנהל"
+
+#: admin/magenest-giftregistry-setting.php:136
+#: admin/view/html-giftregistry-setting.php:308
+#: admin/view/html-giftregistry-setting.php:313
+msgid "Make shipping address mandatory"
+msgstr "הפוך את כתובת המשלוח לחובה"
+
+#: admin/magenest-giftregistry-setting.php:137
+#: admin/view/html-giftregistry-setting.php:320
+msgid ""
+"Gift registry's owner is NOT allowed to add products to gift registry unless "
+"he/she fills in the shipping address when \n"
+"                    creating the gift registry"
+msgstr ""
+"הבעלים של רשימת המתנות לא יכול להוסיף מוצרים לרשימת המתנות במידה והוא/היא לא "
+"מלאו את הפרטים של כתובת למשלוח באת יצירת רשימת המתנות"
+
+#: admin/magenest-giftregistry-setting.php:145
+#: admin/view/html-giftregistry-setting.php:326
+msgid "Default message for social sharing"
+msgstr "הודעת ברירת מחדל למדיה חברתית"
+
+#: admin/magenest-giftregistry-setting.php:147
+#: admin/view/html-giftregistry-setting.php:329
+msgid ""
+"This message will be used as email content for email sharing and as default "
+"caption for social sharing {Facebook,Twitter,Google+}.\n"
+"                    You can use the shortcode {giftregistry_url} to add gift "
+"registry URL to email template"
+msgstr ""
+"ההודעה הזאת תשמש כתוכן אימייל עבור שיתוף אימייל וככיתוב עבור מדיה חברתית "
+"{Facebook,Twitter,Google+}. אתה יכול להשתמש בקוד הקצר {giftregistry_url} כדי "
+"להוסיף את כתובת רשימת המתנות לתבנית האימייל"
+
+#: admin/magenest-giftregistry-setting.php:153
+#: admin/view/html-giftregistry-setting.php:337
+msgid "Image attached for social sharing"
+msgstr "תמונה המשוייכת למדיה חברתית"
+
+#: admin/magenest-giftregistry-setting.php:159
+msgid "Share gift registry via "
+msgstr "שתף את רשימת המתנות דרך"
+
+#: admin/view/html-giftregistry-setting.php:84
+msgid "Registry's owner"
+msgstr "בעלים רשימת המתנות"
+
+#: admin/view/html-giftregistry-setting.php:136
+#: admin/view/html-giftregistry-setting.php:163
+msgid ""
+"Email subject for Registry's\n"
+"                    owner"
+msgstr "נושא אימייל לבעל הרשימה"
+
+#: admin/view/html-giftregistry-setting.php:147
+#: admin/view/html-giftregistry-setting.php:174
+msgid ""
+"Email template for Registry's\n"
+"                    owner"
+msgstr "תבנית אימייל לבעל הרשימה"
+
+#: admin/view/html-giftregistry-setting.php:151
+#: admin/view/html-giftregistry-setting.php:178
+#: admin/view/html-giftregistry-setting.php:208
+#: admin/view/html-giftregistry-setting.php:236
+#: admin/view/html-giftregistry-setting.php:266
+#: admin/view/html-giftregistry-setting.php:295
+msgid ""
+"Available shortcodes for email template:\n"
+"                    {{buyer_name}},{{store_url}},{{store_name}},"
+"{{order_items}},{{break_line}}"
+msgstr ""
+"קודים זמינים לתבנית אימייל:\n"
+"                    {{buyer_name}},{{store_url}},{{store_name}},"
+"{{order_items}},{{break_line}}"
+
+#: admin/view/html-giftregistry-setting.php:342
+msgid "Add Image"
+msgstr "הוסף תמונה"
+
+#: admin/view/html-giftregistry-setting.php:357
+#: admin/view/html-giftregistry-setting.php:362
+msgid "Share gift registry via"
+msgstr "שתף את רשימת המתנות דרך"
+
+#: admin/view/html-giftregistry-setting.php:367
+msgid "Facebook"
+msgstr "פייסבוק"
+
+#: admin/view/html-giftregistry-setting.php:379
+msgid "Google Plus"
+msgstr "גוגל פלוס"
+
+#: admin/view/html-giftregistry-setting.php:390
+msgid "Twitter"
+msgstr "טוויטר"
+
+#: admin/view/html-giftregistry-setting.php:401
+msgid "Mail"
+msgstr "דואר"
+
+#: frontend/magenest-giftregistry-add-button-in-shop.php:53
+#: frontend/magenest-giftregistry-add-button-in-shop.php:91
+#: frontend/magenest-giftregistry-myaccount.php:50
+#: frontend/magenest-giftregistry-myaccount.php:118
+#: languages/magenest-giftregistry-myaccount.php:32
+msgid "Add to gift registry"
+msgstr "הוסף לרשימת המתנות"
+
+#: frontend/magenest-giftregistry-add-button-in-shop.php:67
+msgid "Remove from <br> gift registry"
+msgstr "הסר מרשימת המתנות"
+
+#: frontend/magenest-giftregistry-add-button-in-shop.php:71
+#: frontend/magenest-giftregistry-add-button-in-shop.php:108
+msgid "Priority:"
+msgstr "עדיפות:"
+
+#: frontend/magenest-giftregistry-add-button-in-shop.php:73
+#: frontend/magenest-giftregistry-add-button-in-shop.php:110
+msgid "Change priority"
+msgstr "שנה עדיפות"
+
+#: frontend/magenest-giftregistry-add-button-in-shop.php:104
+#: frontend/magenest-giftregistry-myaccount.php:81
+#: frontend/magenest-giftregistry-myaccount.php:137
+msgid "Remove from gift registry"
+msgstr "הסר מרשימת המתנות"
+
+#: frontend/magenest-giftregistry-frontend.php:22
+msgid "All items is shipped to gift registry address."
+msgstr "כל המוצרים נשלחים לכתובת הרשומה ברשימת המתנות"
+
+#: frontend/magenest-giftregistry-frontend.php:94
+#: languages/public-view-giftregistry.php:15
+#: template/header_giftregistry_public_view.php:30
+#: template/public-view-giftregistry-full-mode.php:28
+#: template/public-view-giftregistry-mini-mode.php:18
+#: template/public-view-giftregistry.php:29
+msgid " and"
+msgstr " ו"
+
+#: frontend/magenest-giftregistry-frontend.php:95
+msgid "Find more gifts for "
+msgstr "מצא עוד מתנות עבור "
+
+#: frontend/magenest-giftregistry-frontend.php:96
+msgid "Change gifts to regular purchase "
+msgstr "שנה מתנות לקניה רגילה"
+
+#: frontend/magenest-giftregistry-frontend.php:111
+msgid "Gift regitry ID"
+msgstr "ID רשימת המתנות"
+
+#: frontend/magenest-giftregistry-frontend.php:137
+msgid "Registrant's name"
+msgstr "שם הבעלים"
+
+#: frontend/magenest-giftregistry-frontend.php:142
+msgid "Coregistrant's name"
+msgstr "שם של בעל הרשימה הנוסף"
+
+#: frontend/magenest-giftregistry-frontend.php:155
+msgid "Message "
+msgstr "הודעה"
+
+#: frontend/magenest-giftregistry-frontend.php:156
+#: template/account/add-giftregistry.php:319
+msgid "(optional)"
+msgstr "( אופציאונלי )"
+
+#: frontend/magenest-giftregistry-frontend.php:161
+msgid "Message to gift registry's owner."
+msgstr "הודעה למנהל רשימת המתנות"
+
+#: frontend/magenest-giftregistry-myaccount.php:73
+#: frontend/magenest-giftregistry-myaccount.php:129
+msgid "Item priority: "
+msgstr "עדיפות המוצר:"
+
+#: frontend/magenest-giftregistry-widget.php:11
+msgid ""
+"Shows a price filter slider in a widget which lets you narrow down the list "
+"of shown products when viewing product categories."
+msgstr ""
+"הצג סנן של סליידר בתוף ווידג'ט שנותן לך אפשרות לצמצם את כמות המוצרים כאשר "
+"אתה נמצא בתוך קטגוריה של מוצר."
+
+#: frontend/magenest-giftregistry-widget.php:13
+msgid "WooCommerce Price Filter"
+msgstr "סינון מחיר של ווקומרס"
+
+#: frontend/magenest-giftregistry-widget.php:17
+msgid "Filter by price"
+msgstr "סנן לפי מחיר"
+
+#: frontend/magenest-giftregistry-widget.php:18
+#: languages/add-giftregistry.php:42
+#: template/account/CopyOfadd-giftregistry.php:6
+#: template/account/add-giftregistry.php:86
+msgid "Title"
+msgstr "שם הרשימה"
+
+#: frontend/magnest-form-handler.php:154
+msgid "Your share email has been sent!"
+msgstr "אימייל השיתוף שלך נשלח!"
+
+#: frontend/magnest-form-handler.php:348
+msgid "The information of Gift Registry is saved."
+msgstr "המידע של רשימת המתנות נשמר."
+
+#: frontend/magnest-form-handler.php:482
+msgid ""
+"You have to fulfill shipping address before adding item to gift registry"
+msgstr ""
+"אתה חייב להזין כתובת למשלוח לפני שאתה יכול להוסיף את המוצר לרשימת המתנות"
+
+#: frontend/magnest-form-handler.php:493
+msgid "Please select some product options before add gift registry"
+msgstr "אנא בחר מהאפשרויות של המוצר לפני הוספה לרשימת המתנות"
+
+#: frontend/magnest-form-handler.php:518
+msgid "Item is added to your gift registry"
+msgstr "המוצר התווסף לרשימת המתנות"
+
+#: frontend/magnest-form-handler.php:520
+msgid "You have to select item"
+msgstr "אתה חייב לבחור מוצר"
+
+#: frontend/magnest-form-handler.php:523 frontend/magnest-form-handler.php:526
+msgid ""
+"You have to enter gift registry information before adding item to gift "
+"registry"
+msgstr ""
+"אתה חייב להזין מידע של רשימת מתנות לפני שאתה יכול להוסיף את המוצר לרשימת "
+"המתנות"
+
+#: frontend/magnest-form-handler.php:590
+msgid "Gift Registry item is deleted."
+msgstr "מוצר נמחק מרשימת המתנות"
+
+#: frontend/magnest-form-handler.php:604
+msgid "Gift Registry items are deleted."
+msgstr "המוצרים נמחקו מרשימת המתנות"
+
+#: frontend/magnest-form-handler.php:630
+msgid "Gift Registry item's information are updated."
+msgstr "פרטי רשימת המתנות עודכנו"
+
+#: frontend/magnest-form-handler.php:654
+msgid "Item is removed from your gift registry"
+msgstr "המוצר הוסר מרשימת המתנות"
+
+#: languages/add-giftregistry.php:34 template/account/add-giftregistry.php:77
+msgid "Gift Registry Info"
+msgstr "מידע של רשימת המתנות"
+
+#: languages/add-giftregistry.php:49 languages/add-giftregistry.php:101
+#: template/account/CopyOfadd-giftregistry.php:12
+#: template/account/CopyOfadd-giftregistry.php:30
+#: template/account/CopyOfadd-giftregistry.php:81
+#: template/account/add-giftregistry.php:94
+#: template/account/add-giftregistry.php:158
+#: template/account/add-giftregistry.php:266
+msgid "First name"
+msgstr "שם פרטי"
+
+#: languages/add-giftregistry.php:55 languages/add-giftregistry.php:107
+#: template/account/CopyOfadd-giftregistry.php:17
+#: template/account/CopyOfadd-giftregistry.php:35
+#: template/account/CopyOfadd-giftregistry.php:86
+#: template/account/add-giftregistry.php:103
+#: template/account/add-giftregistry.php:166
+#: template/account/add-giftregistry.php:273
+msgid "Last name"
+msgstr "שם משפחה"
+
+#: languages/add-giftregistry.php:61 languages/add-giftregistry.php:113
+#: languages/giftregistry-index.php:46
+#: template/account/CopyOfadd-giftregistry.php:22
+#: template/account/CopyOfadd-giftregistry.php:40
+#: template/account/add-giftregistry.php:113
+#: template/account/add-giftregistry.php:174 template/giftregistry-index.php:52
+#: template/search_giftregistry.php:181
+msgid "Email"
+msgstr "אימייל"
+
+#: languages/add-giftregistry.php:74 languages/add-giftregistry.php:124
+#: template/account/add-giftregistry.php:128
+#: template/account/add-giftregistry.php:188
+msgid "Description"
+msgstr "תאור"
+
+#: languages/add-giftregistry.php:79 template/account/add-giftregistry.php:134
+msgid "Are there CoRegistrants?"
+msgstr "האם יש בעלים נוספים לרשימה?"
+
+#: languages/add-giftregistry.php:85 languages/add-giftregistry.php:89
+#: template/account/add-giftregistry.php:141
+#: template/account/add-giftregistry.php:146
+msgid "Yes"
+msgstr "כן"
+
+#: languages/add-giftregistry.php:86 languages/add-giftregistry.php:90
+#: template/account/add-giftregistry.php:142
+#: template/account/add-giftregistry.php:147
+msgid "No"
+msgstr "לא"
+
+#: languages/add-giftregistry.php:98
+#: template/account/CopyOfadd-giftregistry.php:28
+#: template/account/add-giftregistry.php:155
+msgid "CoRegistrant"
+msgstr "בעל הרשימה הנוסף"
+
+#: languages/add-giftregistry.php:130
+#: template/account/CopyOfadd-giftregistry.php:45
+#: template/account/add-giftregistry.php:195
+msgid "Event"
+msgstr "אירוע"
+
+#: languages/add-giftregistry.php:133 languages/public-view-giftregistry.php:79
+#: template/account/CopyOfadd-giftregistry.php:47
+#: template/account/add-giftregistry.php:198
+#: template/header_giftregistry_public_view.php:51
+#: template/public-view-giftregistry-mini-mode.php:71
+#: template/public-view-giftregistry.php:139
+msgid "Event date"
+msgstr "תאריך האירוע"
+
+#: languages/add-giftregistry.php:142
+#: template/account/CopyOfadd-giftregistry.php:52
+#: template/account/add-giftregistry.php:208
+msgid "Event location"
+msgstr "מיקום האירוע"
+
+#: languages/add-giftregistry.php:148
+#: template/account/CopyOfadd-giftregistry.php:57
+#: template/account/add-giftregistry.php:215
+msgid "Message for guests"
+msgstr "הודעה לאורחים"
+
+#: languages/add-giftregistry.php:163
+msgid "Role gift registry"
+msgstr "תפקיד רשימת המתנות"
+
+#: languages/add-giftregistry.php:166
+msgid "Role"
+msgstr "תפקיד"
+
+#: languages/add-giftregistry.php:171 languages/add-giftregistry.php:175
+#: template/account/CopyOfadd-giftregistry.php:67
+#: template/account/add-giftregistry.php:241
+#: template/account/add-giftregistry.php:248
+msgid "Public"
+msgstr "פומבי"
+
+#: languages/add-giftregistry.php:172 languages/add-giftregistry.php:176
+#: template/account/CopyOfadd-giftregistry.php:72
+#: template/account/add-giftregistry.php:243
+#: template/account/add-giftregistry.php:249 template/giftregistry-index.php:93
+#: template/search_giftregistry.php:240
+msgid "Private"
+msgstr "פרטי"
+
+#: languages/add-giftregistry.php:184 template/account/add-giftregistry.php:257
+#: template/checkpass_giftregistry.php:10 template/giftregistry-index.php:112
+#: template/search_giftregistry.php:64
+msgid "Password"
+msgstr "סיסמה"
+
+#: languages/add-giftregistry.php:187 template/account/add-giftregistry.php:361
+#: template/account/my-giftregistry.php:143
+#: template/account/my-giftregistry.php:144
+msgid "Save"
+msgstr "שמור"
+
+#: languages/giftregistry-index.php:44 template/giftregistry-index.php:50
+#: template/search_giftregistry.php:173
+msgid "Name"
+msgstr "שם"
+
+#: languages/giftregistry-index.php:45 template/giftregistry-index.php:51
+#: template/search_giftregistry.php:177
+msgid "Co-registrant name"
+msgstr "שם של בעל הרשימה הנוסף"
+
+#: languages/giftregistry-index.php:47 template/giftregistry-index.php:53
+#: template/search_giftregistry.php:185
+msgid "Co-registrant email"
+msgstr "אימייל של בעל הרשימה הנוסף"
+
+#: languages/giftregistry-index.php:48 languages/giftregistry-index.php:77
+#: languages/giftregistry-index.php:149 template/giftregistry-index.php:54
+#: template/giftregistry-index.php:83 template/giftregistry-index.php:157
+#: template/search_giftregistry.php:109 template/search_giftregistry.php:189
+#: template/search_giftregistry.php:230
+msgid "View"
+msgstr "הצגה"
+
+#: languages/giftregistry-index.php:170 template/giftregistry-index.php:179
+msgid "By name"
+msgstr "לפי שם"
+
+#: languages/giftregistry-index.php:174 template/giftregistry-index.php:185
+msgid "By email"
+msgstr "לפי אימייל"
+
+#: languages/giftregistry-index.php:178 template/giftregistry-index.php:193
+#: template/search_giftregistry.php:128 template/search_giftregistry.php:144
+msgid "Search gift registry"
+msgstr "חפש ברשימת המתנות"
+
+#: languages/giftregistry-index.php:189 template/giftregistry-index.php:207
+#: template/view_giftregistry.php:63
+msgid "Create gift registry"
+msgstr "צור רשימת מתנות"
+
+#: languages/giftregistry-index.php:196 template/giftregistry-index.php:219
+#: template/view_giftregistry.php:56
+msgid "View my gift registry"
+msgstr "צפה ברשימת המתנות שלי"
+
+#: languages/public-view-giftregistry.php:87
+#: languages/public-view-giftregistry.php:100
+#: template/account/giftregistry-share.php:97
+#: template/header_giftregistry_public_view.php:60
+#: template/public-view-giftregistry-full-mode.php:230
+#: template/public-view-giftregistry-mini-mode.php:79
+#: template/public-view-giftregistry-mini-mode.php:92
+#: template/public-view-giftregistry.php:147
+#: template/public-view-giftregistry.php:164
+msgid "Message"
+msgstr "הודעה"
+
+#: languages/public-view-giftregistry.php:94
+#: template/account/my-giftregistry.php:29
+#: template/public-view-giftregistry-full-mode.php:224
+#: template/public-view-giftregistry-mini-mode.php:86
+#: template/public-view-giftregistry.php:156 template/table_giftregistry.php:16
+msgid "Image"
+msgstr "תמונה"
+
+#: languages/public-view-giftregistry.php:95
+#: template/account/my-giftregistry.php:30
+#: template/public-view-giftregistry-full-mode.php:225
+#: template/public-view-giftregistry-mini-mode.php:87
+#: template/public-view-giftregistry.php:159 template/table_giftregistry.php:18
+msgid "Product"
+msgstr "מוצר"
+
+#: languages/public-view-giftregistry.php:96
+#: template/account/my-giftregistry.php:31
+#: template/public-view-giftregistry-full-mode.php:226
+#: template/public-view-giftregistry-mini-mode.php:88
+#: template/public-view-giftregistry.php:160 template/table_giftregistry.php:19
+msgid "Price"
+msgstr "מחיר"
+
+#: languages/public-view-giftregistry.php:97
+#: template/account/my-giftregistry.php:33
+#: template/public-view-giftregistry-full-mode.php:227
+#: template/public-view-giftregistry-mini-mode.php:89
+#: template/public-view-giftregistry.php:161 template/table_giftregistry.php:20
+msgid "Desired Quantity"
+msgstr "כמות רצויה"
+
+#: languages/public-view-giftregistry.php:98
+#: template/account/my-giftregistry.php:32
+#: template/public-view-giftregistry-full-mode.php:228
+#: template/public-view-giftregistry-mini-mode.php:90
+#: template/public-view-giftregistry.php:162 template/table_giftregistry.php:21
+msgid "Priority"
+msgstr "עדיפות"
+
+#: languages/public-view-giftregistry.php:99
+#: template/public-view-giftregistry-full-mode.php:229
+#: template/public-view-giftregistry-mini-mode.php:91
+#: template/public-view-giftregistry.php:163 template/table_giftregistry.php:22
+msgid "Quantity"
+msgstr "כמות"
+
+#: languages/public-view-giftregistry.php:146
+#: template/account/my-giftregistry.php:82
+#: template/account/my-giftregistry.php:87
+#: template/public-view-giftregistry-full-mode.php:258
+#: template/public-view-giftregistry-mini-mode.php:141
+#: template/public-view-giftregistry.php:214 template/table_giftregistry.php:85
+#: template/table_giftregistry.php:180
+msgid "High"
+msgstr "גבוהה"
+
+#: languages/public-view-giftregistry.php:148
+#: template/public-view-giftregistry-full-mode.php:260
+#: template/public-view-giftregistry-mini-mode.php:143
+#: template/public-view-giftregistry.php:216
+msgid "Medium"
+msgstr "בינוני"
+
+#: languages/public-view-giftregistry.php:150
+#: template/account/my-giftregistry.php:83
+#: template/account/my-giftregistry.php:88
+#: template/public-view-giftregistry-full-mode.php:262
+#: template/public-view-giftregistry-mini-mode.php:145
+#: template/public-view-giftregistry.php:218 template/table_giftregistry.php:87
+#: template/table_giftregistry.php:182
+msgid "Low"
+msgstr "נמוכה"
+
+#: languages/public-view-giftregistry.php:170
+#: template/public-view-giftregistry.php:238
+#: template/table_giftregistry.php:126 template/table_giftregistry.php:220
+msgid "Add to cart"
+msgstr "הוסף לסל"
+
+#: languages/public-view-giftregistry.php:176
+#: template/public-view-giftregistry.php:244
+#: template/table_giftregistry.php:132 template/table_giftregistry.php:226
+msgid "Out stock"
+msgstr "אזל המלאי"
+
+#: languages/woocommerce-gift-registry.php:342
+#: woocommerce-gift-registry.php:155
+msgid "My Gift Registry"
+msgstr "רשימת המתנות שלי"
+
+#: model/magenest-giftregistry-model.php:344
+#: model/magenest-giftregistry-model.php:346
+msgid "Thank you!"
+msgstr "תודה רבה!"
+
+#: model/magenest-giftregistry-model.php:346
+msgid "Message your friend: "
+msgstr "רשום הודעה לחברים שלך:"
+
+#: template/account/CopyOfadd-giftregistry.php:1
+msgid "Create Gift Registry"
+msgstr "צור רשימת מתנות"
+
+#: template/account/CopyOfadd-giftregistry.php:62
+msgid "Add a photo"
+msgstr "הוסף תמונה"
+
+#: template/account/CopyOfadd-giftregistry.php:65
+msgid "Gift Registry status"
+msgstr "מצב רשימת המתנות"
+
+#: template/account/CopyOfadd-giftregistry.php:78
+msgid "Shipping address"
+msgstr "כתובת משלוח"
+
+#: template/account/CopyOfadd-giftregistry.php:91
+#: template/account/add-giftregistry.php:280
+msgid "Company"
+msgstr "חברה"
+
+#: template/account/CopyOfadd-giftregistry.php:97
+#: template/account/CopyOfadd-giftregistry.php:102
+msgid "Address"
+msgstr "כתובת"
+
+#: template/account/CopyOfadd-giftregistry.php:108
+msgid "City"
+msgstr "עיר"
+
+#: template/account/CopyOfadd-giftregistry.php:113
+msgid "State"
+msgstr "מדינה"
+
+#: template/account/CopyOfadd-giftregistry.php:157
+msgid "Select a country&hellip;"
+msgstr "בחר מדינה..."
+
+#: template/account/CopyOfadd-giftregistry.php:164
+msgid "Update country"
+msgstr "עדכן מדינה"
+
+#: template/account/add-giftregistry.php:64
+msgid "Information"
+msgstr "מידע"
+
+#: template/account/add-giftregistry.php:65
+msgid "Item"
+msgstr "מוצר"
+
+#: template/account/add-giftregistry.php:68
+msgid "Share"
+msgstr "שתף"
+
+#: template/account/add-giftregistry.php:230
+msgid "Gift Registry Privacy"
+msgstr "פרטיות של רשימת המתנות"
+
+#: template/account/add-giftregistry.php:233
+msgid "Privacy"
+msgstr "פרטיות"
+
+#: template/account/add-giftregistry.php:263
+msgid "Shipping Address"
+msgstr "כתובת משלוח"
+
+#: template/account/add-giftregistry.php:288
+msgid "Country"
+msgstr "מדינה"
+
+#: template/account/add-giftregistry.php:311
+msgid "Street Address"
+msgstr "כתובת רחוב"
+
+#: template/account/add-giftregistry.php:319
+msgid "Postcode / ZIP"
+msgstr "מיקוד"
+
+#: template/account/add-giftregistry.php:327
+msgid "Town / City"
+msgstr "עיר"
+
+#: template/account/add-giftregistry.php:336
+msgid "Quantity display"
+msgstr "הצגת כמות"
+
+#: template/account/add-giftregistry.php:340
+msgid "Drop-down list"
+msgstr "רשימה נפתחת"
+
+#: template/account/add-giftregistry.php:342
+msgid "Text field"
+msgstr "שדה טקסט"
+
+#: template/account/add-giftregistry.php:348
+#: template/account/add-giftregistry.php:353
+msgid ""
+"Drop-down list: Your friends must purchase within the \"desired quantity\" "
+"(ie: Desired quantity = 10; buyers can purchase maximum 10 units of that "
+"product)."
+msgstr ""
+"רשימה נפתחת: החברים שלך חייבים לקנות בתווח \"הכמות הרצויה\" (לדוגמה: כמות "
+"רצויה = 10, קונים יכולים לקנות מקסימום 10 יחידות מהמוצר)."
+
+#: template/account/add-giftregistry.php:349
+#: template/account/add-giftregistry.php:354
+msgid ""
+"Text field: Your friends can purchase more than the \"desired quantity\".(ie:"
+" Desired quantity = 10; buyers can purchase more than 10 units of that "
+"product)."
+msgstr ""
+"שדה טקסט: החברים שלך חייבים לקנות בתווח \"הכמות הרצויה\" (לדוגמה: כמות רצויה "
+"= 10, קונים יכולים לקנות מקסימום 10 יחידות מהמוצר)."
+
+#: template/account/giftregistry-share.php:32
+msgid "Share your registry URL"
+msgstr "שתף את כתובת רשימת המתנות"
+
+#: template/account/giftregistry-share.php:40
+msgid "Share your registry with your social network"
+msgstr "שתף את רשימת המתנות שלך במדיה החברתית"
+
+#: template/account/giftregistry-share.php:79
+msgid "Recipient"
+msgstr "מקבל"
+
+#: template/account/giftregistry-share.php:83
+msgid "separate email by commas"
+msgstr "הפרד אימייל על ידי פסיק"
+
+#: template/account/giftregistry-share.php:88
+msgid "Subject"
+msgstr "נושא"
+
+#: template/account/my-giftregistry.php:14
+msgid "Gift registry items"
+msgstr "מוצרים של רשימת המתנות"
+
+#: template/account/my-giftregistry.php:34
+msgid "Received Quantity"
+msgstr "כמות שהתקבלה"
+
+#: template/account/my-giftregistry.php:137
+#: template/account/my-giftregistry.php:153
+#: template/table_giftregistry_public_view.php:119
+msgid "Add More Products"
+msgstr "הוסף עוד מוצרים"
+
+#: template/account/my-giftregistry.php:150
+#: template/table_giftregistry_public_view.php:116
+msgid "Your gift registry item list is empty"
+msgstr "רשימת המתנות שלך ריקה"
+
+#: template/account/overview-statistics.php:50
+msgid "Days to go"
+msgstr "ימים שנותרו"
+
+#: template/account/overview-statistics.php:54
+msgid "Day to go"
+msgstr "נותר יום"
+
+#: template/account/overview-statistics.php:58
+msgid "Days past"
+msgstr "ימים שעברו"
+
+#: template/account/overview-statistics.php:62
+msgid "Day past"
+msgstr "יום שעבר"
+
+#: template/account/overview-statistics.php:67
+msgid "Total Gifts"
+msgstr "סך הכל מתנות"
+
+#: template/account/overview-statistics.php:71
+msgid "Total Gift"
+msgstr "סך הכל מתנות"
+
+#: template/account/overview-statistics.php:75
+msgid "Purchased"
+msgstr "נרכש"
+
+#: template/checkpass_giftregistry.php:9 template/giftregistry-index.php:111
+#: template/search_giftregistry.php:63
+msgid "The gift registry is protected by password. Please enter the password."
+msgstr "רשימת המתנות מוגנת על ידי סיסמה, אנא הזן את הסיסמה"
+
+#: template/checkpass_giftregistry.php:13 template/giftregistry-index.php:116
+#: template/search_giftregistry.php:68
+msgid "Submit"
+msgstr "שלח"
+
+#: template/public-view-giftregistry-full-mode.php:278
+#: template/public-view-giftregistry-mini-mode.php:161
+msgid "Buy"
+msgstr "קנה"
+
+#: template/search_giftregistry.php:60
+msgid "Password incorrect! Please try again."
+msgstr "סיסמה לא נכונה! אנא נסה שוב."
+
+#: template/search_giftregistry.php:136
+msgid "Search by name"
+msgstr "חפש לפי שם"
+
+#: template/search_giftregistry.php:140
+msgid "Search by email"
+msgstr "חפש לפי אימייל"
+
+#: template/search_giftregistry.php:267
+msgid "No results found"
+msgstr "לא נמצאו תוצאות"
+
+#: template/table_giftregistry_public_view.php:42
+msgid "View cart"
+msgstr "צפה בעגלה"
+
+#: template/table_giftregistry_public_view.php:42
+msgid "The item has been added to your cart."
+msgstr "המוצר התווסף לעגלת הקניות"
+
+#: template/table_giftregistry_public_view.php:57
+msgid "You can not add products from multiple gift registry"
+msgstr "אתה לא יכול להוסיף מוצרים מיותר מרשימת מתנות אחת"
+
+#: template/table_giftregistry_public_view.php:79
+msgid "Default sorting"
+msgstr "מיון ברירת מחדל"
+
+#: template/table_giftregistry_public_view.php:80
+msgid "Sort by desired quantity"
+msgstr "סנן לפי כמות רצויה"
+
+#: template/table_giftregistry_public_view.php:81
+msgid "Sort by priority"
+msgstr "סנן לפי עדיפות"
+
+#: template/table_giftregistry_public_view.php:82
+msgid "Sort by price"
+msgstr "סנן לפי מחיר"
+
+#: template/table_giftregistry_public_view.php:85
+msgid "High to low"
+msgstr "גבוה לנמוך"
+
+#: template/table_giftregistry_public_view.php:86
+msgid "Low to high"
+msgstr "נומך לגבוה"
+
+#: template/table_giftregistry_public_view.php:104
+msgid "Filter"
+msgstr "סינון"
+
+#: woocommerce-gift-registry.php:156
+msgid "Logout"
+msgstr "התנתק"
+
+#: woocommerce-gift-registry.php:557 woocommerce-gift-registry.php:566
+msgid "Set background image"
+msgstr "הגדר תמונת רקע"
+
+#: woocommerce-gift-registry.php:560 woocommerce-gift-registry.php:568
+msgid "Click the image to edit or update"
+msgstr "לחץ על התמונה כדי לערוך או לעדכן אותה"
+
+#: woocommerce-gift-registry.php:562 woocommerce-gift-registry.php:570
+msgid "Remove background image"
+msgstr "הסר תמונת רקע"
+
+#: template/account/advanced.phtml:283
+msgid "Subscribe and Save"
+msgstr "הפוך למנוי ושמור"

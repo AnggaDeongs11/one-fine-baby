@@ -1,0 +1,141 @@
+/* magenest-giftregistry-add-button-in-shop.php*/
+
+.button-add-giftregistry{
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 1em 0;
+    text-align: right;
+    position: relative;
+}
+.cart {
+    display: table-cell;
+    width: 40%;
+}
+.giftregistry-detail{
+    display: table-cell !important;
+    vertical-align: bottom;
+    padding: 1em 0;
+    text-align: right;
+}
+.single_add_to_cart_button{
+    float: left !important;
+}
+.quantity{
+    margin-right:100% !important;
+    margin-bottom: 5px;
+}
+.wgr-remove-product{
+    /*display: inline-block;
+    margin-left: 55%;*/
+}
+
+.wgr-priority {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+/* Tooltip text */
+.wgr-priority .tooltiptext {
+    visibility: visible;
+    width: 70px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 85%;
+    margin-left: -35px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.wgr-priority .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.wgr-priority:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/*@media only screen and (max-width:1150px) {
+    .button-add-giftregistry{
+        margin-left: 15% !important;
+}
+.giftregistry-detail{
+    width: 38%;
+}
+.wgr-remove-product{
+    margin-left: 15%;
+}
+}*/
+@media only screen and (max-width:845px) {
+    .button-add-giftregistry{
+        margin-left: 0% !important;
+    }
+    .wgr-remove-product{
+        margin-left: 0%;
+    }
+}
+/*@media only screen and (max-width:450px) {
+    .button-add-giftregistry{
+        width: 100%;
+        display: block;
+    }
+    .giftregistry-detail {
+        width: 100%;
+    }
+    .wgr-priority p{
+        float: left !important;
+    }
+    .wgr-priority img{
+        float: inherit;
+        margin-left:5%;
+        display: inline;
+    }
+}*/
+.wgr-priority {
+    border-bottom: none !important;
+    width: 100%;
+}
+
+.wgr-priority img {
+    float: right;
+    /*margin-right: 10%;*/
+    /*margin-bottom: 5px;*/
+}
+
+.wgr-priority p {
+    /*margin-right: 5%;
+    float: right;
+    margin-top: 3%;*/
+    margin: 8px 5% 8px 0;
+}
+
+.wgr-remove-product {
+    /*width: 100%;*/
+}
+
+#loader{
+    display: none;
+    position: absolute;
+    left: 20%;
+}
+#page {
+    overflow: hidden;
+}

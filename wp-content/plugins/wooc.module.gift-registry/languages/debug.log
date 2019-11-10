@@ -1,0 +1,9 @@
+[02-Mar-2018 06:59:19 UTC] log 1
+[02-Mar-2018 06:59:19 UTC] [A9]
+[02-Mar-2018 06:59:19 UTC] $gen1
+[02-Mar-2018 06:59:19 UTC] MGwRTadFR
+[02-Mar-2018 06:59:19 UTC] $pattern
+[02-Mar-2018 06:59:19 UTC] MGwRTadFR
+[02-Mar-2018 06:59:19 UTC] PHP Fatal error:  Call to undefined function write_log() in /home/content/a2pewpnaspod04_data01/37/41417237/html/wp-content/plugins/woocommerce-event-ticket/model/magenest-ticket-product.php on line 226
+[02-Mar-2018 07:00:19 UTC] PHP Notice:  is_tax was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://codex.wordpress.org/Debugging_in_WordPress">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/content/a2pewpnaspod04_data01/37/41417237/html/wp-includes/functions.php on line 4147
+[02-Mar-2018 07:02:35 UTC] PHP Notice:  is_tax was called <strong>incorrectly</strong>. Conditional query tags do not work before the query is run. Before then, they always return false. Please see <a href="https://codex.wordpress.org/Debugging_in_WordPress">Debugging in WordPress</a> for more information. (This message was added in version 3.1.0.) in /home/content/a2pewpnaspod04_data01/37/41417237/html/wp-includes/functions.php on line 4147

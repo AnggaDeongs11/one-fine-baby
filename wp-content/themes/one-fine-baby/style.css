@@ -1,0 +1,12 @@
+/*
+Theme Name: One Fine Baby
+Author: KHAN
+Author URI: https://websitesbykhan.com
+Description: Wordpress theme for One Fine Baby
+Version: 1.0
+License: GNU General Public License
+*/
+
+@import url('styles/boots-bones.css');
+@import url('styles/base.css');
+@import url('styles/ofb.css');

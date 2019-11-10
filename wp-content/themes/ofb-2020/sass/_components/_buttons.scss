@@ -1,0 +1,93 @@
+/** buttons **/
+.btn {
+  font-family: $font-default;
+  text-transform: uppercase;
+
+
+  .form-actions & {
+    height: 40px;
+  }
+
+  &.btn--primary {
+    background: $primary;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  &.btn--secondary {
+    background: $lighter-grey;
+    border-radius: 50px;
+    color: $cobalt;
+    font-size: 14px;
+    letter-spacing: 2px;
+
+    &:hover {
+      background-color: $cobalt;
+      text-decoration: none;
+    }
+  }
+
+  &.btn--link {
+    color: $cobalt;
+    letter-spacing: 2px;
+    font-size: 12px;
+    line-height: 30px;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $cobalt;
+      color: #fff;
+    }
+  }
+
+  &.btn-bordered {
+    border-radius: 50px;
+    border: 1px solid $cobalt;
+  }
+
+  span {
+    height: 15px;
+    font-family: $font-default;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .vendor-content &,
+  .vendor-sidebar & {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+  }
+
+  .vendor-modal & {
+    color: $cobalt;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.btn--primary {
+      color: #fff;
+    }
+  }
+
+  &.btn-long {
+    width: 150px;
+  }
+
+  &.btn-longer {
+    width: 175px;
+  }
+
+  &.btn-longest {
+    width: 200px;
+  }
+
+  &.btn-thick {
+    height: 50px;
+  }
+}

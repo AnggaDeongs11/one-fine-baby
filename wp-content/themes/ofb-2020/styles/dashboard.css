@@ -1,0 +1,450 @@
+/************************ COLOURS ************************/
+
+/* Orange - #F79F90 */
+/* Light Pink - #FEF2F1 */
+/* Dark Pink - Button - #E7B6D2 */
+/* Light Purple - #E3E5F3 */
+/* Purple - #D3CFE8 */
+/* Dark Blue - #030753 */
+/* Light Green - #CDE9E0 */
+/* Dark Green - #5EC4B6 */
+
+@font-face {
+    font-family: 'Canela';
+    src: url('../fonts/Canela-Regular-Web.woff2') format('woff2'),
+        url('../fonts/Canela-Regular-Web.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+.the-content.container {
+    width: 100%;
+}
+
+.aws-container form.aws-search-form {
+    padding: 0px 1.5px 1.5px 1.5px;
+}
+
+body.single-product .woocommerce-message {
+    margin: -10px 5% 50px !important;
+}
+
+body.single-product .woocommerce .woocommerce-message .button {
+    font-family: 'Sailec-Regular', Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: #F79F90 !important;
+    border-radius: 0;
+    color: #fff;
+    padding: 10px 20px 7px;
+}
+
+.full-page-pink-background {
+    background: #FEF2F1;
+    margin: -50px 0 -80px;
+}
+
+.full-page-pink-background .padded-row {
+    padding: 50px 0;
+}
+
+.full-page-pink-background .padded-row.no-bottom-padding {
+    padding: 50px 0 0;
+}
+
+.full-page-pink-background .padded-row.no-top-padding {
+    padding: 0 0 50px;
+}
+
+.full-page-pink-background h3 {
+    border-bottom: 1px solid #030753;
+    padding-bottom: 24px;
+}
+
+.about-img {
+    width: 70%;
+    margin-top: 66px;
+}
+
+
+/************************ CATEGORY PAGE ************************/
+
+.woocommerce button.button {
+    font-family: 'Sailec-Regular', Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: #F79F90 !important;
+    color: #fff !important;
+    font-size: 14px;
+    border-radius: 0 !important;
+    padding: 15px;
+}
+
+.set-giftregistry-detail-shop-page {
+    width: 100% !important;
+    display: block !important;
+}
+
+.wgr-priority-shop-page {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.wgr-add-product-shop-page {
+    width: 100%;
+}
+
+.wgr-add-product-shop-page .button-remove-giftregistry-shop-page {
+    width: 100%;
+}
+
+
+/************************ PRODUCT PAGE ************************/
+
+#add-to-giftregistry-list {
+    font-family: 'Sailec-Regular', Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: transparent !important;
+    font-size: 13px;
+    color: #14185f !important;
+    font-weight: 200;
+    padding: 0;
+}
+
+/************************ VENDOR DASHBOARD ************************/
+
+body.page-id-36 .woocommerce-message {
+    display: none !important;
+}
+
+.wcv-grid p, .wcv-grid table, .wcvendors-table a, span.recent-orders h3, a.wcv-media-uploader-featured-add, .wcv-grid a {
+    font-family: 'Sailec-Regular', Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+}
+
+.wcv-grid h2 {
+    font-size: 20px !important;
+    color: #030753 !important;
+    border-bottom: 1px solid #030753;
+    padding-bottom: 17px;
+    margin-top: 30px !important;
+}
+
+.woocommerce-MyAccount-content h3 {
+    font-family: 'Sailec-Medium', Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    color: #030753 !important;
+    text-transform: uppercase;
+    font-size: 13px !important;
+    letter-spacing: 0.4px;
+    line-height: 0;
+    margin: 11px 0 30px !important;
+}
+}
+
+.wcv-grid h3 {
+    font-size: 20px !important;
+    color: #030753 !important;
+}
+
+.woocommerce-message {
+    font-size: 20px;
+    text-transform: uppercase;
+    border-top-color: #F79F90 !important;
+    padding: 15px 30px 10px 70px;
+}
+
+.woocommerce-message a {
+    font-size: 10px !important;
+    margin-left: 13px;
+}
+
+.woocommerce-message::before {
+    color: #f79f90;
+    top: 13px;
+    left: 25px;
+}
+
+.dashboard-sidebar p {
+    text-transform: uppercase;
+    line-height: 35px;
+}
+
+.dashboard-sidebar a {
+    color: #030753 !important;
+    letter-spacing: 0.4px;
+}
+
+.dashboard-sidebar a:hover {
+    font-family: 'Sailec-Medium', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.dashboard-content {
+    overflow-x: hidden;
+}
+
+.all-40.small-100 a.button.product {
+    font-size: 25px !important;
+}
+
+a.button.product:hover, a.button.product:active {
+    color: #030753;
+    text-decoration: none !important;
+}
+
+.button.product {
+    font-family: 'Canela', Helvetica Neue, Helvetica, Arial, sans-serif !important;
+}
+
+.button.product::after {
+    content: ' +';
+}
+
+.wcv-usage-stats button, .wcv-usage-stats button:hover {
+    background-color: #F79F90 !important;
+}
+
+ .dashboard-section-hr-top {
+    border-top: 1px solid #030753;
+    padding-top: 17px !important;
+    margin-top: 50px !important;
+}
+
+.wcv_dashboard_datepicker .wcv-form .control-group .control>input {
+    width: auto !important;
+    background: transparent;
+}
+
+input#update_button {
+    font-family: 'Sailec-Bold', Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+    color: #030753 !important;
+    letter-spacing: 0.7px !important;
+    text-transform: uppercase;
+    text-decoration: underline;
+    border: 0 !important;
+    padding: 7px 0 0 !important;
+    float: right !important;
+}
+
+label, .wcv-grid h5, .wcv-grid h6 {
+    font-family: 'Sailec-Regular', Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+    color: #030753 !important;
+    text-transform: none;
+}
+
+.wcv_dashboard_overview {
+    padding-top: 30px !important;
+}
+
+table.wcv-table td, table.wcv-table th {
+    padding: 15px 10px !important;
+}
+
+table.wcv-table tr td, table.wcv-table tr th {
+    font-size: 13px;
+    color: #030753;
+    border-bottom: #030753 1px solid !important;
+    vertical-align: middle !important;
+}
+
+.wcvendors-table .woocommerce-Price-amount {
+    font-size: 13px !important;
+}
+
+img.attachment-50x50.size-50x50.wp-post-image.wp-post-image, .wcvendors-table.wcvendors-table-product.wcv-table img {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #030753 !important;
+    border-radius: 50%;
+}
+
+::placeholder {
+    color: #707070;
+}
+
+.dashboard-product-categories, .dashboard-product-tags {
+    float: left;
+}
+
+.wcv-grid .wcv_terms_checklist_container {
+    height: auto !important;
+    border: none !important;
+}
+
+.wcv-form .control-group input[type=checkbox], .wcv-form .control-group input[type=radio] {
+    margin-top: 7px;
+}
+
+.wcv-grid input, .wcv-grid textarea {
+    color: #030753 !important;
+    border: 1px solid #030753 !important;
+}
+
+.wcv-form textarea {
+    height: 150px;
+    margin-top: 15px;
+}
+
+.wcv-product-basic input, .wcv-product-basic textarea {
+    padding: 15px 20px !important;
+}
+
+.select2-container--default .select2-selection--multiple {
+    height: 42px !important;
+    border: 1px solid #030753 !important;
+    border-radius: 0 !important;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+    border: none !important;
+}
+
+input.select2-search__field {
+    padding: 0 10px !important;
+}
+
+.wcv-grid .wcv-featuredimg {
+    height: 230px !important;
+    width: 230px !important;
+    overflow: hidden;
+    background: #e1e1e1;
+    margin-right: 30px;
+    border: 1px solid #030753 !important;
+}
+
+.wcv-grid .wcv-featuredimg img {
+    width: 230px !important;
+    height: 230px !important;
+}
+
+a.wcv-media-uploader-featured-add, .wcv-media-uploader-gallery a {
+    text-decoration: underline !important;
+}
+
+span.select2.select2-container.select2-container--default {
+    margin-bottom: 5px !important;
+}
+
+span#select2-product-type-container, span#select2-_stock_status-container, span#select2-_wcv_store_country-container {
+    font-size: 15px;
+}
+
+.wcv-tabs .tabs-content {
+    margin-top: 15px !important;
+}
+
+.wcv-form .control-group {
+    margin-bottom: 5px !important;
+}
+
+a.sale_schedule.right {
+    font-size: 10px !important;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+input#product_save_button, input#draft_button, input#store_save_button {
+    width: 175px;
+    color: #fff !important;
+    background: #f79e90;
+    text-transform: uppercase;
+    border: 0 !important;
+    border-radius: 0 !important;
+    padding: 15px 0 12px;
+    margin-top: 15px;
+    box-shadow: none !important;
+}
+
+#inventory span.select2.select2-container.select2-container--default {
+    margin-bottom: 0 !important;
+}
+
+#attributes.wcv-tabs.tabs-content {
+    margin-top: 30px !important;
+}
+
+button.button.add_attribute {
+    background: transparent;
+    color: #030852;
+    text-transform: uppercase;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+button.button.add_attribute::before {
+    content: '+ ';
+}
+
+div#wcv-attr-message {
+    background: transparent;
+    font-size: 15px;
+    text-transform: none;
+    border-top: 0;
+    padding: 15px 0 30px;
+}
+
+div#wcv-attr-message::before {
+    content: none !important;
+}
+
+.wcv-cols-group.wcv-horizontal-gutters.variation_options.variations-toolbar {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #030852;
+    display: block !important;
+}
+.wcv_attribute_data.wcv-metabox-content .control{
+    display: block !important;
+}
+
+.wcv-tabs .tabs-nav li a:hover {
+    background: #fff !important;
+}
+
+.wcv-grid a:hover {
+    color: #030852 !important;
+    text-decoration: none !important;
+}
+
+a.tabs-tab.seo, a.tabs-tab.social, a.tabs-tab.policies {
+    display: none !important;
+}
+
+ul.control.unstyled.inline, .wcv_actions.wcv-cols-group, .wcv_dashboard_table_header.wcv-cols-group.wcv-search {
+    display: none;
+}
+
+.wcv-tabs.top>.tabs-nav li.active a {
+    color: #030753 !important;
+    border: 1px solid #030753 !important;
+}
+
+.wcv-tabs.top>.tabs-nav {
+    border-bottom: 1px solid #030753 !important;
+}
+
+.wcv-tabs .tabs-nav li a {
+    border: 1px solid #030753 !important;
+}
+
+.wcv-tabs.top>.tabs-nav li a {
+    border-radius: 0 !important;
+    margin-right: 0 !important;
+}
+
+.wcv-form .control-group {
+    margin-bottom: 15px;
+}
+
+input#_wcv_store_address1 {
+    margin-bottom: 5px !important;
+}
+
+p.tip, .tip a {
+    font-size: 9px !important;
+    text-transform: uppercase;
+}
+
+.branding-50 {
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+}

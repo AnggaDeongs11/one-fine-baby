@@ -1,0 +1,9 @@
+.cf7-storage-settings-sidebar { background-color: #fff; padding: 1.25em; border: 1px solid #ddd; }
+.cf7-storage-settings-sidebar h3 { margin:0; }
+.cf7-storage-support { margin-bottom: 2em; }
+
+@media screen and ( min-width: 782px ) {
+	.cf7-storage-settings { padding-right: 25em; }
+	.cf7-storage-settings-main { float: left; width: 100%; }
+	.cf7-storage-settings-sidebar { float: right; width: 21em; margin-left:-25em; position: relative; right: -25em; }
+}

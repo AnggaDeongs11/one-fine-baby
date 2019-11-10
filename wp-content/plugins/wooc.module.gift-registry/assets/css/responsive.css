@@ -1,0 +1,95 @@
+@media (max-width: 767px) {
+  .box {
+    background-image: none;
+    background-color: #F6F5EC;
+  }
+  .heading {
+    color: #6e6a5f;
+  }
+  .heading .line {
+    border-color: #B5AF47;
+  }
+  .heading i {
+    color: #B5AF47;
+  }
+  .box .thumbnail {
+    color: #6e6a5f;
+  }
+  .box .thumbnail .caption {
+    color: #6e6a5f;
+  }
+  .box .thumbnail .title,
+  .box .thumbnail .caption-time,
+  .box .thumbnail .btn {
+    color: #6e6a5f;
+    border-color: #6e6a5f;
+  }
+  .table-cart {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  .table-cart input {
+    width: 100%;
+  }
+  .table-cart table,
+  .table-cart thead,
+  .table-cart tbody,
+  .table-cart th,
+  .table-cart td,
+  .table-cart tr {
+    display: block;
+  }
+  .table-cart thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .table-cart td {
+    /* Behave  like a "row" */
+    position: relative;
+    padding-left: 50% !important;
+    /*
+			Label the data
+			*/
+  }
+  .table-cart td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .table-cart td:nth-of-type(1):before {
+    content: "Image";
+  }
+  .table-cart td:nth-of-type(2):before {
+    content: "Product";
+  }
+  .table-cart td:nth-of-type(3):before {
+    content: "Price";
+  }
+  .table-cart td:nth-of-type(4):before {
+    content: " Desired Quantity";
+  }
+  .table-cart td:nth-of-type(5):before {
+    content: "Quantity";
+  }
+}
+@media (max-width: 479px) {
+  #defaultCountdown .countdown-row {
+    width: 100%;
+  }
+  #defaultCountdown .countdown-row .countdown-section {
+    margin-right: 3px;
+    width: 23%;
+    padding: 20px 3px;
+  }
+  #defaultCountdown .countdown-row .countdown-section .countdown-amount,
+  #defaultCountdown .countdown-row .countdown-section .countdown-period {
+    font-size: 14px;
+  }
+}

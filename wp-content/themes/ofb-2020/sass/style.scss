@@ -1,0 +1,20 @@
+/*
+Theme Name: One Fine Baby 2020
+Author: Station Five
+Author URI: https://www.stationfive.com/
+Description: WordPress Theme for One Fine Baby 2020
+Version: 1.0
+License: GNU General Public License
+*/
+
+
+
+@import "compass";
+@import "compass/reset";
+
+@import "_partials/mixins";
+@import "_partials/variables";
+@import "_partials/typography";
+@import "_partials/utilities";
+
+@import "_components/dashboard";
