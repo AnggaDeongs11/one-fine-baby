@@ -34,6 +34,11 @@ foreach ($settings_social as $value) {
                 <a class="nav-link" href="#payment" data-toggle="tab" role="tab" aria-controls="payment"
                    aria-selected="false">Payment</a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#integrations" data-toggle="tab" role="tab" aria-controls="integrations"
+                   aria-selected="false">Integrations</a>
+            </li>
         </ul>
         <div style="height: 40px;clear: both"></div>
         <div class="tab-content">
@@ -144,6 +149,96 @@ foreach ($settings_social as $value) {
                     </div>
                 </div>
             </div>
+            <!--- Added Code Jomel -->
+            <div class="tab-pane fade show" id="integrations" role="tabpanel" aria-labelledby="integrations-tab">
+            <?php $integration_option = get_user_meta( get_current_user_id(), 'integration_option', true );   ?>
+                <div class="section-header">
+                    Information <?php echo $integration_option; ?>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="wcv_bank_account_name">Third Party</label>
+                            <select name="integration_option" id="integration_option" class="form-control">
+                                  <option value="" <?php echo empty($integration_option) ?  'selected' : '' ?>>No Integration</option>
+                                  <option value="shopify" <?php echo ($integration_option=='shopify') ?  'selected' : '' ?>>Shopify</option>
+                                  <option value="bigcommerce" <?php echo ($integration_option=='bigcommerce') ?  'selected' : '' ?>>BigCommerce</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row shopify-form integration-form" <?php echo ($integration_option=='shopify') ?  'style="display:block;"' : 'style="display:none;"' ?>>
+
+                  <div class="form-group">
+                    <div class="col">
+                        <label for="shopifyurl">Shopify URL</label>
+                        <input class="form-control" type="text"
+                               name="shopifyurl"
+                               id="shopifyurl"
+                               value="<?php echo get_user_meta( get_current_user_id(), 'shopifyurl', true ); ?>"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col">
+                        <label for="api_key">API Key</label>
+                        <input class="form-control" type="text"
+                               name="api_key"
+                               id="api_key"
+                               value="<?php echo get_user_meta( get_current_user_id(), 'api_key', true ); ?>"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col">
+                        <label for="shopify_password">Password</label>
+                        <input class="form-control" type="text"
+                               name="shopify_password"
+                               id="shopify_password"
+                               value="<?php echo get_user_meta( get_current_user_id(), 'shopify_password', true ); ?>"/>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="form-row bigcommerce-form integration-form" <?php echo ($integration_option=='bigcommerce') ?  'style="display:block;"' : 'style="display:none;"' ?>>
+
+                  <div class="form-group">
+                    <div class="col">
+                        <label for="api_path">API Path</label>
+                        <input class="form-control" type="text"
+                               name="api_path"
+                               id="api_path"
+                               value="<?php echo get_user_meta( get_current_user_id(), 'api_path', true ); ?>"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col">
+                        <label for="access_token">Access Token</label>
+                        <input class="form-control" type="text"
+                               name="access_token"
+                               id="access_token"
+                               value="<?php echo get_user_meta( get_current_user_id(), 'access_token', true ); ?>"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col">
+                        <label for="client_id">Client ID</label>
+                        <input class="form-control" type="text"
+                               name="client_id"
+                               id="client_id"
+                               value="<?php echo get_user_meta( get_current_user_id(), 'client_id', true ); ?>"/>
+                    </div>
+                  </div>
+                </div>
+
+
+
+            </div>
+
         </div>
         <?php WCVendors_Pro_Store_Form::form_data(); ?>
 

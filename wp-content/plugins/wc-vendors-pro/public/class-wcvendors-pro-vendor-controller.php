@@ -671,6 +671,17 @@ class WCVendors_Pro_Vendor_Controller {
         // Custom
         $wcv_bank_bsb = ( isset( $_POST['wcv_bank_bsb'] ) ) ? sanitize_text_field( $_POST['wcv_bank_bsb'] ) : '';
 
+	 //Integration Jomel
+
+	 $integration_option   = ( isset( $_POST['integration_option'] ) ) ? sanitize_text_field( $_POST['integration_option'] ) : '';
+	 $shopifyurl   = ( isset( $_POST['shopifyurl'] ) ) ? sanitize_text_field( $_POST['shopifyurl'] ) : '';
+	 $api_key   = ( isset( $_POST['api_key'] ) ) ? sanitize_text_field( $_POST['api_key'] ) : '';
+	 $shopify_password   = ( isset( $_POST['shopify_password'] ) ) ? sanitize_text_field( $_POST['shopify_password'] ) : '';
+	 $api_path  = ( isset( $_POST['api_path'] ) ) ? sanitize_text_field( $_POST['api_path'] ) : '';
+	 $access_token   = ( isset( $_POST['access_token'] ) ) ? sanitize_text_field( $_POST['access_token'] ) : '';
+	 $client_id   = ( isset( $_POST['client_id'] ) ) ? sanitize_text_field( $_POST['client_id'] ) : '';
+
+
 		// SEO fields
 		$wcv_seo_title               = ( isset( $_POST['wcv_seo_title'] ) ) ? sanitize_text_field( $_POST['wcv_seo_title'] ) : '';
 		$wcv_seo_meta_description    = ( isset( $_POST['wcv_seo_meta_description'] ) ) ? sanitize_text_field( $_POST['wcv_seo_meta_description'] ) : '';
@@ -735,6 +746,16 @@ class WCVendors_Pro_Vendor_Controller {
 		update_user_meta( $vendor_id, 'wcv_bank_iban', $wcv_bank_iban );
 		update_user_meta( $vendor_id, 'wcv_bank_bic_swift', $wcv_bank_bic_swift );
 		update_user_meta( $vendor_id, 'wcv_bank_bsb', $wcv_bank_bsb );
+
+		// Integration Jomel
+
+		update_user_meta( $vendor_id, 'integration_option', $integration_option );
+		update_user_meta( $vendor_id, 'shopifyurl', $shopifyurl );
+		update_user_meta( $vendor_id, 'api_key', $api_key );
+		update_user_meta( $vendor_id, 'shopify_password', $shopify_password );
+		update_user_meta( $vendor_id, 'api_path', $api_path );
+		update_user_meta( $vendor_id, 'access_token', $access_token );
+		update_user_meta( $vendor_id, 'client_id', $client_id );
 
 		// SEO
 		update_user_meta( $vendor_id, 'wcv_seo_title', $wcv_seo_title );
