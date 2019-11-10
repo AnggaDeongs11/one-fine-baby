@@ -47,7 +47,7 @@
         <p><?php _e( 'No orders for this period. Adjust your dates above and click Update, or list new products for customers to buy.', 'wcvendors-pro' ); ?></p>
     <?php else : ?>
 
-        <canvas id="orders_chart" width="350" height="200" ></canvas>
+        <canvas id="orders_chart" width="350" height="200" style="margin-top:10px" ></canvas>
         <script type="text/javascript">
           var orders_chart_label = <?php echo $label_new; ?>;
 
