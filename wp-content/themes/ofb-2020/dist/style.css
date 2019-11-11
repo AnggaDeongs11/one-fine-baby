@@ -605,3 +605,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .default_attribute {
   width: 100%;
 }
+
+.variations_notice {
+  display: none !important;
+}
