@@ -609,3 +609,69 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .variations_notice {
   display: none !important;
 }
+
+.wcv-tabs.top>.tabs-nav li {
+   display: none !important;  
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: #fff !important;
+  float: right;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #5EC5B6 !important;
+  color: #fff;
+}
+
+.variations-pagenav {
+   display: none !important;
+}
+
+.wcv-grid .wcv_variation_inner {
+  border: 0px !important;
+}
+
+.wcv-cols-group div {
+  text-align: center;
+}
+
+.wcv-grid .wcv_variation_inner label {
+  color: #030753;
+}
+
+.variations_wrapper input, .variations_wrapper select {
+  width: 90%;
+  font-size: 12px;
+}
+
+.wcv-grid .wcv_variation .remove_variation {
+  right: -15px;
+  position: relative;
+}
+
+.btnAddAttr {
+  position: absolute !important;
+  bottom: -40px;
+}
+
+.wcv-grid .wcv_variation_inner {
+  padding: 0px !important;
+  margin-bottom: -20px;
+}
+
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #030753; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

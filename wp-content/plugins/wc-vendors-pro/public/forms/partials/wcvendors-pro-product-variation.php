@@ -23,14 +23,62 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 
 ?>
 
+
+
 <div class="wcv_variation wcv-metabox closed all-100" rel="<?php echo esc_attr( $variation_id ); ?>"
 	 data-loop="<?php echo $loop; ?>">
 	<div class="wcv-cols-group wcv_variation_inner">
+	 
 		<div class="all-100">
-			<h5 class="variation_title">
-				<span class="wcv-sort"><i class="wcv-icon wcv-icon-sort"></i></span>
-				<strong>#<?php echo esc_html( $variation_data['id'] ); ?> : </strong>
+			 <h5 class="variation_title">
+
+				<strong style="display:none">#<?php echo esc_html( $variation_data['id'] ); ?> : </strong>
 				<span class="variations_wrapper">
+
+					<?php do_action( 'wcv_product_variation_before_general', $loop, $variation_id, $variation_data, $variation ); ?>
+
+					<div class="all-10 upload_image">
+						<?php if ( 'yes' != get_option( 'wcvendors_hide_product_variations_featured' ) ) : ?>
+							<a style="width: 100%"  href="#" class="upload_image_button
+							<?php
+							if ( $_thumbnail_id > 0 ) {
+								echo 'wcv_remove';
+							}
+							?>
+							" rel="<?php echo esc_attr( $variation_id ); ?>">
+								<img style="width: 75%" class="wc_placeholder_img" src="
+								<?php
+								if ( ! empty( $image ) ) {
+									echo esc_attr( $image );
+								} else {
+									echo "/wp-content/themes/ofb-2020/images/placeholder.png";
+								}
+								?>
+								"/>
+								<input type="hidden" name="upload_image_id[<?php echo $loop; ?>]" class="upload_image_id"
+										 value="<?php echo esc_attr( $_thumbnail_id ); ?>"/>
+							</a>
+						<?php endif; ?>
+					</div>
+
+					<div class="all-15 sku">
+						<?php if ( 'yes' != get_option( 'wcvendors_hide_product_variations_sku' ) ) : ?>
+							<?php if ( wc_product_sku_enabled() ) : ?>
+
+									<input type="text" name="variable_sku[<?php echo $loop; ?>]"
+											 value="<?php if ( isset( $_sku ) ) { echo esc_attr( $_sku ); } ?>" placeholder="<?php echo esc_attr( $parent_data['sku'] ); ?>"/>
+
+							<?php else : ?>
+								<input type="hidden" name="variable_sku[<?php echo $loop; ?>]"
+										 value="<?php if ( isset( $_sku ) ) { echo esc_attr( $_sku ); } ?>"/>
+							<?php endif; ?>
+						<?php else : ?>
+							<input type="hidden" name="variable_sku[<?php echo $loop; ?>]" value="<?php if ( isset( $_sku ) ) { echo esc_attr( $_sku ); } ?>"/>
+						<?php endif; ?>
+					</div>
+
+					<?php do_action( 'wcv_product_variation_after_general', $loop, $variation_id, $variation_data, $variation ); ?>
+
 				<?php
 
 				$attributes = WCVendors_Pro_Utils::array_sort( $attributes, 'position' );
@@ -43,6 +91,7 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 						continue;
 					}
 					// Name will be something like attribute_pa_color
+					echo '<div class="all-15">';
 					echo '<select data-taxonomy="' . sanitize_title( $attribute['name'] ) . '" class="variation_attribute ' . sanitize_title( $key ) . '" name="attribute_' . sanitize_title( $key ) . '[' . $loop . ']"><option value="">' . __( 'Any', 'wcvendors-pro' ) . ' ' . esc_html( wc_attribute_label( $key ) ) . '&hellip;</option>';
 
 
@@ -72,12 +121,75 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 					}
 
 					echo '</select>';
+					echo '</div>';
 				}
 				?>
-				</span>
+
+
+				<?php do_action( 'wcv_product_variation_before_pricing', $loop, $variation_id, $variation_data, $variation ); ?>
+
+			 <!-- Variable pricing  -->
+
+				 <?php if ( 'yes' != get_option( 'wcvendors_hide_product_variations_price' ) ) : ?>
+					 <div class="all-15">
+								 <input type="text" size="5" name="variable_regular_price[<?php echo $loop; ?>]"
+											value="<?php if ( isset( $_regular_price ) ) { echo wc_format_localized_price( $_regular_price ); } ?>"
+											class="wc_input_price variable_regular_price"
+											placeholder="<?php esc_attr_e( 'Variation price (required)', 'wcvendors-pro' ); ?>"
+												data-parsley-price
+								 />
+					 </div>
+				 <?php endif; ?>
+				 <div class="all-15">
+					 <?php if ( 'yes' != get_option( 'wcvendors_hide_product_variations_sale_price' ) ) : ?>
+
+								 <input type="text" size="5" name="variable_sale_price[<?php echo $loop; ?>]"
+											class="variable_sale_price wc_input_price"
+											value="<?php if ( isset( $_sale_price ) ) { echo wc_format_localized_price( $_sale_price ); } ?>"
+											data-parsley-price
+								 />
+							 <p clas="tip" style="display: none;"><a href="#" class="sale_schedule"><?php _e( 'Schedule', 'wcvendors-pro' ); ?></a>
+							 </p>
+						 </div>
+					 <?php endif; ?>
+				 </div>
+
+			 <div class="wcv-cols-group wcv-horizontal-gutters sale_price_dates_fields" style="display:none;">
+				 <div class="all-50">
+					 <div class="control-group">
+						 <label><?php _e( 'Sale start date:', 'wcvendors-pro' ); ?></label>
+						 <div class="control">
+							 <input type="text" class="sale_price_dates_from wcv-datepicker"
+										name="variable_sale_price_dates_from[<?php echo $loop; ?>]"
+										value="<?php echo ! empty( $_sale_price_dates_from ) ? date_i18n( 'Y-m-d', $_sale_price_dates_from ) : ''; ?>"
+										placeholder="<?php echo esc_attr_x( 'From&hellip;', 'placeholder', 'wcvendors-pro' ); ?> YYYY-MM-DD"
+										maxlength="10" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"/>
+						 </div>
+					 </div>
+				 </div>
+
+				 <div class="all-50">
+					 <div class="control-group">
+						 <label><?php _e( 'Sale end date:', 'wcvendors-pro' ); ?></label>
+						 <div class="control">
+							 <input type="text" class="sale_price_dates_to wcv-datepicker"
+										name="variable_sale_price_dates_to[<?php echo $loop; ?>]"
+										value="<?php echo ! empty( $_sale_price_dates_to ) ? date_i18n( 'Y-m-d', $_sale_price_dates_to ) : ''; ?>"
+										placeholder="<?php echo esc_attr_x( 'To&hellip;', 'placeholder', 'wcvendors-pro' ); ?> YYYY-MM-DD"
+										maxlength="10" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"/>
+						 </div>
+						 <p class="tip"><a href="#" class="cancel_sale_schedule"
+											 style="display:none"><?php _e( 'Cancel schedule', 'wcvendors-pro' ); ?></a></p>
+					 </div>
+				 </div>
+			 </div>
+
+			 <?php do_action( 'wcv_product_variation_after_pricing', $loop, $variation_id, $variation_data, $variation ); ?>
+
+			 	</span>
 				<span><i class="wcv-icon wcv-icon-caret-down" aria-hidden="true"></i></span>
 				<a href="#" class="remove_variation delete" rel="<?php echo esc_attr( $variation_id ); ?>"
-				   data-loop="<?php echo $loop; ?>"><?php _e( 'Remove', 'wcvendors-pro' ); ?></a>
+				   data-loop="<?php echo $loop; ?>"><?php _e( '<i class="fa fa-remove"></i>', 'wcvendors-pro' ); ?></a>
 				<input type="hidden" name="variable_post_id[<?php echo $loop; ?>]"
 					   value="<?php echo esc_attr( $variation_id ); ?>"/>
 				<input type="hidden" class="variation_menu_order" name="variation_menu_order[<?php echo $loop; ?>]"
@@ -87,53 +199,10 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 	</div>
 	<div class="wcv_variable_attributes wcv-metabox-content" style="display: none;">
 
-		<?php do_action( 'wcv_product_variation_before_general', $loop, $variation_id, $variation_data, $variation ); ?>
+		<?php //do_action( 'wcv_product_variation_before_general', $loop, $variation_id, $variation_data, $variation ); ?>
 
-		<div class="wcv-cols-group wcv-horizontal-gutters">
-			<div class="all-50 upload_image">
-				<?php if ( 'yes' != get_option( 'wcvendors_hide_product_variations_featured' ) ) : ?>
-					<a href="#" class="upload_image_button
-					<?php
-					if ( $_thumbnail_id > 0 ) {
-						echo 'wcv_remove';
-					}
-					?>
-					" rel="<?php echo esc_attr( $variation_id ); ?>">
-						<img class="wc_placeholder_img" src="
-						<?php
-						if ( ! empty( $image ) ) {
-							echo esc_attr( $image );
-						} else {
-							echo esc_attr( wc_placeholder_img_src() );
-						}
-						?>
-						"/>
-						<input type="hidden" name="upload_image_id[<?php echo $loop; ?>]" class="upload_image_id"
-							   value="<?php echo esc_attr( $_thumbnail_id ); ?>"/>
-					</a>
-				<?php endif; ?>
-			</div>
-			<div class="all-50 sku">
-				<?php if ( 'yes' != get_option( 'wcvendors_hide_product_variations_sku' ) ) : ?>
-					<?php if ( wc_product_sku_enabled() ) : ?>
-						<div class="control-group">
-						<label><?php _e( 'SKU', 'wcvendors-pro' ); ?>: </label>
-						<div class="control">
-							<input type="text" name="variable_sku[<?php echo $loop; ?>]"
-								   value="<?php if ( isset( $_sku ) ) { echo esc_attr( $_sku ); } ?>" placeholder="<?php echo esc_attr( $parent_data['sku'] ); ?>"/>
-						</div>
-					<?php else : ?>
-						<input type="hidden" name="variable_sku[<?php echo $loop; ?>]"
-							   value="<?php if ( isset( $_sku ) ) { echo esc_attr( $_sku ); } ?>"/>
-					<?php endif; ?>
-					</div>
-				<?php else : ?>
-					<input type="hidden" name="variable_sku[<?php echo $loop; ?>]" value="<?php if ( isset( $_sku ) ) { echo esc_attr( $_sku ); } ?>"/>
-				<?php endif; ?>
-			</div>
-		</div>
 
-		<?php do_action( 'wcv_product_variation_after_general', $loop, $variation_id, $variation_data, $variation ); ?>
+		<?php //do_action( 'wcv_product_variation_after_general', $loop, $variation_id, $variation_data, $variation ); ?>
 
 		<hr style="clear: both;"/>
 
@@ -187,74 +256,6 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 
 		<?php // endif; ?>
 
-		<?php do_action( 'wcv_product_variation_before_pricing', $loop, $variation_id, $variation_data, $variation ); ?>
-
-		<!-- Variable pricing  -->
-		<div class="wcv-cols-group wcv-horizontal-gutters variable_pricing">
-			<?php if ( 'yes' != get_option( 'wcvendors_hide_product_variations_price' ) ) : ?>
-				<div class="all-50">
-					<div class="control-group">
-						<label><?php echo __( 'Regular Price:', 'wcvendors-pro' ) . ' (' . get_woocommerce_currency_symbol() . ')'; ?></label>
-						<div class="control">
-							<input type="text" size="5" name="variable_regular_price[<?php echo $loop; ?>]"
-								   value="<?php if ( isset( $_regular_price ) ) { echo wc_format_localized_price( $_regular_price ); } ?>"
-								   class="wc_input_price variable_regular_price"
-								   placeholder="<?php esc_attr_e( 'Variation price (required)', 'wcvendors-pro' ); ?>"
-							       data-parsley-price
-							/>
-						</div>
-					</div>
-				</div>
-			<?php endif; ?>
-			<div class="all-50">
-				<?php if ( 'yes' != get_option( 'wcvendors_hide_product_variations_sale_price' ) ) : ?>
-					<div class="control-group">
-						<label><?php echo __( 'Sale Price:', 'wcvendors-pro' ) . ' (' . get_woocommerce_currency_symbol() . ')'; ?></label>
-						<div class="control">
-							<input type="text" size="5" name="variable_sale_price[<?php echo $loop; ?>]"
-								   class="variable_sale_price wc_input_price"
-								   value="<?php if ( isset( $_sale_price ) ) { echo wc_format_localized_price( $_sale_price ); } ?>"
-								   data-parsley-price
-							/>
-						</div>
-						<p clas="tip"><a href="#" class="sale_schedule"><?php _e( 'Schedule', 'wcvendors-pro' ); ?></a>
-						</p>
-					</div>
-				<?php endif; ?>
-			</div>
-		</div>
-
-		<div class="wcv-cols-group wcv-horizontal-gutters sale_price_dates_fields" style="display:none;">
-			<div class="all-50">
-				<div class="control-group">
-					<label><?php _e( 'Sale start date:', 'wcvendors-pro' ); ?></label>
-					<div class="control">
-						<input type="text" class="sale_price_dates_from wcv-datepicker"
-							   name="variable_sale_price_dates_from[<?php echo $loop; ?>]"
-							   value="<?php echo ! empty( $_sale_price_dates_from ) ? date_i18n( 'Y-m-d', $_sale_price_dates_from ) : ''; ?>"
-							   placeholder="<?php echo esc_attr_x( 'From&hellip;', 'placeholder', 'wcvendors-pro' ); ?> YYYY-MM-DD"
-							   maxlength="10" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"/>
-					</div>
-				</div>
-			</div>
-
-			<div class="all-50">
-				<div class="control-group">
-					<label><?php _e( 'Sale end date:', 'wcvendors-pro' ); ?></label>
-					<div class="control">
-						<input type="text" class="sale_price_dates_to wcv-datepicker"
-							   name="variable_sale_price_dates_to[<?php echo $loop; ?>]"
-							   value="<?php echo ! empty( $_sale_price_dates_to ) ? date_i18n( 'Y-m-d', $_sale_price_dates_to ) : ''; ?>"
-							   placeholder="<?php echo esc_attr_x( 'To&hellip;', 'placeholder', 'wcvendors-pro' ); ?> YYYY-MM-DD"
-							   maxlength="10" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])"/>
-					</div>
-					<p class="tip"><a href="#" class="cancel_sale_schedule"
-									  style="display:none"><?php _e( 'Cancel schedule', 'wcvendors-pro' ); ?></a></p>
-				</div>
-			</div>
-		</div>
-
-		<?php do_action( 'wcv_product_variation_after_pricing', $loop, $variation_id, $variation_data, $variation ); ?>
 
 		<?php do_action( 'wcv_product_variation_before_stock', $loop, $variation_id, $variation_data, $variation ); ?>
 
