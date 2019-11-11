@@ -154,12 +154,115 @@ $actions = apply_filters( 'wcvendors_pro_variation_actions', $actions );
 				</div>
 			</div>
 		</div>
+
+		<div class="wcv-cols-group wcv-horizontal-gutters" >
+			<div class="all-100">
+				<div class="toolbar toolbar-variations-defaults">
+					<div class="variations-defaults">
+						<?php if ( $variation_attribute_found ) : ?>
+							<div class="wcv-cols-group">
+								<div class="all-20" style="display:none">
+									<strong><?php _e( 'Default Form Values', 'wcvendors-pro' ); ?>:</strong>
+								</div>
+								<div class="variation_default_values all-100">
+
+									<?php
+									echo '<div class="form-group"><div class="form-row">';
+
+									$attributes         = WCVendors_Pro_Utils::array_sort( $attributes, 'position' );
+									$default_attributes = maybe_unserialize( get_post_meta( $post_id, '_default_attributes', true ) );
+
+									foreach ( $attributes as $attribute ) {
+
+										// Only deal with attributes that are variations
+										if ( ! $attribute['is_variation'] ) {
+											continue;
+										}
+
+										// Get current value for variation (if set)
+										$variation_selected_value = isset( $default_attributes[ sanitize_title( $attribute['name'] ) ] ) ? $default_attributes[ sanitize_title( $attribute['name'] ) ] : '';
+
+										// Name will be something like attribute_pa_color
+
+										$name = explode("_",strtoupper(sanitize_title( $attribute['name'] )));
+
+										echo '<div class="col"><label >'.$name[1].'</label>';
+
+                    echo '<div class="control-group" style="margin-top:0px !important">';
+										echo '<select data-taxonomy="' . sanitize_title( $attribute['name'] ) . '" name="default_attribute_' . sanitize_title( $attribute['name'] ) . '" class="default_attribute form-control ' . sanitize_title( $attribute['name'] ) . '" data-current="' . esc_attr( $variation_selected_value ) . '"><option value="">' . __( 'No default', 'wcvendors-pro' ) . ' ' . esc_html( wc_attribute_label( $attribute['name'] ) ) . '&hellip;</option>';
+
+										// Get terms for attribute taxonomy or value if its a custom attribute
+										if ( $attribute['is_taxonomy'] ) {
+											$post_terms = wp_get_post_terms( $post_id, $attribute['name'] );
+
+											foreach ( $post_terms as $term ) {
+												echo '<option ' . selected( $variation_selected_value, $term->slug, false ) . ' value="' . esc_attr( $term->slug ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_name', $term->name ) ) . '</option>';
+											}
+										} else {
+											$options = wc_get_text_attributes( $attribute['value'] );
+
+											foreach ( $options as $option ) {
+												$selected = sanitize_title( $variation_selected_value ) === $variation_selected_value ? selected( $variation_selected_value, sanitize_title( $option ), false ) : selected( $variation_selected_value, $option, false );
+												echo '<option ' . $selected . ' value="' . esc_attr( $option ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_name', $option ) ) . '</option>';
+											}
+										}
+
+										echo '</select>';
+										echo '</div>';
+										echo '</div>';
+									}
+
+									?>
+										 <div class="col">
+												<label for="api_path">SKU</label>
+												<div class="control-group" style="margin-top:0px !important">
+												<input class="form-control" type="text">
+											  </div>
+											</div>
+											<div class="col">
+ 												<label for="api_path">Price</label>
+ 												<div class="control-group" style="margin-top:0px !important">
+ 												<input class="form-control" type="text">
+ 											  </div>
+ 											</div>
+											<div class="col">
+												<label for="api_path">Sale</label>
+												<div class="control-group" style="margin-top:0px !important">
+												<input class="form-control" type="text">
+												</div>
+											</div>
+											<div class="col">
+												<label for="api_path">Image</label>
+												<div class="control-group" style="margin-top:0px !important">
+												<input class="form-control" type="text">
+												</div>
+											</div>
+									</div></div>
+								</div>
+								<div class="all-100"  style="display: none;">
+									<p class="tip"><?php _e( 'These are the attributes that will be pre-selected on the frontend.', 'wcvendors-pro' ); ?></p>
+								</div>
+							</div>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+			<div class="all-20 align-right" style="display:none">
+				<div class="variations-pagenav">
+					<span class="displaying-num"><?php printf( _n( '%s item', '%s items', $variations_count, 'wcvendors-pro' ), $variations_count ); ?></span>
+					<span class="expand-close">
+						(<a href="#" class="expand_all"><?php _e( 'Expand', 'wcvendors-pro' ); ?></a> / <a href="#"
+																										   class="close_all"><?php _e( 'Close', 'wcvendors-pro' ); ?></a>)
+					</span>
+				</div>
+			</div>
+		</div>
 		<div class="wcv-cols-group wcv-horizontal-gutters variation_options variations-toolbar">
 			<div class="all-100">
 
 				<?php if ( $variaton_dropdown_type == 'single' ) : ?>
 					<div class="wcv-cols-group control-group">
-						<div class="all-90 control">
+						<div class="all-90 control"  style="display: none">
 
 							<input type="hidden" name="variation_dropdown_type" id="variation_dropdown_type"
 								   value="single"/>
@@ -175,7 +278,7 @@ $actions = apply_filters( 'wcvendors_pro_variation_actions', $actions );
 										}
 									}
 									?>
-									<option value="<?php echo $value; ?>" 
+									<option value="<?php echo $value; ?>"
 															  <?php
 																if ( $option_attributes ) {
 																	echo $option_attributes;
@@ -194,8 +297,8 @@ $actions = apply_filters( 'wcvendors_pro_variation_actions', $actions );
 							</select>
 
 						</div>
-						<div class="all-10 wcv-horizontal-gutters align-right control">
-							<a class="button bulk_edit do_variation_action"><?php _e( 'Go', 'wcvendors-pro' ); ?></a>
+						<div class="all-10 wcv-horizontal-gutters align-center control btnAddAttr">
+							<a class="button bulk_edit do_variation_action"><?php _e( 'ADD ATTRIBUTE', 'wcvendors-pro' ); ?></a>
 						</div>
 					</div>
 
@@ -232,74 +335,7 @@ $actions = apply_filters( 'wcvendors_pro_variation_actions', $actions );
 			</div>
 		</div>
 
-		<div class="wcv-cols-group wcv-horizontal-gutters">
-			<div class="all-80">
-				<div class="toolbar toolbar-variations-defaults">
-					<div class="variations-defaults">
-						<?php if ( $variation_attribute_found ) : ?>
-							<div class="wcv-cols-group">
-								<div class="all-20">
-									<strong><?php _e( 'Default Form Values', 'wcvendors-pro' ); ?>:</strong>
-								</div>
-								<div class="variation_default_values all-80">
-									<?php
-
-									$attributes         = WCVendors_Pro_Utils::array_sort( $attributes, 'position' );
-									$default_attributes = maybe_unserialize( get_post_meta( $post_id, '_default_attributes', true ) );
-
-									foreach ( $attributes as $attribute ) {
-
-										// Only deal with attributes that are variations
-										if ( ! $attribute['is_variation'] ) {
-											continue;
-										}
-
-										// Get current value for variation (if set)
-										$variation_selected_value = isset( $default_attributes[ sanitize_title( $attribute['name'] ) ] ) ? $default_attributes[ sanitize_title( $attribute['name'] ) ] : '';
-
-										// Name will be something like attribute_pa_color
-										echo '<select data-taxonomy="' . sanitize_title( $attribute['name'] ) . '" name="default_attribute_' . sanitize_title( $attribute['name'] ) . '" class="default_attribute ' . sanitize_title( $attribute['name'] ) . '" data-current="' . esc_attr( $variation_selected_value ) . '"><option value="">' . __( 'No default', 'wcvendors-pro' ) . ' ' . esc_html( wc_attribute_label( $attribute['name'] ) ) . '&hellip;</option>';
-
-										// Get terms for attribute taxonomy or value if its a custom attribute
-										if ( $attribute['is_taxonomy'] ) {
-											$post_terms = wp_get_post_terms( $post_id, $attribute['name'] );
-
-											foreach ( $post_terms as $term ) {
-												echo '<option ' . selected( $variation_selected_value, $term->slug, false ) . ' value="' . esc_attr( $term->slug ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_name', $term->name ) ) . '</option>';
-											}
-										} else {
-											$options = wc_get_text_attributes( $attribute['value'] );
-
-											foreach ( $options as $option ) {
-												$selected = sanitize_title( $variation_selected_value ) === $variation_selected_value ? selected( $variation_selected_value, sanitize_title( $option ), false ) : selected( $variation_selected_value, $option, false );
-												echo '<option ' . $selected . ' value="' . esc_attr( $option ) . '">' . esc_html( apply_filters( 'woocommerce_variation_option_name', $option ) ) . '</option>';
-											}
-										}
-
-										echo '</select>';
-									}
-									?>
-								</div>
-								<div class="all-100">
-									<p class="tip"><?php _e( 'These are the attributes that will be pre-selected on the frontend.', 'wcvendors-pro' ); ?></p>
-								</div>
-							</div>
-						<?php endif; ?>
-					</div>
-				</div>
-			</div>
-			<div class="all-20 align-right">
-				<div class="variations-pagenav">
-					<span class="displaying-num"><?php printf( _n( '%s item', '%s items', $variations_count, 'wcvendors-pro' ), $variations_count ); ?></span>
-					<span class="expand-close">
-						(<a href="#" class="expand_all"><?php _e( 'Expand', 'wcvendors-pro' ); ?></a> / <a href="#"
-																										   class="close_all"><?php _e( 'Close', 'wcvendors-pro' ); ?></a>)
-					</span>
-				</div>
-			</div>
-		</div>
-
-		<div class="wcv-cols-group wcv-horizontal-gutters">
+		<div class="wcv-cols-group wcv-horizontal-gutters" style="margin-top:50px;">
 			<div class="all-100">
 				<div class="wcv_variations wcv-metaboxes" data-attributes="
 				<?php
@@ -328,7 +364,15 @@ $actions = apply_filters( 'wcvendors_pro_variation_actions', $actions );
 				</div> <!-- end .toolbar -->
 			</div>
 		</div>
+
+
 		<input type="hidden" id="wcv_parent_object" value=""/>
 		<input type="hidden" id="wcv_deleted_variations" name="wcv_deleted_variations" value="" data-variations=""/>
 	</div>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#variation_actions_single').val('add_variation');
+});
+</script>

@@ -895,7 +895,7 @@ class WCVendors_Pro_Product_Form {
 						'post_id'           => $post_id,
 						'id'                => '_sale_price',
 						'data_type'         => 'price',
-						'label'             => __( 'Sale Price', 'wcvendors-pro' ) . ' (' . get_woocommerce_currency_symbol() . ')',
+						'label'             => __( 'Sale Price', 'wcvendors-pro' ),// . ' (' . get_woocommerce_currency_symbol() . ')',
 						'desc_tip'          => 'true',
 						'class'             => 'form-control',
 						'description'       => '<a href="#" class="sale_schedule right">' . __( 'Schedule', 'wcvendors-pro' ) . '</a>',
@@ -1213,7 +1213,7 @@ class WCVendors_Pro_Product_Form {
 						'post_id'           => $post_id,
 						'id'                => '_private_listing',
 						'wrapper_class'     => '',
-						'label'             => __( 'Private Listing, hide this product from the catalog.', 'wcvendors-pro' ),
+						'label'             => __( 'Hide Product', 'wcvendors-pro' ),
 						'type'              => 'checkbox',
 						'custom_attributes' => $custom_attributes,
 					)

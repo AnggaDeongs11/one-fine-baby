@@ -178,6 +178,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: Canela;
   font-size: 40px;
   line-height: 40px;
+  color: #030753;
 }
 /* line 16, ../sass/_components/_dashboard-content.scss */
 .vendor-content__page-subtitle {
@@ -564,4 +565,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   color: #030753;
   opacity: .5;
+}
+
+.product-settings {
+  background: #F5F5F5;
+  background: #F5F5F5;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+.info-title {
+    color: #030753;
+    font-weight: 600;
+}
+
+.sale_price .sale_schedule  {
+  display: none !important;
+}
+
+.icon {
+   text-align: center;
+}
+
+.do_variation_action {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #030753 !important;
+  font-size: 14px;
+}
+
+.btnAddAttr {
+   background: #F5F5F5;
+   border-radius: 50px;
+   padding: 12px;
+   width: 160px !important;
+   float: left;
+}
+
+.default_attribute {
+  width: 100%;
 }

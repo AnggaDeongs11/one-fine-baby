@@ -12,7 +12,7 @@
  *   DO NOT EDIT ANY OF THE LINES BELOW UNLESS YOU KNOW WHAT YOU'RE DOING
  */
 
-$title      = ( is_numeric( $object_id ) ) ? __( 'Save Changes', 'wcvendors-pro' ) : __( 'Add Product', 'wcvendors-pro' );
+$title      = ( is_numeric( $object_id ) ) ? __( 'Save Changes', 'wcvendors-pro' ) : __( 'Preview', 'wcvendors-pro' );
 $page_title = ( is_numeric( $object_id ) ) ? __( 'Edit Product', 'wcvendors-pro' ) : __( 'Add Product', 'wcvendors-pro' );
 $product    = ( is_numeric( $object_id ) ) ? wc_get_product( $object_id ) : null;
 $post       = ( is_numeric( $object_id ) ) ? get_post( $object_id ) : null;

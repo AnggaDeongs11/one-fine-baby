@@ -10,7 +10,7 @@
 /**
  *   DO NOT EDIT ANY OF THE LINES BELOW UNLESS YOU KNOW WHAT YOU'RE DOING
  */
-$title = ( is_numeric($object_id) ) ? __('Save', 'wcvendors-pro') : __('Add Product', 'wcvendors-pro');
+$title = ( is_numeric($object_id) ) ? __('Save', 'wcvendors-pro') : __('Save', 'wcvendors-pro');
 $page_title = ( is_numeric($object_id) ) ? __('Edit Product', 'wcvendors-pro') : __('Add Product', 'wcvendors-pro');
 $product = ( is_numeric($object_id) ) ? wc_get_product($object_id) : null;
 $post = ( is_numeric($object_id) ) ? get_post($object_id) : null;
@@ -34,6 +34,25 @@ $post_status = ( isset($product) && null !== $product ) ? $post->post_status : '
     <?php WCVendors_Pro_Product_Form::form_data( $object_id, $post_status ); ?>
     <?php WCVendors_Pro_Product_Form::draft_button( __( 'Preview', 'wcvendors-pro' ) ); ?>
     <?php WCVendors_Pro_Product_Form::save_button( $title ); ?>
+    </div>
+
+    <div class="product-settings">
+            <div class="form-row">
+               <div class="col-md-2">
+                 <div class="icon"><img src="/wp-content/themes/ofb-2020/images/Settings.png"></div>
+               </div>
+                <div class="col-md-5">
+                    <div class="info-title">
+                      Product Settings
+                    </div>
+                    <p>Manage how your products appears on your page</p>
+                </div>
+                  <div class="col-md-5">
+                    <div class="custom-control custom-switch">
+                    <?php WCVendors_Pro_Product_Form::private_listing( $object_id ); ?>
+                    </div>
+                  </div>
+            </div>
     </div>
     <div class="section-header">
         Information
@@ -134,134 +153,58 @@ $post_status = ( isset($product) && null !== $product ) ? $post->post_status : '
         </div>
         <div class="form-group">
             <div class="form-row">
-<!--                <div class="col-12 col-md-6">-->
-<!--                    --><?php
-//                    $required_field    = 'yes' === get_option( 'wcvendors_required_product_general_price' ) ? array(
-//                        'required'                   => '',
-//                        'data-parsley-error-message' => __( 'Price is required', 'wcvendors-pro' ),
-//                    ) : array();
-//                    $custom_attributes = array();
-//                    $custom_attributes = array_merge( $custom_attributes, $required_field );
-//                    WCVendors_Pro_Form_Helper::input(
-//                        apply_filters(
-//                            'wcv_product_price',
-//                            array(
-//                                'post_id'           => $object_id,
-//                                'id'                => '_regular_price',
-//                                'label'             => __( 'Regular Price', 'wcvendors-pro' ) . ' (' . get_woocommerce_currency_symbol() . ')',
-//                                'data_type'         => 'price',
-//                                'custom_attributes' => $custom_attributes,
-//                            )
-//                        )
-//                    ); ?>
-<!--                </div>-->
-<!--                <div class="col-12 col-md-6">-->
-<!--                    --><?php //WCVendors_Pro_Product_Form::sku($object_id); ?>
-<!--                </div>-->
-<!--                <div class="col-12 col-md-6">-->
-<!--                    --><?php //WCVendors_Pro_Product_Form::sale_price($object_id); ?>
-<!--                </div>-->
-<!--                <div class="col-12 col-md-6">-->
-<!--                    --><?php //WCVendors_Pro_Product_Form::stock_status($object_id); ?>
-<!--                </div>-->
+                <div class="col-12 col-md-6">
+                 <?php
+                    $required_field    = 'yes' === get_option( 'wcvendors_required_product_general_price' ) ? array(
+                         'required'                   => '',
+                         'data-parsley-error-message' => __( 'Price is required', 'wcvendors-pro' ),
+                     ) : array();
+                     $custom_attributes = array();
+                     $custom_attributes = array_merge( $custom_attributes, $required_field );
+                    WCVendors_Pro_Form_Helper::input(
+                         apply_filters(
+                             'wcv_product_price',
+                          array(
+                                 'post_id'           => $object_id,
+                                 'id'                => '_regular_price',
+                                'label'             => __( 'Price', 'wcvendors-pro' ),
+                                 'data_type'         => 'price',
+                                'custom_attributes' => $custom_attributes,
+                             )
+                        )
+                     ); ?>
+                    </div>
+                 <div class="col-12 col-md-6">
+                   <?php WCVendors_Pro_Product_Form::sku($object_id); ?>
+                  </div>
+                   <div class="col-12 col-md-6 sale_price">
+                    <?php WCVendors_Pro_Product_Form::sale_price($object_id); ?>
+                  </div>
+                  <div class="col-12 col-md-6">
+                   <?php WCVendors_Pro_Product_Form::stock_status($object_id); ?>
+                </div>
 
-                    <?php WCVendors_Pro_Product_Form::product_type( $object_id ); ?>
+                  <?php WCVendors_Pro_Product_Form::product_type( $object_id ); ?>
             </div>
 
-            <div class="form-row">
-                <div class="col-12">
-                    <div class="wcv-tabs top" data-prevent-url-change="true">
+        </div>
+        <div class="section-header">
+            Variants
+        </div>
+        <div class="form-group">
 
-                        <?php do_action( 'wcv_before_product_meta_tabs', $object_id ); ?>
+            <p>Add attributes to allow users to order variations of your product.</p>
 
-                        <?php WCVendors_Pro_Product_Form::product_meta_tabs(); ?>
+        </div>
+        <div class="form-row">
+            <div class="col-12">
 
-                        <!-- General Product Options -->
-                        <div class="wcv-product-general tabs-content" id="general">
+              <?php WCVendors_Pro_Product_Form::product_variations( $object_id ); ?>
 
-                            <div class="hide_if_grouped">
-                                <!-- SKU  -->
-                                <?php WCVendors_Pro_Product_Form::sku( $object_id ); ?>
-                                <!-- Private listing  -->
-                                <?php WCVendors_Pro_Product_Form::private_listing( $object_id ); ?>
-                            </div>
-
-                            <div class="show_if_simple show_if_external show_if_variable">
-                                <!-- Tax -->
-                                <?php WCVendors_Pro_Product_Form::tax( $object_id ); ?>
-                            </div>
-
-                            <?php do_action( 'wcv_product_options_general_product_data', $object_id ); ?>
-
-                        </div>
-
-                        <?php do_action( 'wcv_after_general_tab', $object_id ); ?>
-
-                        <?php do_action( 'wcv_before_inventory_tab', $object_id ); ?>
-
-                        <!-- Inventory -->
-                        <div class="wcv-product-inventory inventory_product_data tabs-content" id="inventory">
-
-                            <?php WCVendors_Pro_Product_Form::manage_stock( $object_id ); ?>
-
-                            <?php do_action( 'wcv_product_options_stock', $object_id ); ?>
-
-                            <div class="stock_fields show_if_simple show_if_variable" style="padding-left: 20px;">
-                                <?php WCVendors_Pro_Product_Form::stock_qty( $object_id ); ?>
-                                <?php WCVendors_Pro_Product_Form::backorders( $object_id ); ?>
-                                <?php WCVendors_Pro_Product_Form::low_stock_threshold( $object_id ); ?>
-                            </div>
-
-                            <?php WCVendors_Pro_Product_Form::stock_status( $object_id ); ?>
-                            <div class="options_group show_if_simple show_if_variable">
-                                <?php WCVendors_Pro_Product_Form::sold_individually( $object_id ); ?>
-                            </div>
-
-                            <?php do_action( 'wcv_product_options_sold_individually', $object_id ); ?>
-
-                            <?php do_action( 'wcv_product_options_inventory_product_data', $object_id ); ?>
-
-                        </div>
-
-                        <?php do_action( 'wcv_after_inventory_tab', $object_id ); ?>
-
-                        <!-- Attributes -->
-
-                        <?php do_action( 'wcv_before_attributes_tab', $object_id ); ?>
-
-                        <div class="wcv_product_attributes tabs-content" id="attributes">
-
-                            <div class="attributes-validation-error"></div>
-
-                            <?php WCVendors_Pro_Product_Form::product_attributes( $object_id ); ?>
-
-                            <?php do_action( 'wcv_product_options_attributes_product_data', $object_id ); ?>
-
-                        </div>
-
-                        <?php do_action( 'wcv_after_attributes_tab', $object_id ); ?>
-
-                        <!-- Variations -->
-
-                        <?php do_action( 'wcv_before_variations_tab', $object_id ); ?>
-
-                        <div class="wcv_product_variations tabs-content" id="variations">
-
-                            <?php WCVendors_Pro_Product_Form::product_variations( $object_id ); ?>
-
-                            <?php do_action( 'wcv_product_options_variations_product_data', $object_id ); ?>
-
-                        </div>
-
-                        <?php do_action( 'wcv_after_variations_tab', $object_id ); ?>
-
-
-
-                        <?php do_action( 'wcv_after_product_meta_tabs', $object_id ); ?>
-                    </div>
-                </div>
+              <?php do_action( 'wcv_product_options_variations_product_data', $object_id ); ?>
             </div>
         </div>
+ 
     </div>
 </form>
 
