@@ -20,7 +20,7 @@ $arrLinks = [
         </li>
         <?php endforeach; ?>
     </ul>
-    <a href="/dashboard/product/edit/" class="btn btn--primary py-3">
-        <img src="/wp-content/themes/ofb-2020/images/add.svg" style="margin-right: 15px;"/>
+    <a href="/dashboard/product/edit/" class="btn btn--primary">
+        <img src="/wp-content/themes/ofb-2020/images/add.svg" style="margin-right: 9px;margin-top: -4px;"/>
         <span>Add Product</span></a>
 </nav>
