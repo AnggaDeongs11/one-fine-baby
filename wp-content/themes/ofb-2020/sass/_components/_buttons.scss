@@ -25,6 +25,7 @@
 
     &:hover {
       background-color: $cobalt;
+      color: #fff;
       text-decoration: none;
     }
   }
@@ -53,6 +54,13 @@
     font-family: $font-default;
     font-size: 14px;
     letter-spacing: 2px;
+  }
+
+  .vendor-content,
+  .vendor-sidebar {
+    .btn {
+      padding: 7px 10px 12px;
+    }
   }
 
   .vendor-content &,
