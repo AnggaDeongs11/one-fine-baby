@@ -56,13 +56,6 @@
     letter-spacing: 2px;
   }
 
-  .vendor-content,
-  .vendor-sidebar {
-    .btn {
-      padding: 7px 10px 12px;
-    }
-  }
-
   .vendor-content &,
   .vendor-sidebar & {
     display: flex;
@@ -70,6 +63,7 @@
     text-align: center;
     text-transform: uppercase;
     justify-content: center;
+    padding: 7px 10px 12px;
   }
 
   .vendor-modal & {
