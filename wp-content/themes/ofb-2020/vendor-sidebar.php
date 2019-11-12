@@ -6,7 +6,7 @@ $arrLinks = [
     ['link' => 'dashboard/product', 'label' => 'Products', 'icon' => 'products.svg'],
     ['link' => 'dashboard/order', 'label' => 'Orders', 'icon' => 'order.svg'],
     ['link' => 'dashboard/settings', 'label' => 'Settings', 'icon' => 'settings.svg'],
-    ['link' => '#', 'label' => 'More', 'icon' => 'more.svg'],
+    // ['link' => '#', 'label' => 'More', 'icon' => 'more.svg'],
 ];
 ?>
 <nav class="vendor-nav">
