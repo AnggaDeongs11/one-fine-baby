@@ -569,7 +569,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .product-settings {
   background: #F5F5F5;
-  background: #F5F5F5;
   padding-top: 15px;
   margin-bottom: 10px;
 }
@@ -611,7 +610,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .wcv-tabs.top>.tabs-nav li {
-   display: none !important;  
+  /* display: none !important; */
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
@@ -648,6 +647,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .wcv-grid .wcv_variation .remove_variation {
   right: -15px;
   position: relative;
+  display: none;
 }
 
 .btnAddAttr {
@@ -674,4 +674,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.variations_wrapper .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #000;
+    line-height: 28px;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+
+.wcvendors-pro .select2-results__options {
+    font-size: 12px !important;
 }

@@ -67,13 +67,13 @@
 
 								<select multiple="multiple" id="attribute_values_<?php echo $i; ?>"
 										data-placeholder="<?php esc_attr_e( 'Select terms', 'wcvendors-pro' ); ?>"
-										class="attribute_values select2 mb-3" name="attribute_values[<?php echo $i; ?>][]"
+										class="attribute_values  mb-3" name="attribute_values[<?php echo $i; ?>][]"
 										style="width: 100%">
 									<?php
 									$all_terms = get_terms( $taxonomy, 'orderby=name&hide_empty=0' );
 									if ( $all_terms ) {
 										foreach ( $all_terms as $term ) {
-											echo '<option value="' . esc_attr( $term->slug ) . '" ' . selected( has_term( absint( $term->term_id ), $taxonomy, $post_id ), true, false ) . '>' . $term->name . '</option>';
+											echo '<option value="' . esc_attr( $term->slug ) . '" ' . selected( has_term( absint( $term->term_id ), $taxonomy, $post_id ), true, false ) . ' selected  >' . $term->name . '</option>';
 										}
 									}
 									?>
@@ -116,3 +116,16 @@
 	</div>
 	<hr style="clear: both;"/>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+
+		setTimeout(function(){
+
+				//$('.wcv_variation_checkbox').attr('checked','checked');
+
+
+		}, 10000);
+
+	});
+</script>

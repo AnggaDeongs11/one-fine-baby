@@ -312,7 +312,6 @@ $actions = apply_filters( 'wcvendors_pro_variation_actions', $actions );
 				<div class="all-15">
 					<label><?php _e( 'SKU', 'wcvendors-pro' ); ?> </label>
 				</div>
-
 				<?php
 				$attributes_new         = WCVendors_Pro_Utils::array_sort( $attributes, 'position' );
 				$default_attributes = maybe_unserialize( get_post_meta( $post_id, '_default_attributes', true ) );
@@ -339,8 +338,15 @@ $actions = apply_filters( 'wcvendors_pro_variation_actions', $actions );
 				<div class="all-15">
 					<label><?php _e( 'Sale', 'wcvendors-pro' ); ?> </label>
 				</div>
-				<?php } ?>
+			<?php } else { ?>
+
+				<div class="heading_title">
+				</div>
+
+			<?php } ?>
 			</div>
+
+
 			<div class="all-100">
 
 

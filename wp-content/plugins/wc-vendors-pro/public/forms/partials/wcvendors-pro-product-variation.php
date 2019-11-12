@@ -28,7 +28,7 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 <div class="wcv_variation wcv-metabox closed all-100" rel="<?php echo esc_attr( $variation_id ); ?>"
 	 data-loop="<?php echo $loop; ?>">
 	<div class="wcv-cols-group wcv_variation_inner">
-	 
+
 		<div class="all-100">
 			 <h5 class="variation_title">
 
@@ -66,7 +66,7 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 							<?php if ( wc_product_sku_enabled() ) : ?>
 
 									<input type="text" name="variable_sku[<?php echo $loop; ?>]"
-											 value="<?php if ( isset( $_sku ) ) { echo esc_attr( $_sku ); } ?>" placeholder="<?php echo esc_attr( $parent_data['sku'] ); ?>"/>
+											 value="<?php if ( isset( $_sku ) ) { echo esc_attr( $_sku ); } ?>" placeholder="<?php esc_attr_e( 'SKU', 'wcvendors-pro' ); ?>"/>
 
 							<?php else : ?>
 								<input type="hidden" name="variable_sku[<?php echo $loop; ?>]"
@@ -92,7 +92,7 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 					}
 					// Name will be something like attribute_pa_color
 					echo '<div class="all-15">';
-					echo '<select data-taxonomy="' . sanitize_title( $attribute['name'] ) . '" class="variation_attribute ' . sanitize_title( $key ) . '" name="attribute_' . sanitize_title( $key ) . '[' . $loop . ']"><option value="">' . __( 'Any', 'wcvendors-pro' ) . ' ' . esc_html( wc_attribute_label( $key ) ) . '&hellip;</option>';
+					echo '<select data-taxonomy="' . sanitize_title( $attribute['name'] ) . '" class="variation_attribute select2 ' . sanitize_title( $key ) . '" name="attribute_' . sanitize_title( $key ) . '[' . $loop . ']"><option value="">' . __( 'Any', 'wcvendors-pro' ) . ' ' . esc_html( wc_attribute_label( $key ) ) . '&hellip;</option>';
 
 
 					if ( array_key_exists( 'values', $attribute ) && is_array( $attribute['values'] ) ) {
@@ -135,7 +135,7 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 								 <input type="text" size="5" name="variable_regular_price[<?php echo $loop; ?>]"
 											value="<?php if ( isset( $_regular_price ) ) { echo wc_format_localized_price( $_regular_price ); } ?>"
 											class="wc_input_price variable_regular_price"
-											placeholder="<?php esc_attr_e( 'Variation price (required)', 'wcvendors-pro' ); ?>"
+											placeholder="<?php esc_attr_e( 'Price', 'wcvendors-pro' ); ?>"
 												data-parsley-price
 								 />
 					 </div>
@@ -145,6 +145,7 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 
 								 <input type="text" size="5" name="variable_sale_price[<?php echo $loop; ?>]"
 											class="variable_sale_price wc_input_price"
+											placeholder="<?php esc_attr_e( 'Sale', 'wcvendors-pro' ); ?>"
 											value="<?php if ( isset( $_sale_price ) ) { echo wc_format_localized_price( $_sale_price ); } ?>"
 											data-parsley-price
 								 />
@@ -551,3 +552,9 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 		<?php do_action( 'wcv_product_variation_after_download_files', $loop, $variation_id, $variation_data, $variation ); ?>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+			$('.variation_attribute').select2();
+	});
+</script>

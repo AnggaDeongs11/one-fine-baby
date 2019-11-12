@@ -1212,7 +1212,7 @@ class WCVendors_Pro_Product_Form {
 					array(
 						'post_id'           => $post_id,
 						'id'                => '_private_listing',
-						'wrapper_class'     => '',
+						'wrapper_class'     => 'custom-control custom-switch',
 						'label'             => __( 'Hide Product', 'wcvendors-pro' ),
 						'type'              => 'checkbox',
 						'custom_attributes' => $custom_attributes,

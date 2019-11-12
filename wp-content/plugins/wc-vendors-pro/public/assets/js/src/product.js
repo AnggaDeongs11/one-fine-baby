@@ -662,6 +662,8 @@ jQuery( function( $ ){
 
 						$( document.body ).trigger( 'woocommerce_added_attribute' );
 
+					 console.log('hello');
+
 					}
 
 				});

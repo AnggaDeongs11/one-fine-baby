@@ -292,6 +292,7 @@ $post_status = ( isset($product) && null !== $product ) ? $post->post_status : '
         </div>
     </div>
 </form>
+<input type="text" id="counter" style="visibility:hidden">
 
 <?php //do_action('wcvendors_after_product_form'); ?>
 
@@ -306,33 +307,71 @@ $post_status = ( isset($product) && null !== $product ) ? $post->post_status : '
 
   $(window).ready(function(){
       console.log('ready');
-      $('.loading').fadeIn(100);
-      setTimeout(function(){
+
+      var postid = '<?php echo $object_id; ?>';
+      console.log(postid);
+      if(postid) {
+        $('.loading').fadeOut(100);
+      }else {
+        $('.loading').fadeIn(100);
+      }
+
+      i = 0;
       $('.wcv_product_attributes .attribute_taxonomy option').each(function(){
 
+       $(".wcv_product_attributes .attribute_taxonomy option:eq(1)").attr("selected", "selected");
+       $('#counter').val(1);
+             window.setTimeout(function() {
 
+                  $('.add_attribute').trigger('click');
 
-
-            $('.wcv_product_attributes .attribute_taxonomy').val($(this).val());
-            $('.add_attribute').trigger('click');
-
-              setTimeout(function(){
-                $('.select_all_attributes').trigger('click');
-                setTimeout(function(){
-
-                    $('.wcv_variation_checkbox').attr('checked','checked');
-
-                }, 1000);
-              }, 5000);
+              }, 13000*i);
+             i++;
       });
 
-    }, 6000);
+      heading_product();
 
-    setTimeout(function(){
 
-     $('.loading').fadeOut(100);
-
-   }, 7000);
 
   });
+
+
+
+function heading_product() {
+  html = '<div class="all-10">Image</div>';
+  html += '<div class="all-15">SKU</div>';
+
+  var name = "";
+  var res  = "";
+
+  $('.wcv_product_attributes .attribute_taxonomy option').each(function(){
+
+  name = $(this).val();
+
+  res = name.replace("pa_", " ");
+
+  res = res.replace("_", " ");
+
+  res = res.replace("-", " ");
+
+  res = res.replace("pa", " ");
+
+
+  html += '<div class="all-15" style="text-transform:capitalize">'+res+'</div>';
+
+  });
+
+  html += '<div class="all-15">Price</div>';
+  html += '<div class="all-15">Sale</div>';
+
+
+  $('.heading_title').html(html);
+}
+
+
+function delayedTrigger(elem, delay, option)
+{
+
+    setTimeout( function() { $(elem).trigger('click');   $('.wcv_product_attributes .attribute_taxonomy').val(option); }, delay );
+}
 </script>
