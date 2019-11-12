@@ -304,12 +304,12 @@ $actions = apply_filters( 'wcvendors_pro_variation_actions', $actions );
 
 		<div class="wcv-cols-group wcv-horizontal-gutters">
 
-			<div class="all-100">
+			<div class="all-100 heading-product">
 				<?php if ( $variation_attribute_found )  {?>
 				<div class="all-10">
 					<label><?php _e( 'Image', 'wcvendors-pro' ); ?></label>
 				</div>
-				<div class="all-15">
+				<div class="all-10">
 					<label><?php _e( 'SKU', 'wcvendors-pro' ); ?> </label>
 				</div>
 				<?php

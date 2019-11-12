@@ -312,8 +312,11 @@ $post_status = ( isset($product) && null !== $product ) ? $post->post_status : '
       console.log(postid);
       if(postid) {
         $('.loading').fadeOut(100);
+        $('.heading-product').fadeIn(100);
+        $('.btnAddAttr').fadeIn(100);
       }else {
         $('.loading').fadeIn(100);
+
       }
 
       i = 0;
@@ -339,7 +342,7 @@ $post_status = ( isset($product) && null !== $product ) ? $post->post_status : '
 
 function heading_product() {
   html = '<div class="all-10">Image</div>';
-  html += '<div class="all-15">SKU</div>';
+  html += '<div class="all-10">SKU</div>';
 
   var name = "";
   var res  = "";

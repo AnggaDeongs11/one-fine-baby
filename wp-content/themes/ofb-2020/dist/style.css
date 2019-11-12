@@ -610,7 +610,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .wcv-tabs.top>.tabs-nav li {
-  display: none !important; 
+  display: none !important;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
@@ -688,4 +688,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .wcvendors-pro .select2-results__options {
     font-size: 12px !important;
+}
+
+.heading-product {
+   display: none;
+}
+
+.btnAddAttr {
+  display: none;
+}
+
+.all-100.heading-product {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.all-100.heading-product label {
+    color: #030753;
+    font-weight: 600;
+    text-align: center;
 }
