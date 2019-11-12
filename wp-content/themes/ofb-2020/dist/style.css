@@ -713,4 +713,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .variations_wrapper .select2-container {
     width: 90% !important;
 }
- 
+
+ .custom-control-label::before, .custom-file-label, .custom-select {
+   background-color: #F79F90;
+ }
+
+ .custom-control.switch-hide.custom-switch {
+     padding: 20px;
+     float: right;
+ }
+
+ .variations_wrapper .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+    border-radius: 0px;
+    height: 32px;
+}
+
+.heading-product .all-15 {
+    width: 12% !important;
+}
+
+.variations_wrapper .all-15 {
+    width: 12% !important;
+}

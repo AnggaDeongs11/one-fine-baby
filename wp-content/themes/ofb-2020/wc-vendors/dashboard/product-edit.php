@@ -50,7 +50,7 @@ $post_status = ( isset($product) && null !== $product ) ? $post->post_status : '
                     <!--<div class="custom-control custom-switch">
                     <?php WCVendors_Pro_Product_Form::private_listing( $object_id ); ?>
                   </div> !-->
-                    <div class="custom-control custom-switch">
+                    <div class="custom-control custom-switch switch-hide">
                         <input type="checkbox" class="custom-control-input" id="_private_listing"
                             <?php if (get_post_meta( $object_id, '_private_listing', true ) == 'yes') {echo 'checked="checked"';}; ?>
                                name="_private_listing">
