@@ -652,7 +652,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .btnAddAttr {
   position: absolute !important;
-  bottom: -40px;
+  bottom: -65px;
 }
 
 .wcv-grid .wcv_variation_inner {
@@ -696,6 +696,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .btnAddAttr {
   display: none;
+
 }
 
 .all-100.heading-product {
@@ -703,8 +704,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 20px;
 }
 
-.all-100.heading-product label {
+.all-100.heading-product label, .all-100.heading-product div {
     color: #030753;
     font-weight: 600;
     text-align: center;
+}
+
+.variations_wrapper .select2-container {
+    width: 90% !important;
 }
