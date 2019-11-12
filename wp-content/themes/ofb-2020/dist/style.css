@@ -610,7 +610,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .wcv-tabs.top>.tabs-nav li {
-  /* display: none !important; */
+  display: none !important; 
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
