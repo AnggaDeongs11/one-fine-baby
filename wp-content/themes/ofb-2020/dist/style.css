@@ -411,35 +411,41 @@ body.ofb-2020 {
 /* line 26, ../sass/_components/_buttons.scss */
 .btn.btn--secondary:hover {
   background-color: #030753;
+  color: #fff;
   text-decoration: none;
 }
-/* line 32, ../sass/_components/_buttons.scss */
+/* line 33, ../sass/_components/_buttons.scss */
 .btn.btn--link {
   color: #030753;
   letter-spacing: 2px;
   font-size: 12px;
   line-height: 30px;
 }
-/* line 38, ../sass/_components/_buttons.scss */
+/* line 39, ../sass/_components/_buttons.scss */
 .btn.btn--link:hover {
   text-decoration: none;
   background-color: #030753;
   color: #fff;
 }
-/* line 45, ../sass/_components/_buttons.scss */
+/* line 46, ../sass/_components/_buttons.scss */
 .btn.btn-bordered {
   border-radius: 50px;
   border: 1.5px solid #030753;
   padding: 4px 12px 2px;
 }
-/* line 51, ../sass/_components/_buttons.scss */
+/* line 52, ../sass/_components/_buttons.scss */
 .btn span {
   height: 15px;
   font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
 }
-/* line 58, ../sass/_components/_buttons.scss */
+/* line 61, ../sass/_components/_buttons.scss */
+.btn .vendor-content .btn,
+.btn .vendor-sidebar .btn {
+  padding: 7px 10px 12px;
+}
+/* line 66, ../sass/_components/_buttons.scss */
 .vendor-content .btn, .vendor-sidebar .btn {
   display: flex;
   align-items: center;
@@ -447,31 +453,31 @@ body.ofb-2020 {
   text-transform: uppercase;
   justify-content: center;
 }
-/* line 67, ../sass/_components/_buttons.scss */
+/* line 75, ../sass/_components/_buttons.scss */
 .vendor-modal .btn {
   color: #030753;
 }
-/* line 70, ../sass/_components/_buttons.scss */
+/* line 78, ../sass/_components/_buttons.scss */
 .vendor-modal .btn:hover {
   text-decoration: none;
 }
-/* line 74, ../sass/_components/_buttons.scss */
+/* line 82, ../sass/_components/_buttons.scss */
 .vendor-modal .btn.btn--primary {
   color: #fff;
 }
-/* line 79, ../sass/_components/_buttons.scss */
+/* line 87, ../sass/_components/_buttons.scss */
 .btn.btn-long {
   width: 150px;
 }
-/* line 83, ../sass/_components/_buttons.scss */
+/* line 91, ../sass/_components/_buttons.scss */
 .btn.btn-longer {
   width: 175px;
 }
-/* line 87, ../sass/_components/_buttons.scss */
+/* line 95, ../sass/_components/_buttons.scss */
 .btn.btn-longest {
   width: 200px;
 }
-/* line 91, ../sass/_components/_buttons.scss */
+/* line 99, ../sass/_components/_buttons.scss */
 .btn.btn-thick {
   height: 50px;
 }
