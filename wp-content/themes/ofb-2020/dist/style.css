@@ -6,7 +6,7 @@ Description: WordPress Theme for One Fine Baby 2020
 Version: 1.0
 License: GNU General Public License
 */
-/* line 5, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,45 +28,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../.gem/ruby/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -74,6 +74,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* mixins.scss */
 /*_variables.scss*/
 /*_typography.scss*/
+@font-face {
+  font-family: 'Canela';
+  src: url("../fonts/Canela-Regular.woff2") format("woff2"), url("../fonts/Canela-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular Air Pro';
+  src: url("../fonts/CircularAirPro-Book.woff2") format("woff2"), url("../fonts/CircularAirPro-Book.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+/* line 19, ../sass/_partials/_typography.scss */
+body.ofb-2020 {
+  font-family: 'Circular Air Pro';
+}
+
 /** utilities **/
 /* line 3, ../sass/_partials/_utilities.scss */
 .mt-60 {
@@ -101,7 +118,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .vendor-header__name {
   padding-left: 20px;
   align-self: center;
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 30px;
   letter-spacing: 2px;
@@ -114,7 +131,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 25, ../sass/_components/_vendor-header.scss */
 .vendor-header__logout a {
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 20px;
   color: #D3D3D3;
   font-size: 14px;
@@ -165,52 +182,62 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /** dashboard content **/
-/* line 3, ../sass/_components/_dashboard-content.scss */
+/* line 4, ../sass/_components/_dashboard-content.scss */
+.wcv_dashboard_overview h3.font-default {
+  font-family: Canela;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #030753;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* line 15, ../sass/_components/_dashboard-content.scss */
 .vendor-content {
   padding: 30px 0 30px 30px;
 }
-/* line 6, ../sass/_components/_dashboard-content.scss */
+/* line 18, ../sass/_components/_dashboard-content.scss */
 .vendor-content__page-title {
   margin-top: 30px;
 }
-/* line 9, ../sass/_components/_dashboard-content.scss */
+/* line 21, ../sass/_components/_dashboard-content.scss */
 .vendor-content__page-title h2 {
   font-family: Canela;
   font-size: 40px;
   line-height: 40px;
-  color: #030753;
 }
-/* line 16, ../sass/_components/_dashboard-content.scss */
+/* line 28, ../sass/_components/_dashboard-content.scss */
 .vendor-content__page-subtitle {
   margin-top: 10px;
 }
-/* line 19, ../sass/_components/_dashboard-content.scss */
+/* line 31, ../sass/_components/_dashboard-content.scss */
 .vendor-content__page-subtitle h4 {
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #030753;
   opacity: 0.5;
 }
-/* line 28, ../sass/_components/_dashboard-content.scss */
+/* line 40, ../sass/_components/_dashboard-content.scss */
 .vendor-content .nav-tabs {
   border-bottom: none;
 }
-/* line 31, ../sass/_components/_dashboard-content.scss */
+/* line 43, ../sass/_components/_dashboard-content.scss */
 .vendor-content .nav-tabs .nav-link {
   border: none;
   text-transform: uppercase;
   height: 43px;
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
   color: #030753;
 }
-/* line 39, ../sass/_components/_dashboard-content.scss */
+/* line 51, ../sass/_components/_dashboard-content.scss */
 .vendor-content .nav-tabs .nav-link.active {
   border-bottom: 2px solid #F79F90;
   font-family: "Sailec-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
-/* line 46, ../sass/_components/_dashboard-content.scss */
+/* line 58, ../sass/_components/_dashboard-content.scss */
 .vendor-content .section-header {
   font-size: 25px;
   color: #030753;
@@ -219,32 +246,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-bottom: 1px solid #2F2E7E;
   line-height: 30px;
 }
-/* line 54, ../sass/_components/_dashboard-content.scss */
+/* line 66, ../sass/_components/_dashboard-content.scss */
 .vendor-content .section-header__actions {
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #D3D3D3;
   font-size: 16px;
 }
-/* line 59, ../sass/_components/_dashboard-content.scss */
+/* line 71, ../sass/_components/_dashboard-content.scss */
 .vendor-content .section-header__actions span {
   margin-right: 63px;
 }
-/* line 63, ../sass/_components/_dashboard-content.scss */
+/* line 75, ../sass/_components/_dashboard-content.scss */
 .vendor-content .section-header__actions-select {
   border: none;
   background: #fff;
 }
-/* line 70, ../sass/_components/_dashboard-content.scss */
+/* line 82, ../sass/_components/_dashboard-content.scss */
 .vendor-content .light-border-1 {
   background-color: #F5F5F5;
   height: 1px;
 }
-/* line 75, ../sass/_components/_dashboard-content.scss */
+/* line 87, ../sass/_components/_dashboard-content.scss */
 .vendor-content .blue-border-1 {
   background-color: #2F2E7E;
   height: 1px;
 }
-/* line 81, ../sass/_components/_dashboard-content.scss */
+/* line 93, ../sass/_components/_dashboard-content.scss */
 .vendor-content .wcvendors-table-order th {
   border-bottom: none;
   font-family: "Sailec-Medium", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -254,12 +281,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 91, ../sass/_components/_dashboard-content.scss */
+/* line 103, ../sass/_components/_dashboard-content.scss */
 .vendor-content .wcvendors-table-order td {
   height: 50px;
   border-bottom: none;
 }
-/* line 97, ../sass/_components/_dashboard-content.scss */
+/* line 113, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcvendors-table thead tr th,
+.vendor-content .wcvendors-table thead tr td,
+.vendor-content .wcvendors-table tbody tr th,
+.vendor-content .wcvendors-table tbody tr td {
+  padding: 15px 10px;
+}
+/* line 116, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcvendors-table thead tr th:first-child,
+.vendor-content .wcvendors-table thead tr td:first-child,
+.vendor-content .wcvendors-table tbody tr th:first-child,
+.vendor-content .wcvendors-table tbody tr td:first-child {
+  padding-left: 0;
+}
+/* line 125, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcvendors-table tbody tr:first-child td {
+  padding-top: 30px;
+}
+/* line 130, ../sass/_components/_dashboard-content.scss */
+.vendor-content .wcvendors-table tbody tr:nth-last-child(2) td {
+  padding-bottom: 30px;
+}
+/* line 138, ../sass/_components/_dashboard-content.scss */
 .vendor-content .table-label,
 .vendor-content .table-value {
   font-size: 18px;
@@ -269,42 +318,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-bottom: none;
   height: 60px;
 }
-/* line 107, ../sass/_components/_dashboard-content.scss */
+/* line 148, ../sass/_components/_dashboard-content.scss */
 .vendor-content .table-value {
   opacity: 1;
   text-align: right;
 }
-/* line 112, ../sass/_components/_dashboard-content.scss */
+/* line 153, ../sass/_components/_dashboard-content.scss */
 .vendor-content .table-total {
   font-size: 20px;
   line-height: 25px;
+  color: #030753;
   padding-left: 0;
+  vertical-align: bottom;
 }
-/* line 118, ../sass/_components/_dashboard-content.scss */
+/* line 161, ../sass/_components/_dashboard-content.scss */
 .vendor-content .table-total-value {
   font-size: 50px;
   line-height: 50px;
   text-align: right;
+  color: #030753;
+  vertical-align: bottom;
 }
-/* line 125, ../sass/_components/_dashboard-content.scss */
+/* line 170, ../sass/_components/_dashboard-content.scss */
 .vendor-content .recent-orders thead th,
 .vendor-content .recent-orders tbody td {
   border: none;
   padding: 10px 0;
   line-height: 20px;
 }
-/* line 133, ../sass/_components/_dashboard-content.scss */
+/* line 177, ../sass/_components/_dashboard-content.scss */
+.vendor-content .recent-orders thead th {
+  font-size: 16px;
+  line-height: 20px;
+  color: #030753;
+}
+/* line 184, ../sass/_components/_dashboard-content.scss */
+.vendor-content .recent-orders tbody td {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+/* line 192, ../sass/_components/_dashboard-content.scss */
 .vendor-content .wcv-gallery-image img {
   max-width: 100%;
   height: auto;
 }
-/* line 138, ../sass/_components/_dashboard-content.scss */
+/* line 197, ../sass/_components/_dashboard-content.scss */
 .vendor-content .wcv-tabs.top > .tabs-nav {
   border-bottom: none;
   text-transform: uppercase;
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
-/* line 143, ../sass/_components/_dashboard-content.scss */
+/* line 202, ../sass/_components/_dashboard-content.scss */
 .vendor-content .wcv-tabs.top > .tabs-nav li.active a {
   border-bottom: 2px solid #F79F90;
   border-bottom-color: #F79F90;
@@ -312,7 +377,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-left: none;
   border-right: none;
 }
-/* line 151, ../sass/_components/_dashboard-content.scss */
+/* line 210, ../sass/_components/_dashboard-content.scss */
 .vendor-content .wcv-tabs.top > .tabs-nav li a {
   color: #030753;
 }
@@ -320,7 +385,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /** buttons **/
 /* line 2, ../sass/_components/_buttons.scss */
 .btn {
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
 /* line 7, ../sass/_components/_buttons.scss */
@@ -364,16 +429,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 45, ../sass/_components/_buttons.scss */
 .btn.btn-bordered {
   border-radius: 50px;
-  border: 1px solid #030753;
+  border: 1.5px solid #030753;
+  padding: 4px 12px 2px;
 }
-/* line 50, ../sass/_components/_buttons.scss */
+/* line 51, ../sass/_components/_buttons.scss */
 .btn span {
   height: 15px;
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
 }
-/* line 57, ../sass/_components/_buttons.scss */
+/* line 58, ../sass/_components/_buttons.scss */
 .vendor-content .btn, .vendor-sidebar .btn {
   display: flex;
   align-items: center;
@@ -381,31 +447,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-transform: uppercase;
   justify-content: center;
 }
-/* line 66, ../sass/_components/_buttons.scss */
+/* line 67, ../sass/_components/_buttons.scss */
 .vendor-modal .btn {
   color: #030753;
 }
-/* line 69, ../sass/_components/_buttons.scss */
+/* line 70, ../sass/_components/_buttons.scss */
 .vendor-modal .btn:hover {
   text-decoration: none;
 }
-/* line 73, ../sass/_components/_buttons.scss */
+/* line 74, ../sass/_components/_buttons.scss */
 .vendor-modal .btn.btn--primary {
   color: #fff;
 }
-/* line 78, ../sass/_components/_buttons.scss */
+/* line 79, ../sass/_components/_buttons.scss */
 .btn.btn-long {
   width: 150px;
 }
-/* line 82, ../sass/_components/_buttons.scss */
+/* line 83, ../sass/_components/_buttons.scss */
 .btn.btn-longer {
   width: 175px;
 }
-/* line 86, ../sass/_components/_buttons.scss */
+/* line 87, ../sass/_components/_buttons.scss */
 .btn.btn-longest {
   width: 200px;
 }
-/* line 90, ../sass/_components/_buttons.scss */
+/* line 91, ../sass/_components/_buttons.scss */
 .btn.btn-thick {
   height: 50px;
 }
@@ -418,7 +484,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 7, ../sass/_components/_form.scss */
 .vendor-content .form-group label, .vendor-content .control-group label {
   color: #030753;
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 30px;
   letter-spacing: 2px;
@@ -454,9 +520,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 45, ../sass/_components/_form.scss */
 .vendor-content label[for="_wcv_facebook_url"],
-.vendor-content label[for="_wcv_facebook_url"],
-.vendor-content label[for="integration_option"],
 .vendor-content label[for="_wcv_owner_title"],
+.vendor-content label[for="_integration_option"],
 .vendor-content label[for="first_name"],
 .vendor-content label[for="last_name"],
 .vendor-content label[for="business_reg_num"],
@@ -487,7 +552,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 19, ../sass/_components/_products.scss */
 .product-card__title, .product-card__price {
   font-size: 14px;
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Circular Air Pro", Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 20px;
   padding-top: 5px;
 }
@@ -565,182 +630,4 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-align: center;
   color: #030753;
   opacity: .5;
-}
-
-.product-settings {
-  background: #F5F5F5;
-  padding-top: 15px;
-  margin-bottom: 10px;
-}
-
-.info-title {
-    color: #030753;
-    font-weight: 600;
-}
-
-.sale_price .sale_schedule  {
-  display: none !important;
-}
-
-.icon {
-   text-align: center;
-}
-
-.do_variation_action {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #030753 !important;
-  font-size: 14px;
-}
-
-.btnAddAttr {
-   background: #F5F5F5;
-   border-radius: 50px;
-   padding: 12px;
-   width: 160px !important;
-   float: left;
-}
-
-.default_attribute {
-  width: 100%;
-}
-
-.variations_notice {
-  display: none !important;
-}
-
-.wcv-tabs.top>.tabs-nav li {
-  display: none !important;
-}
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-  color: #fff !important;
-  float: right;
-}
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
-  background-color: #5EC5B6 !important;
-  color: #fff;
-}
-
-.variations-pagenav {
-   display: none !important;
-}
-
-.wcv-grid .wcv_variation_inner {
-  border: 0px !important;
-}
-
-.wcv-cols-group div {
-  text-align: center;
-}
-
-.wcv-grid .wcv_variation_inner label {
-  color: #030753;
-}
-
-.variations_wrapper input, .variations_wrapper select {
-  width: 90%;
-  font-size: 12px;
-  text-align: center;
-  vertical-align: middle !important;
-    /* background-color: white; */
-    /* padding-top: 2px; */
-  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  color: #212529 !important;
-  height: 32px;
-}
-
-.wcv-grid .wcv_variation .remove_variation {
-  right: -15px;
-  position: relative;
-  display: none;
-}
-
-.btnAddAttr {
-  position: absolute !important;
-  bottom: -65px;
-}
-
-.wcv-grid .wcv_variation_inner {
-  padding: 0px !important;
-  margin-bottom: -20px;
-}
-
-
-.loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #030753; /* Blue */
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  margin: auto;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.variations_wrapper .select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: #000;
-    line-height: 28px;
-    font-family: inherit;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 12px;
-}
-
-
-.wcvendors-pro .select2-results__options {
-    font-size: 12px !important;
-}
-
-.heading-product {
-   display: none;
-}
-
-.btnAddAttr {
-  display: none;
-
-}
-
-.all-100.heading-product {
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.all-100.heading-product label, .all-100.heading-product div {
-    color: #030753;
-    font-weight: 600;
-    text-align: center;
-}
-
-.variations_wrapper .select2-container {
-    width: 90% !important;
-}
-
- .custom-control-label::before, .custom-file-label, .custom-select {
-   background-color: #F79F90;
- }
-
- .custom-control.switch-hide.custom-switch {
-     padding: 20px;
-     float: right;
- }
-
- .variations_wrapper .select2-container--default .select2-selection--single {
-    background-color: #fff;
-    border: 1px solid #c7c7c7;
-    border-radius: 0px;
-    height: 32px;
-}
-
-.heading-product .all-15 {
-    width: 12% !important;
-}
-
-.variations_wrapper .all-15 {
-    width: 12% !important;
 }

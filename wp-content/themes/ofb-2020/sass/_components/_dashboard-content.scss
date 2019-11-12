@@ -1,5 +1,17 @@
 /** dashboard content **/
 
+.wcv_dashboard_overview {
+  h3.font-default {
+    font-family: Canela;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #030753;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+
 .vendor-content {
   padding: 30px 0 30px 30px;
 
@@ -94,6 +106,35 @@
     }
   }
 
+  .wcvendors-table {
+    thead,
+    tbody {
+      tr {
+        th,
+        td {
+          padding: 15px 10px;
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:first-child {
+          td {
+            padding-top: 30px;
+          }
+        }
+        &:nth-last-child(2) {
+          td {
+            padding-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
   .table-label,
   .table-value {
     font-size: 18px;
@@ -112,13 +153,17 @@
   .table-total {
     font-size: 20px;
     line-height: 25px;
+    color: $cobalt;
     padding-left: 0;
+    vertical-align: bottom;
   }
 
   .table-total-value {
     font-size: 50px;
     line-height: 50px;
     text-align: right;
+    color: $cobalt;
+    vertical-align: bottom;
   }
 
   .recent-orders {
@@ -127,6 +172,20 @@
       border: none;
       padding: 10px 0;
       line-height: 20px;
+    }
+    thead {
+      th {
+        font-size: 16px;
+        line-height: 20px;
+        color: $cobalt;
+      }
+    }
+    tbody {
+      td {
+        font-size: 14px;
+        line-height: 20px;
+        color: #000;
+      }
     }
   }
 

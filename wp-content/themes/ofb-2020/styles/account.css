@@ -9,15 +9,6 @@
 /* Light Green - #CDE9E0 */
 /* Dark Green - #5EC4B6 */
 
-@font-face {
-    font-family: 'Canela';
-    src: url('../fonts/Canela-Regular-Web.woff2') format('woff2'),
-        url('../fonts/Canela-Regular-Web.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
-}
-
 .st-customized-tinv-wishlist {
     width: 1400px;
     margin: auto;
@@ -431,7 +422,7 @@ body.single-product div.product form.cart{
     padding: 0;
     float: left;
 }
-.summary.entry-summary .after-form-wrap::before, 
+.summary.entry-summary .after-form-wrap::before,
 .summary.entry-summary .after-form-wrap::after {
     content: '';
     display: table;

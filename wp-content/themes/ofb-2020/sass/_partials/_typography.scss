@@ -1,1 +1,21 @@
 /*_typography.scss*/
+
+@font-face {
+    font-family: 'Canela';
+    src: url('../fonts/Canela-Regular.woff2') format('woff2'),
+        url('../fonts/Canela-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Circular Air Pro';
+    src: url('../fonts/CircularAirPro-Book.woff2') format('woff2'),
+        url('../fonts/CircularAirPro-Book.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+body.ofb-2020 {
+  font-family: 'Circular Air Pro';
+}
