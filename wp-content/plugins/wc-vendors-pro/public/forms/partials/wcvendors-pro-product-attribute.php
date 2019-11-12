@@ -67,7 +67,7 @@
 
 								<select multiple="multiple" id="attribute_values_<?php echo $i; ?>"
 										data-placeholder="<?php esc_attr_e( 'Select terms', 'wcvendors-pro' ); ?>"
-										class="attribute_values  mb-3" name="attribute_values[<?php echo $i; ?>][]"
+										class="attribute_values select2 mb-3" name="attribute_values[<?php echo $i; ?>][]"
 										style="width: 100%">
 									<?php
 									$all_terms = get_terms( $taxonomy, 'orderby=name&hide_empty=0' );

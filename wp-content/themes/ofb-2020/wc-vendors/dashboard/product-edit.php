@@ -322,21 +322,23 @@ $post_status = ( isset($product) && null !== $product ) ? $post->post_status : '
         $('.btnAddAttr').fadeIn(100);
       }else {
         $('.loading').fadeIn(100);
+        i = 0;
+        $('.wcv_product_attributes .attribute_taxonomy option').each(function(){
+
+         $(".wcv_product_attributes .attribute_taxonomy option:eq(1)").attr("selected", "selected");
+         $('#counter').val(1);
+               window.setTimeout(function() {
+
+                    $('.add_attribute').trigger('click');
+
+                }, 13000*i);
+               i++;
+        });
+
 
       }
 
-      i = 0;
-      $('.wcv_product_attributes .attribute_taxonomy option').each(function(){
 
-       $(".wcv_product_attributes .attribute_taxonomy option:eq(1)").attr("selected", "selected");
-       $('#counter').val(1);
-             window.setTimeout(function() {
-
-                  $('.add_attribute').trigger('click');
-
-              }, 13000*i);
-             i++;
-      });
 
       heading_product();
 

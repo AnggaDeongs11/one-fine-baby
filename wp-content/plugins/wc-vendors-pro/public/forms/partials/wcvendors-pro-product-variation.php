@@ -96,14 +96,11 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 
 
 					if ( array_key_exists( 'values', $attribute ) && is_array( $attribute['values'] ) ) {
-						$j = 0;
+
 						foreach ( $attribute['values'] as $key => $value ) {
-							$selected = "";
-							if($j==0){
-								$selected = 'selected';
-							}
-							echo '<option ' . selected( $variation_selected_value, $key, false ) . ' value="' . esc_attr( $key ) . '" '.$selected.' >' . esc_html( $value ) . '</option>';
-							$j+=1;
+
+							echo '<option ' . selected( $variation_selected_value, $key, false ) . ' value="' . esc_attr( $key ) . '" >' . esc_html( $value ) . '</option>';
+
 						}
 					} elseif ( array_key_exists( 'value', $attribute ) && $attribute['value'] != '' ) {
 						$attribute_values = explode( '|', $attribute['value'] );
