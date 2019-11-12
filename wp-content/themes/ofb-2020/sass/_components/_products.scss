@@ -45,5 +45,10 @@
         color: $light-grey;
       }
     }
+    &-view {
+      a {
+        display: none;
+      }
+    }
   }
 }

@@ -587,6 +587,10 @@ body.ofb-2020 {
 .product-card__actions-delete a, .product-card__actions-view a {
   color: #D3D3D3;
 }
+/* line 49, ../sass/_components/_products.scss */
+.product-card__actions-view a {
+  display: none;
+}
 
 /* line 3, ../sass/_components/_modals.scss */
 .vendor-modal .wcv-modal > .modal-header {
