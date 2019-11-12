@@ -92,13 +92,18 @@ $variations_options = (array) get_option( 'wcvendors_hide_product_variations' );
 					}
 					// Name will be something like attribute_pa_color
 					echo '<div class="all-15">';
-					echo '<select data-taxonomy="' . sanitize_title( $attribute['name'] ) . '" class="variation_attribute select2 ' . sanitize_title( $key ) . '" name="attribute_' . sanitize_title( $key ) . '[' . $loop . ']"><option value="">' . __( 'Any', 'wcvendors-pro' ) . ' ' . esc_html( wc_attribute_label( $key ) ) . '&hellip;</option>';
+					echo '<select data-taxonomy="' . sanitize_title( $attribute['name'] ) . '" class="variation_attribute select2 ' . sanitize_title( $key ) . '" name="attribute_' . sanitize_title( $key ) . '[' . $loop . ']"><option value="">' . __( 'Any', 'wcvendors-pro' ) . '</option>';
 
 
 					if ( array_key_exists( 'values', $attribute ) && is_array( $attribute['values'] ) ) {
-
+						$j = 0;
 						foreach ( $attribute['values'] as $key => $value ) {
-							echo '<option ' . selected( $variation_selected_value, $key, false ) . ' value="' . esc_attr( $key ) . '">' . esc_html( $value ) . '</option>';
+							$selected = "";
+							if($j==0){
+								$selected = 'selected';
+							}
+							echo '<option ' . selected( $variation_selected_value, $key, false ) . ' value="' . esc_attr( $key ) . '" '.$selected.' >' . esc_html( $value ) . '</option>';
+							$j+=1;
 						}
 					} elseif ( array_key_exists( 'value', $attribute ) && $attribute['value'] != '' ) {
 						$attribute_values = explode( '|', $attribute['value'] );

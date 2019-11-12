@@ -487,6 +487,8 @@ jQuery( function( $ ) {
 			$( '.wcv-metaboxes-wrapper' ).on( 'click', 'a.do_variation_action', function( ) {
 				var current_select_id = 'variation_actions_single';
 				wcv_product_variations_ajax.do_variation_action( current_select_id );
+ 
+
 			} );
 
 			$( 'a.variations' ).on( 'click', this.check_for_attribute_changes );

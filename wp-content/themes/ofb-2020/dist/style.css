@@ -642,6 +642,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .variations_wrapper input, .variations_wrapper select {
   width: 90%;
   font-size: 12px;
+  text-align: center;
+  vertical-align: middle !important;
+    /* background-color: white; */
+    /* padding-top: 2px; */
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  color: #212529 !important;
+  height: 32px;
 }
 
 .wcv-grid .wcv_variation .remove_variation {
