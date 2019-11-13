@@ -738,7 +738,7 @@ html[xmlns] .clearfix {
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}  
+}
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -792,7 +792,7 @@ html[xmlns] .clearfix {
 }
 .accordion label h4 {
     font-family: 'Sailec-Regular', Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 16px; 
+    font-size: 16px;
     color: #030753;
 }
 .accordion form{
@@ -800,7 +800,7 @@ html[xmlns] .clearfix {
 }
 .accordion form .ui-selectmenu-button.ui-button{
     width: -webkit-fill-available;
-    margin: 25px 0px 20px; 
+    margin: 25px 0px 20px;
     border: none;
     outline: none;
     background: #fff;
@@ -827,7 +827,7 @@ html[xmlns] .clearfix {
 .accordion label i{
     position: absolute;
     right: 15px;
-    top: 50%; 
+    top: 50%;
     font-size: 12px;
     margin-top: -7px;
     color: #030753;
@@ -977,10 +977,10 @@ html[xmlns] .clearfix {
 .d-block{
     display: block!important;
 }
-/*.item-list*/ 
+/*.item-list*/
 .woocommerce-widget-layered-nav-list__item span.count{
     display: none;
-} 
+}
 .woocommerce-widget-layered-nav-list__item--chosen a:before{
     display: none;
 }
@@ -1079,4 +1079,147 @@ html[xmlns] .clearfix {
     border-radius: 30px;
     padding: 12px 42px 12px;
     cursor: pointer;
+}
+
+.product-settings {
+  background: #F5F5F5;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+.info-title {
+    color: #030753;
+    font-weight: 600;
+}
+.sale_price .sale_schedule  {
+  display: none !important;
+}
+.icon {
+   text-align: center;
+}
+.do_variation_action {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #030753 !important;
+  font-size: 14px;
+}
+.btnAddAttr {
+   background: #F5F5F5;
+   border-radius: 50px;
+   padding: 12px;
+   width: 160px !important;
+   float: left;
+}
+.default_attribute {
+  width: 100%;
+}
+.variations_notice {
+  display: none !important;
+}
+.wcv-tabs.top>.tabs-nav li {
+  display: none !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: #fff !important;
+  float: right;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #5EC5B6 !important;
+  color: #fff;
+}
+.variations-pagenav {
+   display: none !important;
+}
+.wcv-grid .wcv_variation_inner {
+  border: 0px !important;
+}
+.wcv-cols-group div {
+  text-align: center;
+}
+.wcv-grid .wcv_variation_inner label {
+  color: #030753;
+}
+.variations_wrapper input, .variations_wrapper select {
+  width: 90%;
+  font-size: 12px;
+  text-align: center;
+  vertical-align: middle !important;
+    /* background-color: white; */
+    /* padding-top: 2px; */
+  font-family: "Sailec-Regular", Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  color: #212529 !important;
+  height: 32px;
+}
+.wcv-grid .wcv_variation .remove_variation {
+  right: -15px;
+  position: relative;
+  display: none;
+}
+.btnAddAttr {
+  position: absolute !important;
+  bottom: -65px;
+}
+.wcv-grid .wcv_variation_inner {
+  padding: 0px !important;
+  margin-bottom: -20px;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #030753; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.variations_wrapper .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #000;
+    line-height: 28px;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12px;
+}
+.wcvendors-pro .select2-results__options {
+    font-size: 12px !important;
+}
+.heading-product {
+   display: none;
+}
+.btnAddAttr {
+  display: none;
+}
+.all-100.heading-product {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.all-100.heading-product label, .all-100.heading-product div {
+    color: #030753;
+    font-weight: 600;
+    text-align: center;
+}
+.variations_wrapper .select2-container {
+    width: 90% !important;
+}
+ .custom-control-label::before, .custom-file-label, .custom-select {
+   background-color: #F79F90;
+ }
+ .custom-control.switch-hide.custom-switch {
+     padding: 20px;
+     float: right;
+ }
+ .variations_wrapper .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+    border-radius: 0px;
+    height: 32px;
+}
+.heading-product .all-15 {
+    width: 12% !important;
+}
+.variations_wrapper .all-15 {
+    width: 12% !important;
 }
