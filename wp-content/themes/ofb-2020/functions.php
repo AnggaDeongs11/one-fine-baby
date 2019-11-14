@@ -1,6 +1,7 @@
 <?php
 // Define the version so we can easily replace it throughout the theme
-require __DIR__ .'/api/google-feed.php';
+
+@session_start();
 
 define('ONE_FINE_BABY_VERSION', 1.0);
 
@@ -1195,22 +1196,75 @@ add_action( 'wp_ajax_import_google_feed', 'import_google_feed' );
 
 function import_google_feed() {
 
-    $merchantId = $_POST['merchant_id'];
-    $google_feed = new GoogleFeedClient;
+     $message = array();
+     $products = $_SESSION['product_list'];
 
-    $url = site_url() . '/google-shopping/google-api.php';
+     foreach ($products as $data) {
 
-    $google_feed->setMerchant($merchantId);
+        $offerid = $data['offerid'];
+        $title = $data['title'];
+        $description = $data['description'];
+        $image = $data['image'];
+        $price = $data['price'];
+        $sale = $data['sale'];
+        $brand = $data['brand'];
+        $color = $data['color'];
+        $sizes = $data['sizes'];
+        $pid = explode("-",$offerid);
 
-    $google_feed->setURL($url);
+        $parent_id = get_product_by_sku($offerid);
 
-     echo $google_feed->getAllProducts();
+        if($parent_id){
+
+          $variation_data =  array(
+              'attributes' => array(
+                  'pa_size'  => $sizes,
+                  'pa_color' => $color
+              ),
+              'sku'           => $offerid.'-'.$sizes,
+              'regular_price' => $price,
+              'sale_price'    => $sale
+          );
 
 
+          create_product_variation( $parent_id, $variation_data );
 
+        }else{
+
+          create_product_variation_save( array(
+            'title'         => $title,
+            'content'       => $description,
+            'regular_price' => $price,
+            'sale_price'    => '',
+            'stock'         => '10',
+            'image_id'      => '', // optional
+            'gallery_ids'   => array(), // optional
+            'sku'           => $offerid, // optional
+            'tax_class'     => '', // optional
+            'weight'        => '', // optional
+            'attributes'    => array(
+                'pa_color'   =>  array($color),
+                'pa_size'   =>  array($sizes )
+            )
+          ) );
+
+
+        }
+       // code...
+     }
     die;
 }
 
+
+function get_product_by_sku( $sku ) {
+  global $wpdb;
+
+  $product_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key='_sku' AND meta_value='%s' LIMIT 1", $sku ) );
+
+  if ( $product_id ) return new WC_Product( $product_id );
+
+  return null;
+}
 
 function create_product_variation( $product_id, $variation_data ){
 
@@ -1228,13 +1282,13 @@ function create_product_variation( $product_id, $variation_data ){
 
     $variation_id = wp_insert_post( $variation_post );
 
-
     $variation = new WC_Product_Variation( $variation_id );
 
 
     foreach ($variation_data['attributes'] as $attribute => $term_name )
     {
         $taxonomy = 'pa_'.$attribute;
+
 
         if( ! taxonomy_exists( $taxonomy ) ){
             register_taxonomy(
@@ -1244,25 +1298,33 @@ function create_product_variation( $product_id, $variation_data ){
                     'hierarchical' => false,
                     'label' => ucfirst( $attribute ),
                     'query_var' => true,
-                    'rewrite' => array( 'slug' => sanitize_title($attribute) )
+                    'rewrite' => array( 'slug' => sanitize_title($attribute) ),
                 )
             );
         }
+
 
         if( ! term_exists( $term_name, $taxonomy ) )
             wp_insert_term( $term_name, $taxonomy );
 
         $term_slug = get_term_by('name', $term_name, $taxonomy )->slug;
+
+
         $post_term_names =  wp_get_post_terms( $product_id, $taxonomy, array('fields' => 'names') );
+
 
         if( ! in_array( $term_name, $post_term_names ) )
             wp_set_post_terms( $product_id, $term_name, $taxonomy, true );
 
+
         update_post_meta( $variation_id, 'attribute_'.$taxonomy, $term_slug );
     }
 
+
+
     if( ! empty( $variation_data['sku'] ) )
         $variation->set_sku( $variation_data['sku'] );
+
 
     if( empty( $variation_data['sale_price'] ) ){
         $variation->set_price( $variation_data['regular_price'] );
@@ -1271,6 +1333,7 @@ function create_product_variation( $product_id, $variation_data ){
         $variation->set_sale_price( $variation_data['sale_price'] );
     }
     $variation->set_regular_price( $variation_data['regular_price'] );
+
 
     if( ! empty($variation_data['stock_qty']) ){
         $variation->set_stock_quantity( $variation_data['stock_qty'] );
@@ -1283,4 +1346,125 @@ function create_product_variation( $product_id, $variation_data ){
     $variation->set_weight('');
 
     $variation->save();
+}
+
+
+function save_product_attribute_from_name( $name, $label='', $set=true ){
+    if( ! function_exists ('get_attribute_id_from_name') ) return;
+
+    global $wpdb;
+
+    $label = $label == '' ? ucfirst($name) : $label;
+    $attribute_id = get_attribute_id_from_name( $name );
+
+    if( empty($attribute_id) ){
+        $attribute_id = NULL;
+    } else {
+        $set = false;
+    }
+    $args = array(
+        'attribute_id'      => $attribute_id,
+        'attribute_name'    => $name,
+        'attribute_label'   => $label,
+        'attribute_type'    => 'select',
+        'attribute_orderby' => 'menu_order',
+        'attribute_public'  => 0,
+    );
+
+
+    if( empty($attribute_id) ) {
+        $wpdb->insert(  "{$wpdb->prefix}woocommerce_attribute_taxonomies", $args );
+        set_transient( 'wc_attribute_taxonomies', false );
+    }
+
+    if( $set ){
+        $attributes = wc_get_attribute_taxonomies();
+        $args['attribute_id'] = get_attribute_id_from_name( $name );
+        $attributes[] = (object) $args;
+        //print_r($attributes);
+        set_transient( 'wc_attribute_taxonomies', $attributes );
+    } else {
+        return;
+    }
+}
+
+
+function create_product_variation_save( $data ){
+    if( ! function_exists ('save_product_attribute_from_name') ) return;
+
+    $postname = sanitize_title( $data['title'] );
+    $author = get_the_author();
+
+    $post_data = array(
+        'post_author'   => $author,
+        'post_name'     => $postname,
+        'post_title'    => $data['title'],
+        'post_content'  => $data['content'],
+        'post_excerpt'  => $data['excerpt'],
+        'post_status'   => 'publish',
+        'ping_status'   => 'closed',
+        'post_type'     => 'product'
+    );
+
+    $product_id = wp_insert_post( $post_data );
+
+    $product = new WC_Product_Variable( $product_id );
+    $product->save();
+
+    if( ! empty( $data['gallery_ids'] ) && count( $data['gallery_ids'] ) > 0 )
+        $product->set_gallery_image_ids( $data['gallery_ids'] );
+
+
+    if( ! empty( $data['sku'] ) )
+        $product->set_sku( $data['sku'] );
+
+    $product->set_stock_quantity( $data['stock'] );
+    $product->set_manage_stock(true);
+    $product->set_stock_status('');
+
+
+    if( empty( $data['tax_class'] ) )
+        $product->set_tax_class( $data['tax_class'] );
+
+    if( ! empty($data['weight']) )
+        $product->set_weight('');
+    else
+        $product->set_weight($data['weight']);
+
+    $product->validate_props();
+
+
+    $product_attributes = array();
+
+    foreach( $data['attributes'] as $key => $terms ){
+        $taxonomy = wc_attribute_taxonomy_name($key);
+        $attr_label = ucfirst($key);
+        $attr_name = ( wc_sanitize_taxonomy_name($key));
+
+
+        if( ! taxonomy_exists( $taxonomy ) )
+            save_product_attribute_from_name( $attr_name, $attr_label );
+
+        $product_attributes[$taxonomy] = array (
+            'name'         => $taxonomy,
+            'value'        => '',
+            'position'     => '',
+            'is_visible'   => 0,
+            'is_variation' => 1,
+            'is_taxonomy'  => 1
+        );
+
+        foreach( $terms as $value ){
+            $term_name = ucfirst($value);
+            $term_slug = sanitize_title($value);
+
+            if( ! term_exists( $value, $taxonomy ) )
+                wp_insert_term( $term_name, $taxonomy, array('slug' => $term_slug ) );
+
+
+            wp_set_post_terms( $product_id, $term_name, $taxonomy, true );
+        }
+    }
+    update_post_meta( $product_id, '_product_attributes', $product_attributes );
+    $product->save();
 }

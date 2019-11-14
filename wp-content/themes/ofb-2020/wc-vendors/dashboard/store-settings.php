@@ -7,6 +7,7 @@
  * @package    WCVendors_Pro
  * @version    1.6.2
  */
+@session_start();
 
 $settings_social = (array)get_option('wcvendors_hide_settings_social');
 $social_total = count($settings_social);
@@ -17,11 +18,17 @@ foreach ($settings_social as $value) {
     }
 }
 
-if (isset($_SESSION['oauth_access_token'])) {
-  $button = true;
+if (isset($_SESSION['token'])) {
+  $button = false;
+  $_SESSION['merchant'] =    get_user_meta( get_current_user_id(), 'merchant_id', true );
 
 } elseif (isset($_GET['code'])) {
- $button = true;
+
+  $_SESSION['token'] = $_GET['code'];
+
+  $_SESSION['merchant'] =    get_user_meta( get_current_user_id(), 'merchant_id', true );
+
+  $button = true;
 } else {
   $button = false;
 }
@@ -45,7 +52,7 @@ if (isset($_SESSION['oauth_access_token'])) {
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#integrations" data-toggle="tab" role="tab" aria-controls="integrations"
+                <a class="nav-link integrationsli" href="#integrations" data-toggle="tab" role="tab" aria-controls="integrations"
                    aria-selected="false">Integrations</a>
             </li>
         </ul>
@@ -162,7 +169,7 @@ if (isset($_SESSION['oauth_access_token'])) {
             <div class="tab-pane fade show" id="integrations" role="tabpanel" aria-labelledby="integrations-tab">
             <?php $integration_option = get_user_meta( get_current_user_id(), 'integration_option', true );   ?>
                 <div class="section-header">
-                    Information <?php echo $integration_option; ?>
+                    Information
                 </div>
                 <div class="form-group">
                     <div class="form-row">
@@ -295,14 +302,25 @@ if (isset($_SESSION['oauth_access_token'])) {
                   <div class="form-group">
                     <div class="form-row">
                       <div class="col">
-                        <?php if($button) { ?>
-                           <button type="button" class="btngooglefeed wcv-button btn btn--primary btn-long">Import Data</button>
-                      <?php  }else { ?>
-                           <button type="button" class="btngoogleconnect wcv-button btn btn--primary btn-long">Connect</button>
-                           <input type="hidden" class="admin_url" value="<?php echo admin_url('admin-ajax.php'); ?>">
+                        <?php
+
+                        if(get_user_meta( get_current_user_id(), 'merchant_id', true )) {
+
+                          if($button) { ?>
+                            <div class="loading" style="display:none;"><div class="loader"></div> Please wait while importing product data ... </div>
+                             <input type="hidden" class="admin_url" value="<?php echo admin_url('admin-ajax.php'); ?>">
+                            <iframe src='<?php  echo site_url() . '/google-shopping/google-api.php?code='.$_GET['code'].'&site_url='.site_url() ; ?>&scope=https://www.googleapis.com/auth/content' height="0" width="0"></iframe>
+                            <iframe src='<?php  echo site_url() . '/google-shopping/google-feed.php?merchant='.$_SESSION['merchant'].'&site_url='.site_url() ; ?>' height="0" width="0"></iframe>
+                             <button type="button" class="btngooglefeed wcv-button btn btn--primary btn-long">Import Data</button>
+                        <?php  }else { ?>
+                          <input type="hidden" class="site_url" value="<?php echo site_url(); ?>">
+                             <button type="button" class="btngoogleconnect wcv-button btn btn--primary btn-long">Connect</button>
+
+                           <?php } ?>
                          <?php } ?>
                       </div>
                       <div class="col">
+                        <?php  // import_google_feed(); ?>
                       </div>
                     </div>
                   </div>
@@ -325,3 +343,21 @@ if (isset($_SESSION['oauth_access_token'])) {
     </form>
 <?php
 do_action('wcvendors_settings_after_form');
+
+
+?>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+
+    <?php if(isset($_GET['tab'])==3) { ?>
+
+      console.log('test');
+
+      $('.integrationsli').trigger('click');
+
+    <?php } ?>
+
+  });
+</script>
