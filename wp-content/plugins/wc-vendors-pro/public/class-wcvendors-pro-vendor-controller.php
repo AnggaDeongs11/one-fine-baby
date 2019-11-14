@@ -680,6 +680,7 @@ class WCVendors_Pro_Vendor_Controller {
 	 $api_path  = ( isset( $_POST['api_path'] ) ) ? sanitize_text_field( $_POST['api_path'] ) : '';
 	 $access_token   = ( isset( $_POST['access_token'] ) ) ? sanitize_text_field( $_POST['access_token'] ) : '';
 	 $client_id   = ( isset( $_POST['client_id'] ) ) ? sanitize_text_field( $_POST['client_id'] ) : '';
+	 $merchant_id   = ( isset( $_POST['merchant_id'] ) ) ? sanitize_text_field( $_POST['merchant_id'] ) : '';
 
 
 		// SEO fields
@@ -756,7 +757,7 @@ class WCVendors_Pro_Vendor_Controller {
 		update_user_meta( $vendor_id, 'api_path', $api_path );
 		update_user_meta( $vendor_id, 'access_token', $access_token );
 		update_user_meta( $vendor_id, 'client_id', $client_id );
-
+		update_user_meta( $vendor_id, 'merchant_id', $merchant_id );
 		// SEO
 		update_user_meta( $vendor_id, 'wcv_seo_title', $wcv_seo_title );
 		update_user_meta( $vendor_id, 'wcv_seo_meta_description', $wcv_seo_meta_description );

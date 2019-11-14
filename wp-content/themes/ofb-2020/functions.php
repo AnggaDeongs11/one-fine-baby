@@ -1,5 +1,7 @@
 <?php
 // Define the version so we can easily replace it throughout the theme
+require __DIR__ .'/api/google-feed.php';
+
 define('ONE_FINE_BABY_VERSION', 1.0);
 
 
@@ -1088,6 +1090,7 @@ function get_owner_integration() {
                         '' => 'No Integration',
                         'shopify' => 'Shopify',
                         'bigcommerce' => 'BigCommerce',
+                        'googlefeed' => 'Google Shopping Feed'
                 ],
                 'label'             => '&nbsp;',
             )
@@ -1186,3 +1189,98 @@ function get_bank_account_name() {
         )
     );
 } // bank_account_name()
+
+add_action( 'wp_ajax_nopriv_import_google_feed', 'import_google_feed' );
+add_action( 'wp_ajax_import_google_feed', 'import_google_feed' );
+
+function import_google_feed() {
+
+    $merchantId = $_POST['merchant_id'];
+    $google_feed = new GoogleFeedClient;
+
+    $url = site_url() . '/google-shopping/google-api.php';
+
+    $google_feed->setMerchant($merchantId);
+
+    $google_feed->setURL($url);
+
+     echo $google_feed->getAllProducts();
+
+
+
+    die;
+}
+
+
+function create_product_variation( $product_id, $variation_data ){
+
+    $product = wc_get_product($product_id);
+
+    $variation_post = array(
+        'post_title'  => $product->get_title(),
+        'post_name'   => 'product-'.$product_id.'-variation',
+        'post_status' => 'publish',
+        'post_parent' => $product_id,
+        'post_type'   => 'product_variation',
+        'guid'        => $product->get_permalink()
+    );
+
+
+    $variation_id = wp_insert_post( $variation_post );
+
+
+    $variation = new WC_Product_Variation( $variation_id );
+
+
+    foreach ($variation_data['attributes'] as $attribute => $term_name )
+    {
+        $taxonomy = 'pa_'.$attribute;
+
+        if( ! taxonomy_exists( $taxonomy ) ){
+            register_taxonomy(
+                $taxonomy,
+               'product_variation',
+                array(
+                    'hierarchical' => false,
+                    'label' => ucfirst( $attribute ),
+                    'query_var' => true,
+                    'rewrite' => array( 'slug' => sanitize_title($attribute) )
+                )
+            );
+        }
+
+        if( ! term_exists( $term_name, $taxonomy ) )
+            wp_insert_term( $term_name, $taxonomy );
+
+        $term_slug = get_term_by('name', $term_name, $taxonomy )->slug;
+        $post_term_names =  wp_get_post_terms( $product_id, $taxonomy, array('fields' => 'names') );
+
+        if( ! in_array( $term_name, $post_term_names ) )
+            wp_set_post_terms( $product_id, $term_name, $taxonomy, true );
+
+        update_post_meta( $variation_id, 'attribute_'.$taxonomy, $term_slug );
+    }
+
+    if( ! empty( $variation_data['sku'] ) )
+        $variation->set_sku( $variation_data['sku'] );
+
+    if( empty( $variation_data['sale_price'] ) ){
+        $variation->set_price( $variation_data['regular_price'] );
+    } else {
+        $variation->set_price( $variation_data['sale_price'] );
+        $variation->set_sale_price( $variation_data['sale_price'] );
+    }
+    $variation->set_regular_price( $variation_data['regular_price'] );
+
+    if( ! empty($variation_data['stock_qty']) ){
+        $variation->set_stock_quantity( $variation_data['stock_qty'] );
+        $variation->set_manage_stock(true);
+        $variation->set_stock_status('');
+    } else {
+        $variation->set_manage_stock(false);
+    }
+
+    $variation->set_weight('');
+
+    $variation->save();
+}

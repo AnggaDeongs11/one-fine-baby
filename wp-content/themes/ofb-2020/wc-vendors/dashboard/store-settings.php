@@ -17,6 +17,15 @@ foreach ($settings_social as $value) {
     }
 }
 
+if (isset($_SESSION['oauth_access_token'])) {
+  $button = true;
+
+} elseif (isset($_GET['code'])) {
+ $button = true;
+} else {
+  $button = false;
+}
+
 ?>
 
     <?php do_action('wcvendors_settings_before_form'); ?>
@@ -261,6 +270,44 @@ foreach ($settings_social as $value) {
                       </div>
                     </div>
                   </div>
+
+
+                </div>
+
+                <div class="googlefeed-form integration-form" <?php echo ($integration_option=='googlefeed') ?  'style="display:block;"' : 'style="display:none;"' ?>>
+
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col-6">
+                          <label for="merchant_id">Merchant ID</label>
+                          <input class="form-control merchant_id" type="text"
+                                   name="merchant_id"
+                                   id="merchant_id"
+                                   value="<?php echo get_user_meta( get_current_user_id(), 'merchant_id', true ); ?>"/>
+
+                      </div>
+                      <div class="col-6">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-row">
+                      <div class="col">
+                        <?php if($button) { ?>
+                           <button type="button" class="btngooglefeed wcv-button btn btn--primary btn-long">Import Data</button>
+                      <?php  }else { ?>
+                           <button type="button" class="btngoogleconnect wcv-button btn btn--primary btn-long">Connect</button>
+                           <input type="hidden" class="admin_url" value="<?php echo admin_url('admin-ajax.php'); ?>">
+                         <?php } ?>
+                      </div>
+                      <div class="col">
+                      </div>
+                    </div>
+                  </div>
+
+
                 </div>
 
 
@@ -268,6 +315,8 @@ foreach ($settings_social as $value) {
             </div>
 
         </div>
+
+
         <?php WCVendors_Pro_Store_Form::form_data(); ?>
 
 
